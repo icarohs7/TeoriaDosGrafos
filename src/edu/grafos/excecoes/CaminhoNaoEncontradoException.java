@@ -1,4 +1,4 @@
-package edu.grafos;
+package edu.grafos.excecoes;
 
 /**
  * Exceção representando um caminho inalcançável partindo da origem ao destino

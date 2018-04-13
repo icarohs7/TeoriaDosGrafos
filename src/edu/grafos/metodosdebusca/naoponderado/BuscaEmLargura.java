@@ -3,8 +3,8 @@ package edu.grafos.metodosdebusca.naoponderado;
 import java.util.LinkedList;
 import java.util.Stack;
 
-import edu.grafos.CaminhoNaoEncontradoException;
-import edu.grafos.Grafo;
+import edu.grafos.GrafoNaoPonderado;
+import edu.grafos.excecoes.CaminhoNaoEncontradoException;
 
 public abstract class BuscaEmLargura {
 	/**
@@ -18,7 +18,7 @@ public abstract class BuscaEmLargura {
 	 *
 	 * @throws CaminhoNaoEncontradoException caso o destino não seja encontrado
 	 */
-	public static LinkedList buscar( int origem, int destino, Grafo grafo ) throws CaminhoNaoEncontradoException {
+	public static LinkedList buscar( int origem, int destino, GrafoNaoPonderado grafo ) throws CaminhoNaoEncontradoException {
 		//Utilizar a numeração utilizada pela máquina na numeração de vetores 0..X
 		origem--;
 		destino--;
@@ -60,7 +60,7 @@ public abstract class BuscaEmLargura {
 	 *
 	 * @return Verdadeiro se o caminho for encontrado e Falso caso contrário
 	 */
-	private static boolean BFS( int origem, int destino, Grafo grafo, LinkedList<Integer> proximosVertices, Stack<Integer> caminhoInvertido ) {
+	private static boolean BFS( int origem, int destino, GrafoNaoPonderado grafo, LinkedList<Integer> proximosVertices, Stack<Integer> caminhoInvertido ) {
 		//Empilhar vértice visitado
 		caminhoInvertido.push( origem + 1 );
 		

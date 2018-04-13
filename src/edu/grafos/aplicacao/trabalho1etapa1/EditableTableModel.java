@@ -1,4 +1,4 @@
-package edu.grafos;
+package edu.grafos.aplicacao.trabalho1etapa1;
 
 /**
  * Implementação do modelo de tabela que permite a edição da mesma após a

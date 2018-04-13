@@ -1,4 +1,4 @@
-package edu.grafos;
+package edu.grafos.aplicacao.trabalho1etapa1;
 
 import com.alee.laf.WebLookAndFeel;
 
@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 import javax.swing.JTable;
 import javax.swing.UnsupportedLookAndFeelException;
+
+import edu.grafos.GrafoNaoPonderado;
+import edu.grafos.excecoes.CaminhoNaoEncontradoException;
 
 
 /**
@@ -19,7 +22,7 @@ import javax.swing.UnsupportedLookAndFeelException;
  * Look and Feel utilizado: <a href="http://weblookandfeel.com/">WebLaF</a>
  */
 @SuppressWarnings( { "deprecation", "MagicConstant", "unused" } )
-public class T1E1 extends javax.swing.JFrame {
+public class Aplicacao extends javax.swing.JFrame {
 	
 	//Matriz utilizada no grafo
 	private final int[][] matriz = {
@@ -51,7 +54,7 @@ public class T1E1 extends javax.swing.JFrame {
 	private final int[][] matrizOriginal;
 	
 	//Atributo utilizado para armazenar o grafo
-	private Grafo.GrafoNaoPonderado grafo;
+	private GrafoNaoPonderado grafo;
 	// Variables declaration - do not modify//GEN-BEGIN:variables
 	private javax.swing.JButton btnBuscar;
 	private javax.swing.JButton btnExcluir;
@@ -70,7 +73,7 @@ public class T1E1 extends javax.swing.JFrame {
 	/**
 	 * Construir a aplicação
 	 */
-	private T1E1() {
+	private Aplicacao() {
 		initComponents();
 		
 		//Instanciar a matriz secundária e copiar o conteúdo da matriz primária para ela
@@ -79,8 +82,8 @@ public class T1E1 extends javax.swing.JFrame {
 		
 		//Instanciar grafo e configurar alguns valores padrão da aplicação
 		try {
-			grafo = new Grafo.GrafoNaoPonderado( matriz );
-		} catch ( Grafo.CaminhoNaoEncontradoException e ) {
+			grafo = new GrafoNaoPonderado( matriz );
+		} catch ( CaminhoNaoEncontradoException e ) {
 			exclusaoResultado.setText( "Erro: " + e.getMessage() );
 		}
 		setLocationRelativeTo( null );
@@ -91,7 +94,7 @@ public class T1E1 extends javax.swing.JFrame {
 		tblCol4.getTableHeader().setEnabled( false );
 		
 		try {
-			setIconImage( java.awt.Toolkit.getDefaultToolkit().getImage( getClass().getResource( "resources/icon.png" ) ) );
+			setIconImage( java.awt.Toolkit.getDefaultToolkit().getImage( getClass().getResource( "../../res/icon.png" ) ) );
 		} catch ( Exception e ) {
 			e.printStackTrace();
 		}
@@ -99,18 +102,6 @@ public class T1E1 extends javax.swing.JFrame {
 		//Inicializar tabela e colocar o título da aplicação
 		atualizarConexoes( grafo, tblCol1, tblCol2, tblCol3, tblCol4 );
 		setTitle( "Italian National Roads - Busca em grafos" );
-	}
-	
-	public static void main( String args[] ) {
-		// Selecionar o Look & Feel da aplicação
-		try {
-			javax.swing.UIManager.setLookAndFeel( new WebLookAndFeel() );
-		} catch ( UnsupportedLookAndFeelException e ) {
-			System.out.println( Arrays.toString( e.getStackTrace() ) );
-		}
-		
-		//Instanciar e tornar visível a interface da aplicação
-		java.awt.EventQueue.invokeLater( () -> new T1E1().setVisible( true ) );
 	}
 	
 	@SuppressWarnings( "unchecked" )
@@ -492,6 +483,81 @@ public class T1E1 extends javax.swing.JFrame {
 	}// </editor-fold>//GEN-END:initComponents
 	
 	/**
+	 * Procedimento utilizado para copiar o conteúdo de uma matriz instanciada
+	 * para outra
+	 *
+	 * @param m1 Matriz origem
+	 * @param m2 Matriz que receberá a cópia da matriz origem
+	 */
+	private void copiarMatriz( int[][] m1, int[][] m2 ) {
+		if ( m1.length != m2.length ) {
+			return;
+		}
+		
+		for ( int i = 0; i < m1.length; i++ ) {
+			System.arraycopy( m1[i], 0, m2[i], 0, m1[i].length );
+		}
+	}
+	
+	/**
+	 * Verifica os valores contidos no grafo e atualiza a tabela
+	 *
+	 * @param grafo O grafo a ser utilizado
+	 * @param t1    A primeira tabela representando a linha 1
+	 * @param t2    A segunda tabela representando a linha 2
+	 * @param t3    A terceira tabela representando a linha 3
+	 * @param t4    A quarta tabela representando a linha 4
+	 */
+	private void atualizarConexoes( GrafoNaoPonderado grafo, JTable t1, JTable t2, JTable t3, JTable t4 ) {
+		for ( int i = 0; i < 5; i++ ) {
+			t1.setValueAt( grafo.logConexoes( i ), 0, i );
+			t2.setValueAt( grafo.logConexoes( i + 5 ), 0, i );
+			t3.setValueAt( grafo.logConexoes( i + 10 ), 0, i );
+			t4.setValueAt( grafo.logConexoes( i + 15 ), 0, i );
+		}
+		t1.repaint();
+		t2.repaint();
+		t3.repaint();
+		t4.repaint();
+	}
+	
+	/**
+	 * Tratamento para o pressionar da tecla enter nos campos de busca
+	 *
+	 * @param evt Pressionar da tecla enter nos campos referentes aos dados da
+	 *            busca
+	 */
+	private void kPBusca( java.awt.event.KeyEvent evt ) {//GEN-FIRST:event_kPBusca
+		if ( evt.getKeyCode() == 10 ) {
+			btnBuscar.doClick();
+		}
+	}//GEN-LAST:event_kPBusca
+	
+	/**
+	 * Tratamento para o pressionar da tecla enter nos campos de exclusão
+	 *
+	 * @param evt Pressionar da tecla enter nos campos referentes aos dados da
+	 *            exclusão
+	 */
+	private void kPExclusao( java.awt.event.KeyEvent evt ) {//GEN-FIRST:event_kPExclusao
+		if ( evt.getKeyCode() == 10 ) {
+			btnExcluir.doClick();
+		}
+	}//GEN-LAST:event_kPExclusao
+	
+	public static void main( String args[] ) {
+		// Selecionar o Look & Feel da aplicação
+		try {
+			javax.swing.UIManager.setLookAndFeel( new WebLookAndFeel() );
+		} catch ( UnsupportedLookAndFeelException e ) {
+			System.out.println( Arrays.toString( e.getStackTrace() ) );
+		}
+		
+		//Instanciar e tornar visível a interface da aplicação
+		java.awt.EventQueue.invokeLater( () -> new Aplicacao().setVisible( true ) );
+	}
+	
+	/**
 	 * Fazer a busca no grafo utilizando os vértices e o método selecionado pelo
 	 * usuário
 	 *
@@ -505,9 +571,9 @@ public class T1E1 extends javax.swing.JFrame {
 			
 			//Fazer a busca ->(índice 0 = profundidade,índice 1 = largura)
 			if ( tipoDeBusca.getSelectedIndex() == 0 ) {
-				buscaResultado.setText( grafo.buscar( origem, destino, Grafo.GrafoNaoPonderado.MetodoDeBusca.PROFUNDIDADE ).toString() );
+				buscaResultado.setText( grafo.buscar( origem, destino, GrafoNaoPonderado.MetodoDeBusca.PROFUNDIDADE ).toString() );
 			} else {
-				buscaResultado.setText( grafo.buscar( origem, destino, Grafo.GrafoNaoPonderado.MetodoDeBusca.LARGURA ).toString() );
+				buscaResultado.setText( grafo.buscar( origem, destino, GrafoNaoPonderado.MetodoDeBusca.LARGURA ).toString() );
 			}
 			
 			exclusaoResultado.setText( "" );
@@ -552,30 +618,6 @@ public class T1E1 extends javax.swing.JFrame {
 	}//GEN-LAST:event_btnExcluirActionPerformed
 	
 	/**
-	 * Tratamento para o pressionar da tecla enter nos campos de busca
-	 *
-	 * @param evt Pressionar da tecla enter nos campos referentes aos dados da
-	 *            busca
-	 */
-	private void kPBusca( java.awt.event.KeyEvent evt ) {//GEN-FIRST:event_kPBusca
-		if ( evt.getKeyCode() == 10 ) {
-			btnBuscar.doClick();
-		}
-	}//GEN-LAST:event_kPBusca
-	
-	/**
-	 * Tratamento para o pressionar da tecla enter nos campos de exclusão
-	 *
-	 * @param evt Pressionar da tecla enter nos campos referentes aos dados da
-	 *            exclusão
-	 */
-	private void kPExclusao( java.awt.event.KeyEvent evt ) {//GEN-FIRST:event_kPExclusao
-		if ( evt.getKeyCode() == 10 ) {
-			btnExcluir.doClick();
-		}
-	}//GEN-LAST:event_kPExclusao
-	
-	/**
 	 * Reiniciar a tabela, voltando o grafo para seu estado inicial
 	 *
 	 * @param evt Clique do botão usado para reiniciar o grafo
@@ -594,44 +636,5 @@ public class T1E1 extends javax.swing.JFrame {
 		exclusaoDestino.setText( "" );
 		exclusaoResultado.setText( "" );
 	}//GEN-LAST:event_btnReiniciarActionPerformed
-	
-	/**
-	 * Verifica os valores contidos no grafo e atualiza a tabela
-	 *
-	 * @param grafo O grafo a ser utilizado
-	 * @param t1    A primeira tabela representando a linha 1
-	 * @param t2    A segunda tabela representando a linha 2
-	 * @param t3    A terceira tabela representando a linha 3
-	 * @param t4    A quarta tabela representando a linha 4
-	 */
-	private void atualizarConexoes( Grafo.GrafoNaoPonderado grafo, JTable t1, JTable t2, JTable t3, JTable t4 ) {
-		for ( int i = 0; i < 5; i++ ) {
-			t1.setValueAt( grafo.logConexoes( i ), 0, i );
-			t2.setValueAt( grafo.logConexoes( i + 5 ), 0, i );
-			t3.setValueAt( grafo.logConexoes( i + 10 ), 0, i );
-			t4.setValueAt( grafo.logConexoes( i + 15 ), 0, i );
-		}
-		t1.repaint();
-		t2.repaint();
-		t3.repaint();
-		t4.repaint();
-	}
-	
-	/**
-	 * Procedimento utilizado para copiar o conteúdo de uma matriz instanciada
-	 * para outra
-	 *
-	 * @param m1 Matriz origem
-	 * @param m2 Matriz que receberá a cópia da matriz origem
-	 */
-	private void copiarMatriz( int[][] m1, int[][] m2 ) {
-		if ( m1.length != m2.length ) {
-			return;
-		}
-		
-		for ( int i = 0; i < m1.length; i++ ) {
-			System.arraycopy( m1[i], 0, m2[i], 0, m1[i].length );
-		}
-	}
 	// End of variables declaration//GEN-END:variables
 }

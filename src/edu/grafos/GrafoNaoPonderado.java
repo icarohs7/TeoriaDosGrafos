@@ -3,6 +3,7 @@ package edu.grafos;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import edu.grafos.excecoes.CaminhoNaoEncontradoException;
 import edu.grafos.metodosdebusca.naoponderado.BuscaEmLargura;
 import edu.grafos.metodosdebusca.naoponderado.BuscaEmProfundidade;
 
@@ -49,7 +50,7 @@ public class GrafoNaoPonderado extends Grafo {
 	 *
 	 * @throws CaminhoNaoEncontradoException Lança uma exceção caso o destino seja inalcançável apartir da origem
 	 */
-	protected Queue buscar( int origem, int destino, MetodoDeBusca metodo ) throws CaminhoNaoEncontradoException {
+	public Queue buscar( int origem, int destino, MetodoDeBusca metodo ) throws CaminhoNaoEncontradoException {
 		switch ( metodo ) {
 			case LARGURA:
 				return BuscaEmLargura.buscar( origem, destino, this );

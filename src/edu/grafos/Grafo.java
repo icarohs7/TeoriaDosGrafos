@@ -6,9 +6,20 @@ package edu.grafos;
  * @author Icaro D. Temponi
  */
 public abstract class Grafo {
+	/**
+	 * Tabela de vértices que foram visitados, ou vértices abertos
+	 */
 	public boolean[] visitados;
-	protected int[][] matrizDeAdjacencia;
-	protected boolean direcionado;
+	
+	/**
+	 * Matriz de adjacência utilizada para construir o grafo
+	 */
+	int[][] matrizDeAdjacencia;
+	
+	/**
+	 * Se o grafo é ou não direcionado
+	 */
+	boolean direcionado;
 	
 	
 	/**

@@ -3,7 +3,7 @@ package edu.grafos.metodosdebusca.naoponderado;
 import java.util.LinkedList;
 import java.util.Stack;
 
-import edu.grafos.CaminhoNaoEncontradoException;
+import edu.grafos.excecoes.CaminhoNaoEncontradoException;
 import edu.grafos.Grafo;
 
 public abstract class BuscaEmProfundidade {
