@@ -22,7 +22,7 @@ import edu.grafos.excecoes.CaminhoNaoEncontradoException;
  * Look and Feel utilizado: <a href="http://weblookandfeel.com/">WebLaF</a>
  */
 @SuppressWarnings( { "deprecation", "MagicConstant", "unused" } )
-public class Aplicacao extends javax.swing.JFrame {
+public class Trabalho1Etapa1 extends javax.swing.JFrame {
 	
 	//Matriz utilizada no grafo
 	private final int[][] matriz = {
@@ -73,7 +73,7 @@ public class Aplicacao extends javax.swing.JFrame {
 	/**
 	 * Construir a aplicação
 	 */
-	private Aplicacao() {
+	private Trabalho1Etapa1() {
 		initComponents();
 		
 		//Instanciar a matriz secundária e copiar o conteúdo da matriz primária para ela
@@ -554,7 +554,7 @@ public class Aplicacao extends javax.swing.JFrame {
 		}
 		
 		//Instanciar e tornar visível a interface da aplicação
-		java.awt.EventQueue.invokeLater( () -> new Aplicacao().setVisible( true ) );
+		java.awt.EventQueue.invokeLater( () -> new Trabalho1Etapa1().setVisible( true ) );
 	}
 	
 	/**

@@ -9,6 +9,7 @@ import edu.grafos.metodosdebusca.ponderado.ResultadoDijkstra;
  * @author Icaro D. Temponi
  */
 public class GrafoPonderado extends Grafo {
+	public final int INFINITO = Integer.MAX_VALUE / 2;
 	/**
 	 * Tabela de distâncias que guarda a menor distância da origem ao vértice v
 	 */

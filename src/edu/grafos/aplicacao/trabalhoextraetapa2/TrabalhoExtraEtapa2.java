@@ -1,9 +1,6 @@
 package edu.grafos.aplicacao.trabalhoextraetapa2;
 
-import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.Insets;
 
 import javax.swing.JComponent;
@@ -16,7 +13,7 @@ import javax.swing.JTable;
 import edu.grafos.GrafoPonderado;
 import edu.grafos.metodosdebusca.ponderado.ResultadoDijkstra;
 
-public class Aplicacao {
+public class TrabalhoExtraEtapa2 {
 	private JPanel root;
 	private JLabel lbl1;
 	private JTable tblDistancias;
@@ -27,8 +24,8 @@ public class Aplicacao {
 	public ResultadoDijkstra resultado;
 	
 	public static void main( String[] args ) {
-		Aplicacao app = new Aplicacao();
-		JFrame frame = new JFrame( "Aplicacao" );
+		TrabalhoExtraEtapa2 app = new TrabalhoExtraEtapa2();
+		JFrame frame = new JFrame( "Trabalho1Etapa1" );
 		frame.setContentPane( app.root );
 		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 		frame.pack();

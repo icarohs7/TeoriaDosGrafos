@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: edu.grafos.aplicacao.trabalhoextraetapa2.Aplicacao
+Main-Class: edu.grafos.aplicacao.trabalhoextraetapa2.TrabalhoExtraEtapa2
 
