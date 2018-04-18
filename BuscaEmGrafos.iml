@@ -7,7 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="weblaf-complete-1.28" level="project" />
+    <orderEntry type="module-library">
+      <library name="weblaf">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/weblaf-complete-1.28.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>

@@ -58,15 +58,17 @@ public class TrabalhoExtraEtapa2 {
 		resultado =
 				(ResultadoDijkstra) new GrafoPonderado( grafo, true )
 						.buscar( 0, 0, GrafoPonderado.MetodoDeBusca.DIJKSTRA );
-		
+		//Definição dos dados a serem inseridos na tabela de distâncias
 		Object[] colunas = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m" };
 		Object[] distancias = new Object[grafo.length];
+		//Definição dos dados a serem inseridos na tabela de predecessores
 		Object[] predecessores = new Object[grafo.length];
+		//Transferir os dados da busca para os objetos a serem inseridos nas tabelas
 		for ( int i = 0; i < resultado.getDistancias().length; i++ ) {
 			distancias[i] = resultado.getDistancias()[i];
 			predecessores[i] = resultado.getPredecessores()[i];
 		}
-		
+		//Definir e popular as tabelas distâncias e predecessores
 		tblDistancias = new JTable( new Object[][] { distancias }, colunas );
 		tblPredecessores = new JTable( new Object[][] { predecessores }, colunas );
 	}
