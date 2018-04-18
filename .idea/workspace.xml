@@ -8,19 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="947c8d10-2658-41e0-a346-11b706e6e843" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/GrafoPonderado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/GrafoPonderado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalho1etapa1/Aplicacao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalho1etapa1/Aplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalho1etapa1/Trabalho1Etapa1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/Aplicacao.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/Aplicacao.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/Aplicacao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/Aplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/metodosdebusca/ponderado/Dijkstra.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/metodosdebusca/ponderado/Dijkstra.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/grafos/metodosdebusca/ponderado/ResultadoDijkstra.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/metodosdebusca/ponderado/ResultadoDijkstra.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,35 +27,22 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="TrabalhoExtraEtapa2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuscaEmLargura.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/grafos/metodosdebusca/naoponderado/BuscaEmLargura.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="673">
+              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="initializer##0;class#TrabalhoExtraEtapa2#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Trabalho1Etapa1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalho1etapa1/Trabalho1Etapa1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
-            </state>
-          </provider>
+      <file leaf-file-name="TrabalhoExtraEtapa2.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
     </leaf>
@@ -119,6 +99,7 @@
         <option value="$PROJECT_DIR$/src/edu/grafos/GrafoPonderado.java" />
         <option value="$PROJECT_DIR$/src/edu/grafos/metodosdebusca/ponderado/Dijkstra.kt" />
         <option value="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/Aplicacao.java" />
+        <option value="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form" />
         <option value="$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.java" />
       </list>
     </option>
@@ -138,65 +119,49 @@
         <subPane>
           <expand>
             <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="grafos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="grafos" type="462c0819:PsiDirectoryNode" />
               <item name="aplicacao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grafos" type="462c0819:PsiDirectoryNode" />
+              <item name="aplicacao" type="462c0819:PsiDirectoryNode" />
+              <item name="trabalho1etapa1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="grafos" type="462c0819:PsiDirectoryNode" />
               <item name="aplicacao" type="462c0819:PsiDirectoryNode" />
               <item name="trabalhoextraetapa2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grafos" type="462c0819:PsiDirectoryNode" />
-              <item name="aplicacao" type="462c0819:PsiDirectoryNode" />
-              <item name="trabalhoextraetapa2" type="462c0819:PsiDirectoryNode" />
-              <item name="TrabalhoExtraEtapa2" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grafos" type="462c0819:PsiDirectoryNode" />
-              <item name="metodosdebusca" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos_T1_E2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos_T1_E2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grafos" type="462c0819:PsiDirectoryNode" />
-              <item name="metodosdebusca" type="462c0819:PsiDirectoryNode" />
-              <item name="naoponderado" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TrabalhoExtraEtapa2">
     <configuration name="Aplicacao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.grafos.aplicacao.trabalhoextraetapa2.Aplicacao" />
       <module name="BuscaEmGrafos" />
@@ -268,6 +233,7 @@
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
     <list>
+      <item itemvalue="Application.Aplicacao" />
       <item itemvalue="Application.Trabalho1Etapa1" />
       <item itemvalue="Application.TrabalhoExtraEtapa2" />
       <item itemvalue="Kotlin.edu.grafos.aplicacao.trabalhoextraetapa2.AplicacaoKt" />
@@ -312,11 +278,19 @@
       <option name="project" value="LOCAL" />
       <updated>1523586324321</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="..">
+      <created>1523889264263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523889264263</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -325,11 +299,10 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.16884531" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.16884531" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1444563" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14605543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -342,6 +315,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -353,7 +327,8 @@
     <MESSAGE value="Diversas alterações para melhoria da qualidade do código" />
     <MESSAGE value="Fragmentação da classe principal e inner classes em classes separadas." />
     <MESSAGE value="Altos níveis de gambiarra introduzidos&#10;Adicionados bugs ao corrigir bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Altos níveis de gambiarra introduzidos&#10;Adicionados bugs ao corrigir bugs" />
+    <MESSAGE value=".." />
+    <option name="LAST_COMMIT_MESSAGE" value=".." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -361,6 +336,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/edu/grafos/kotlin/Grafo.kt" />
+    <entry file="file://$PROJECT_DIR$/src/edu/grafos/java/GrafoNaoPonderado.java" />
+    <entry file="file://$PROJECT_DIR$/src/edu/grafos/kotlin/GrafoNaoPonderado.kt" />
+    <entry file="file://$PROJECT_DIR$/src/edu/grafos/kotlin/metodosdebusca/naoponderado/BuscaEmLargura.kt" />
     <entry file="file://$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -489,13 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/grafos/Dijkstra.java" />
     <entry file="file://$PROJECT_DIR$/src/edu/grafos/metodosdebusca/naoponderado/BuscaEmProfundidade.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -588,9 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -601,10 +570,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/grafos/aplicacao/trabalhoextraetapa2/TrabalhoExtraEtapa2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        <state relative-caret-position="673">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding>
+            <element signature="initializer##0;class#TrabalhoExtraEtapa2#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
