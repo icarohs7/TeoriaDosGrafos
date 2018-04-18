@@ -60,14 +60,15 @@ public class GrafoPonderado extends Grafo {
 		switch ( metodo ) {
 			case DIJKSTRA:
 				return dijkstra( origem );
+			case BELLMAN_FORD:
+				return bellmanford( origem );
 			default:
 				return null;
 		}
 	}
 	
 	/**
-	 * Executar a busca de menor caminho em um grafo ponderado partindo de um vértice origem em direção a um vértice
-	 * destino
+	 * Executar a busca de menor caminho em um grafo ponderado utilizando o algoritmo de Dijkstra
 	 *
 	 * @param origem O vértice de origem
 	 *
@@ -75,6 +76,17 @@ public class GrafoPonderado extends Grafo {
 	 */
 	private ResultadoDijkstra dijkstra( int origem ) {
 		return Dijkstra.Companion.buscar( origem, this );
+	}
+	
+	/**
+	 * Executar a busca de menor caminho em um grafo ponderado utilizando o algoritmo de Bellman-Ford
+	 *
+	 * @param origem
+	 *
+	 * @return
+	 */
+	private Object bellmanford( int origem ) {
+		return null;
 	}
 	
 	/**
@@ -101,6 +113,6 @@ public class GrafoPonderado extends Grafo {
 	 * Tipos de busca disponíveis para um grafo ponderado
 	 */
 	public enum MetodoDeBusca {
-		DIJKSTRA
+		DIJKSTRA, BELLMAN_FORD
 	}
 }
