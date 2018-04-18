@@ -23,7 +23,7 @@ public class TrabalhoExtraEtapa2 {
 	private JTable tblPredecessores;
 	private JLabel lblRes;
 	private JLabel lbl13;
-	public ResultadoDijkstra resultado;
+	private ResultadoDijkstra resultado;
 	
 	public static void main( String[] args ) {
 		TrabalhoExtraEtapa2 app = new TrabalhoExtraEtapa2();
