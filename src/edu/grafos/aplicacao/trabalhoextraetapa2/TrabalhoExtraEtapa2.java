@@ -12,8 +12,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
+import edu.grafos.Grafo;
 import edu.grafos.GrafoPonderado;
-import edu.grafos.metodosdebusca.ponderado.ResultadoDijkstra;
+import edu.grafos.metodosdebusca.ponderado.ResultadoPonderado;
+import edu.grafos.metodosdebusca.ponderado.ResultadoWarshall;
 
 public class TrabalhoExtraEtapa2 {
 	private JPanel root;
@@ -23,7 +25,7 @@ public class TrabalhoExtraEtapa2 {
 	private JTable tblPredecessores;
 	private JLabel lblRes;
 	private JLabel lbl13;
-	private ResultadoDijkstra resultado;
+	private ResultadoPonderado resultado;
 	
 	public static void main( String[] args ) {
 		TrabalhoExtraEtapa2 app = new TrabalhoExtraEtapa2();
@@ -34,35 +36,35 @@ public class TrabalhoExtraEtapa2 {
 		frame.setVisible( true );
 		frame.setLocationRelativeTo( null );
 		frame.setSize( 400, 250 );
-		app.lblRes.setText( app.resultado.menorCaminho( 11 ).toString() );
+		app.lblRes.setText( app.resultado.menorCaminho( 12 ).toString() );
 	}
 	
 	private void createUIComponents() {
-		int grafo[][] = new int[][] {
+		int NA = Grafo.INFINITO;
+		int matriz[][] = new int[][] {
 				//       a   b   c   d   e   f   g   h   i   j   l   m
-				/*a*/ { -1, 61, 50, 42, -1, -1, -1, -1, -1, -1, -1, -1 },
-				/*b*/ { 61, -1, -1, 32, -1, 29, -1, -1, -1, 17, -1, -1 },
-				/*c*/ { 50, -1, -1, 56, 67, -1, -1, -1, -1, -1, -1, -1 },
-				/*d*/ { 42, 32, 56, -1, 45, 62, 85, -1, -1, -1, -1, -1 },
-				/*e*/ { -1, -1, 67, 45, -1, -1, 72, -1, 73, -1, -1, -1 },
-				/*f*/ { -1, 29, -1, 62, -1, -1, 20, 35, -1, 30, 45, -1 },
-				/*g*/ { -1, -1, -1, 85, 72, 20, -1, 40, 60, -1, -1, 32 },
-				/*h*/ { -1, -1, -1, -1, -1, 35, 40, -1, -1, -1, 50, 21 },
-				/*i*/ { -1, -1, -1, -1, 73, -1, 60, -1, -1, -1, -1, 50 },
-				/*j*/ { -1, 17, -1, -1, -1, 30, -1, -1, -1, -1, 30, -1 },
-				/*l*/ { -1, -1, -1, -1, -1, 45, -1, 50, -1, 30, -1, -1 },
-				/*m*/ { -1, -1, -1, -1, -1, 32, -1, 21, 50, -1, -1, -1 }
+				/*a*/ { NA, 61, 50, 42, NA, NA, NA, NA, NA, NA, NA, NA },
+				/*b*/ { 61, NA, NA, 32, NA, 29, NA, NA, NA, 17, NA, NA },
+				/*c*/ { 50, NA, NA, 56, 67, NA, NA, NA, NA, NA, NA, NA },
+				/*d*/ { 42, 32, 56, NA, 45, 62, 85, NA, NA, NA, NA, NA },
+				/*e*/ { NA, NA, 67, 45, NA, NA, 72, NA, 73, NA, NA, NA },
+				/*f*/ { NA, 29, NA, 62, NA, NA, 20, 35, NA, 30, 45, NA },
+				/*g*/ { NA, NA, NA, 85, 72, 20, NA, 40, 60, NA, NA, 32 },
+				/*h*/ { NA, NA, NA, NA, NA, 35, 40, NA, NA, NA, 50, 21 },
+				/*i*/ { NA, NA, NA, NA, 73, NA, 60, NA, NA, NA, NA, 50 },
+				/*j*/ { NA, 17, NA, NA, NA, 30, NA, NA, NA, NA, 30, NA },
+				/*l*/ { NA, NA, NA, NA, NA, 45, NA, 50, NA, 30, NA, NA },
+				/*m*/ { NA, NA, NA, NA, NA, 32, NA, 21, 50, NA, NA, NA }
 		};
+		GrafoPonderado grafo = new GrafoPonderado( matriz, true );
 		
 		//Destino ignorado utilizando o algoritmo de Dijkstra
-		resultado =
-				(ResultadoDijkstra) new GrafoPonderado( grafo, true )
-						.buscar( 0, 0, GrafoPonderado.MetodoDeBusca.DIJKSTRA );
+		resultado = (ResultadoPonderado) grafo.buscar( 1, GrafoPonderado.MetodoDeBusca.BELLMAN_FORD );
 		//Definição dos dados a serem inseridos na tabela de distâncias
 		Object[] colunas = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m" };
-		Object[] distancias = new Object[grafo.length];
+		Object[] distancias = new Object[matriz.length];
 		//Definição dos dados a serem inseridos na tabela de predecessores
-		Object[] predecessores = new Object[grafo.length];
+		Object[] predecessores = new Object[matriz.length];
 		//Transferir os dados da busca para os objetos a serem inseridos nas tabelas
 		for ( int i = 0; i < resultado.getDistancias().length; i++ ) {
 			distancias[i] = resultado.getDistancias()[i];
@@ -71,6 +73,10 @@ public class TrabalhoExtraEtapa2 {
 		//Definir e popular as tabelas distâncias e predecessores
 		tblDistancias = new JTable( new Object[][] { distancias }, colunas );
 		tblPredecessores = new JTable( new Object[][] { predecessores }, colunas );
+		
+		System.out.println(
+				( (ResultadoWarshall) grafo.buscar( 0, GrafoPonderado.MetodoDeBusca.FLOYD_WARSHALL ) )
+						.menorCaminho( 1, 12 ) );
 	}
 	
 	{

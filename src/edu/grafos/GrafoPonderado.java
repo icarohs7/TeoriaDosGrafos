@@ -1,7 +1,10 @@
 package edu.grafos;
 
+import edu.grafos.metodosdebusca.ponderado.BellmanFord;
 import edu.grafos.metodosdebusca.ponderado.Dijkstra;
-import edu.grafos.metodosdebusca.ponderado.ResultadoDijkstra;
+import edu.grafos.metodosdebusca.ponderado.FloydWarshall;
+import edu.grafos.metodosdebusca.ponderado.ResultadoPonderado;
+import edu.grafos.metodosdebusca.ponderado.ResultadoWarshall;
 
 /**
  * Classe representando um grafo ponderado e suas operações
@@ -9,7 +12,6 @@ import edu.grafos.metodosdebusca.ponderado.ResultadoDijkstra;
  * @author Icaro D. Temponi
  */
 public class GrafoPonderado extends Grafo {
-	public final int INFINITO = Integer.MAX_VALUE / 2;
 	/**
 	 * Tabela de distâncias que guarda a menor distância da origem ao vértice v
 	 */
@@ -45,9 +47,8 @@ public class GrafoPonderado extends Grafo {
 	/**
 	 * Realiza a busca em um grafo ponderado
 	 *
-	 * @param origem  O vértice de origem
-	 * @param destino O vértice que se deseja alcançar apartir da origem
-	 * @param metodo  O método de busca utilizado
+	 * @param origem O vértice de origem
+	 * @param metodo O método de busca utilizado
 	 *
 	 * @return Retorna um conjunto resultado referente ao método de busca utilizado que deve ser
 	 * 		convertido através de typecasting antes de ser utilizado
@@ -56,12 +57,15 @@ public class GrafoPonderado extends Grafo {
 	 * 		<br/>
 	 * 		Dijkstra utiliza a classe <strong>ResutadoDijkstra</strong>
 	 */
-	public Object buscar( int origem, int destino, MetodoDeBusca metodo ) {
+	public Object buscar( int origem, MetodoDeBusca metodo ) {
+		origem--;
 		switch ( metodo ) {
 			case DIJKSTRA:
 				return dijkstra( origem );
 			case BELLMAN_FORD:
 				return bellmanford( origem );
+			case FLOYD_WARSHALL:
+				return floydwarshall();
 			default:
 				return null;
 		}
@@ -72,21 +76,54 @@ public class GrafoPonderado extends Grafo {
 	 *
 	 * @param origem O vértice de origem
 	 *
-	 * @return A tabela de menores caminhos do grafo de acordo com o algoritmo de dijkstra
+	 * @return O objeto resultado contendo a tabela de menores distâncias e predecessores
 	 */
-	private ResultadoDijkstra dijkstra( int origem ) {
+	private ResultadoPonderado dijkstra( int origem ) {
 		return Dijkstra.Companion.buscar( origem, this );
 	}
 	
 	/**
 	 * Executar a busca de menor caminho em um grafo ponderado utilizando o algoritmo de Bellman-Ford
 	 *
-	 * @param origem
+	 * @param origem O vértice de origem
 	 *
-	 * @return
+	 * @return O objeto resultado contendo a tabela de menores distâncias e predecessores
 	 */
-	private Object bellmanford( int origem ) {
-		return null;
+	private ResultadoPonderado bellmanford( int origem ) {
+		return BellmanFord.Companion.buscar( origem, this );
+	}
+	
+	/**
+	 * Executar a busca de menor caminho em um grafo ponderado utilizando o algoritmo de Floyd-Warshall
+	 *
+	 * @return O objeto resultado contendo a tabela de menores distâncias e predecessores
+	 */
+	private ResultadoWarshall floydwarshall() {
+		return FloydWarshall.Companion.buscar( this );
+	}
+	
+	/**
+	 * Inicializar o grafo
+	 */
+	@Override
+	public void inicializar() {
+		//Inicializar todas as distâncias como infinitas, com exceção da distância s até s, que será 0
+		resetDistancias( INFINITO );
+		
+		//Inicializar todos os precedentes como -1 para representar sem precedente
+		resetPrecedentes( -1 );
+		
+		//Marcar todos os vértices como abertos ou seja, não visitados
+		resetVisitados();
+	}
+	
+	/**
+	 * Inicializa ou Reinicializa o array de distâncias
+	 */
+	private void resetDistancias( int valor ) {
+		for ( int i = 0; i < distancia.length; i++ ) {
+			distancia[i] = valor;
+		}
 	}
 	
 	/**
@@ -94,25 +131,37 @@ public class GrafoPonderado extends Grafo {
 	 *
 	 * @param valor O valor a ser atribuído a cada elemento do array
 	 */
-	public void resetPrecedentes( int valor ) {
+	private void resetPrecedentes( int valor ) {
 		for ( int i = 0; i < precedentes.length; i++ ) {
 			precedentes[i] = valor;
 		}
 	}
 	
 	/**
-	 * Inicializa ou Reinicializa o array de distâncias
+	 * Retorna o vértice contendo a menor distância até uma dada origem
+	 *
+	 * @param origem A origem
+	 *
+	 * @return O índice do vértice aberto mais próximo à origem ou infinito caso não haja vértice aberto
 	 */
-	public void resetDistancias( int valor ) {
-		for ( int i = 0; i < distancia.length; i++ ) {
-			distancia[i] = valor;
+	public int menorDistancia( int origem ) {
+		int menor = INFINITO;
+		
+		for ( int i = 0; i < matrizDeAdjacencia.length; i++ ) {
+			if ( !visitados[i] ) {
+				if ( distancia[i] < menor ) {
+					menor = i;
+				}
+			}
 		}
+		
+		return menor;
 	}
 	
 	/**
 	 * Tipos de busca disponíveis para um grafo ponderado
 	 */
 	public enum MetodoDeBusca {
-		DIJKSTRA, BELLMAN_FORD
+		DIJKSTRA, BELLMAN_FORD, FLOYD_WARSHALL
 	}
 }
