@@ -13,15 +13,13 @@ import javax.swing.JTable;
  * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
 public class TabelaComScroll extends JTable {
-	private JTable rowHeader;
-	
 	/**
 	 * Instantiates a new Tabela com scroll.
 	 *
 	 * @param objects  objects
 	 * @param objects1 objects 1
 	 */
-	public TabelaComScroll( @NotNull Object[][] objects, @NotNull Object[] objects1 ) {
+	TabelaComScroll( @NotNull Object[][] objects, @NotNull Object[] objects1 ) {
 		super( objects, objects1 );
 		/* Desativar a reordenação das colunas */
 		tableHeader.setReorderingAllowed( false );
@@ -34,7 +32,7 @@ public class TabelaComScroll extends JTable {
 	 *
 	 * @return the scrollable table
 	 */
-	public JScrollPane getScrollableTable() {
+	JScrollPane getScrollableTable() {
 		return new JScrollPane( this );
 	}
 	
@@ -65,7 +63,7 @@ public class TabelaComScroll extends JTable {
 	}
 	
 	/**
-	 * Gets preferred scrollable viewport size.
+	 * Definir o tamanho da tabela quando embrulhada para o seu tamanho completo
 	 *
 	 * @return the preferred scrollable viewport size
 	 */

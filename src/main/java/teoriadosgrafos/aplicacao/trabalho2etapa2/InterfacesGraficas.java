@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 
 import teoriadosgrafos.Grafo;
 import teoriadosgrafos.GrafoPonderado;
+import teoriadosgrafos.arvoregeradora.Kruskal;
 import teoriadosgrafos.arvoregeradora.MST;
 import teoriadosgrafos.arvoregeradora.Prim;
 import teoriadosgrafos.metodosdebusca.ponderado.FloydWarshall;
@@ -107,45 +108,24 @@ class Questao1 {
 	 * @return the resultado warshall
 	 */
 	private ResultadoWarshall primeiroGrafo() {
+		/* Definir o valor para a não adjacência(NA) */
 		int NA = Grafo.INFINITO;
-		//		int matriz[][] = new int[][] {
-		//				{ NA, 5, NA, NA, NA, 8, NA, NA, NA, 2, },
-		//				{ 5, NA, -1, NA, NA, 3, NA, NA, NA, 3, },
-		//				{ NA, -1, NA, -1, NA, 3, 3, 2, 3, 3, },
-		//				{ NA, NA, -1, NA, 8, 1, 7, 4, 1, 6, },
-		//				{ NA, NA, NA, 8, NA, NA, 9, NA, 4, NA, },
-		//				{ 8, 3, 3, 1, NA, NA, 4, -1, NA, NA, },
-		//				{ NA, NA, 3, 7, 9, 4, NA, -4, 6, NA, },
-		//				{ NA, NA, 2, 4, NA, -1, -4, NA, NA, NA, },
-		//				{ NA, NA, 3, 1, 4, NA, 6, NA, NA, 7, },
-		//				{ 2, 3, 3, 6, NA, NA, NA, NA, 7, NA, }
-		//		};
-		//		int matriz[][] = new int[][] {
-		//				{ 0, 2, 4, NA, 3 },
-		//				{ 2, 0, 8, NA, 1 },
-		//				{ 6, 2, 0, 4, 3 },
-		//				{ 1, NA, NA, 0, 5 },
-		//				{ NA, NA, NA, 1, 0 }
-		//		};
-		GrafoPonderado grafo = new GrafoPonderado( 5, true );
-		/* Vértice 1 */
-		grafo.addAresta( 1, 2, 2 );
-		grafo.addAresta( 1, 3, 4 );
-		grafo.addAresta( 1, 5, 3 );
-		/* Vértice 2 */
-		grafo.addAresta( 2, 1, 2 );
-		grafo.addAresta( 2, 3, 8 );
-		grafo.addAresta( 2, 5, 1 );
-		/* Vértice 3 */
-		grafo.addAresta( 3, 1, 6 );
-		grafo.addAresta( 3, 2, 2 );
-		grafo.addAresta( 3, 4, 4 );
-		grafo.addAresta( 3, 5, 3 );
-		/* Vértice 4 */
-		grafo.addAresta( 4, 1, 1 );
-		grafo.addAresta( 4, 5, 5 );
-		/* Vértice 5 */
-		grafo.addAresta( 5, 4, 1 );
+		/* Definição da matriz de adjacência */
+		int matriz[][] = new int[][] {
+				{ NA, 5, NA, NA, NA, 8, NA, NA, NA, 2, },
+				{ 5, NA, -1, NA, NA, 3, NA, NA, NA, 3, },
+				{ NA, -1, NA, -1, NA, 3, 3, 2, 3, 3, },
+				{ NA, NA, -1, NA, 8, 1, 7, 4, 1, 6, },
+				{ NA, NA, NA, 8, NA, NA, 9, NA, 4, NA, },
+				{ 8, 3, 3, 1, NA, NA, 4, -1, NA, NA, },
+				{ NA, NA, 3, 7, 9, 4, NA, -4, 6, NA, },
+				{ NA, NA, 2, 4, NA, -1, -4, NA, NA, NA, },
+				{ NA, NA, 3, 1, 4, NA, 6, NA, NA, 7, },
+				{ 2, 3, 3, 6, NA, NA, NA, NA, 7, NA }
+		};
+		/* Criação do grafo */
+		GrafoPonderado grafo = new GrafoPonderado( matriz, false );
+		/* Gerar a matriz de menores distâncias utilizando o algoritmo de Floyd-Warshall */
 		return FloydWarshall.Companion.buscar( grafo );
 	}
 }
@@ -348,7 +328,7 @@ class Questao3 {
 	 */
 	Questao3() {
 		/* Definição do painel raiz */
-		rootPanel = new JPanel( new MigLayout() );
+		rootPanel = new JPanel( new MigLayout( "wrap 1" ) );
 		/* Criar e Definir componentes gráficos */
 		criarComponentes();
 	}
@@ -357,6 +337,105 @@ class Questao3 {
 	 * Criar componentes.
 	 */
 	private void criarComponentes() {
+		/* Nomes das colunas utilizadas nas tabelas */
+		String[] colunas;
+		/* Dados contidos nas tabelas */
+		String[][] dados;
+		/* Título */
+		JLabel titulo = new JLabel( "Questão 3. MST utilizando Kruskal" );
+		titulo.setFont( InterfacesGraficas.h1 );
+		/* Label 1 */
+		JLabel label1 = new JLabel( "Grafo 1" );
+		label1.setFont( InterfacesGraficas.h2 );
+		/* Label 2 */
+		JLabel label2 = new JLabel( "Grafo 2" );
+		label2.setFont( InterfacesGraficas.h2 );
+		/* Adicionar Componentes ao Painel */
+		/* Título */
+		rootPanel.add( titulo, "align center" );
+		/* Label 1 */
+		rootPanel.add( label1, "align center" );
+		/* Tabela 1 */
+		dados = InterfacesGraficas.replaceInfinity( primeiroGrafo().getTreeAsString() );
+		colunas = new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
+		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		/* Label 2 */
+		rootPanel.add( label2, "align center" );
+		/* Tabela 2 */
+		dados = InterfacesGraficas.replaceInfinity( segundoGrafo().getTreeAsString() );
+		colunas = new String[] { "1", "2", "3", "4", "6", "7", "8" };
+		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+	}
 	
+	/**
+	 * Primeiro grafo mst.
+	 *
+	 * @return the mst
+	 */
+	private MST primeiroGrafo() {
+		/* Definição do grafo */
+		GrafoPonderado grafo = new GrafoPonderado( 10, false );
+		/* Adição das Arestas */
+		/* Vértice a */
+		grafo.addAresta( 1, 2, 60 );
+		grafo.addAresta( 1, 3, 54 );
+		grafo.addAresta( 1, 4, 42 );
+		/* Vértice b */
+		grafo.addAresta( 2, 4, 71 );
+		grafo.addAresta( 2, 6, 29 );
+		/* Vértice c */
+		grafo.addAresta( 3, 4, 56 );
+		grafo.addAresta( 3, 5, 67 );
+		/* Vértice d */
+		grafo.addAresta( 4, 5, 26 );
+		grafo.addAresta( 4, 6, 52 );
+		grafo.addAresta( 4, 7, 87 );
+		/* Vértice e */
+		grafo.addAresta( 5, 7, 70 );
+		grafo.addAresta( 5, 9, 73 );
+		/* Vértice f */
+		grafo.addAresta( 6, 7, 20 );
+		grafo.addAresta( 6, 8, 25 );
+		/* Vértice g */
+		grafo.addAresta( 7, 8, 36 );
+		grafo.addAresta( 7, 9, 59 );
+		grafo.addAresta( 7, 10, 32 );
+		/* Vértice h */
+		grafo.addAresta( 8, 10, 25 );
+		/* Vértice i */
+		grafo.addAresta( 9, 10, 26 );
+		/* Gerar MST utilizando o algoritmo de Kruskal */
+		return Kruskal.Companion.gerar( grafo );
+	}
+	
+	/**
+	 * Segundo grafo mst.
+	 *
+	 * @return the mst
+	 */
+	private MST segundoGrafo() {
+		/* Criação do grafo */
+		GrafoPonderado grafo = new GrafoPonderado( 7, false );
+		/* Adição das arestas */
+		/* Vértice 1 */
+		grafo.addAresta( 1, 2, 2 );
+		grafo.addAresta( 1, 3, 4 );
+		grafo.addAresta( 1, 4, 5 );
+		/* Vértice 2 */
+		grafo.addAresta( 2, 4, 2 );
+		grafo.addAresta( 2, 5, 7 );
+		/* Vértice 3 */
+		grafo.addAresta( 3, 4, 1 );
+		grafo.addAresta( 3, 6, 4 );
+		/* Vértice 4 */
+		grafo.addAresta( 4, 5, 2 );
+		grafo.addAresta( 4, 6, 3 );
+		/* Vértice 6 */
+		grafo.addAresta( 5, 6, 1 );
+		grafo.addAresta( 5, 7, 4 );
+		/* Vértice 7 */
+		grafo.addAresta( 6, 7, 7 );
+		/* Gerar MST utilizando o algoritmo de Kruskal */
+		return Kruskal.Companion.gerar( grafo );
 	}
 }

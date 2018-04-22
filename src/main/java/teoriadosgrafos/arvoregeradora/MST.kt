@@ -37,21 +37,6 @@ class MST(val tamanho: Int) {
 	}
 	
 	/**
-	 * Substitui um valor representando nulo na árvore por outro
-	 * @param oldPlaceholder Int -- O valor antigo
-	 * @param newPlaceholder Int -- O valor novo
-	 */
-	fun replacePlaceholder(oldPlaceholder: Int, newPlaceholder: Int) {
-		for (i in 0 until tree.size) {
-			for (j in 0 until tree[0].size) {
-				if (tree[i][j] == oldPlaceholder) {
-					tree[i][j] = newPlaceholder
-				}
-			}
-		}
-	}
-	
-	/**
 	 * Imprimir a árvore
 	 * @param out PrintStream -- A saída onde será impressa a árvore
 	 */
@@ -120,7 +105,7 @@ class MST(val tamanho: Int) {
 	 */
 	fun getTreeAsString(): Array<Array<String>> {
 		/* Criar matriz */
-		val stringTree = Array<Array<String>>(tamanho) { Array(tamanho) { "" } }
+		val stringTree = Array(tamanho) { Array(tamanho) { "" } }
 		
 		for (i in 0 until tamanho) {
 			for (j in 0 until tamanho) {

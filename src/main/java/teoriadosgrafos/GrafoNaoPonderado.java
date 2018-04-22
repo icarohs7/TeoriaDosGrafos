@@ -10,9 +10,16 @@ import teoriadosgrafos.metodosdebusca.naoponderado.BuscaEmProfundidade;
 /**
  * Classe representando um grafo não ponderado e suas operações
  *
- * @author Icaro D. Temponi
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
 public class GrafoNaoPonderado extends Grafo {
+	/**
+	 * Instantiates a new Grafo nao ponderado.
+	 *
+	 * @param matrizDeAdjacencia matriz de adjacencia
+	 *
+	 * @throws CaminhoNaoEncontradoException caminho nao encontrado exception
+	 */
 	public GrafoNaoPonderado( int[][] matrizDeAdjacencia ) throws CaminhoNaoEncontradoException {
 		this( matrizDeAdjacencia, false );
 	}
@@ -26,6 +33,7 @@ public class GrafoNaoPonderado extends Grafo {
 	 *
 	 * @throws CaminhoNaoEncontradoException Lança uma exceção caso o destino seja inalcançável apartir da origem
 	 */
+	@SuppressWarnings( "WeakerAccess" )
 	public GrafoNaoPonderado( int[][] matrizDeAdjacencia, boolean direcionado ) throws CaminhoNaoEncontradoException {
 		super( matrizDeAdjacencia, direcionado );
 		
@@ -51,6 +59,8 @@ public class GrafoNaoPonderado extends Grafo {
 	 * @throws CaminhoNaoEncontradoException Lança uma exceção caso o destino seja inalcançável apartir da origem
 	 */
 	public Queue buscar( int origem, int destino, MetodoDeBusca metodo ) throws CaminhoNaoEncontradoException {
+		/* Definir abordagem de busca baseando-se no método
+		 * informado pelo usuáro */
 		switch ( metodo ) {
 			case LARGURA:
 				return BuscaEmLargura.buscar( origem, destino, this );
@@ -97,8 +107,17 @@ public class GrafoNaoPonderado extends Grafo {
 		return conexoes;
 	}
 	
+	/**
+	 * The enum Metodo de busca.
+	 */
 	//Enumeração dos tipos de busca
 	public enum MetodoDeBusca {
-		LARGURA, PROFUNDIDADE
+		/**
+		 * Largura metodo de busca.
+		 */
+		LARGURA, /**
+		 * Profundidade metodo de busca.
+		 */
+		PROFUNDIDADE
 	}
 }

@@ -4,6 +4,8 @@ import java.util.Objects;
 
 /**
  * Classe representando a aresta de um grafo
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
 public class Aresta {
 	/**
@@ -60,13 +62,14 @@ public class Aresta {
 	}
 	
 	/**
-	 * To string da aresta
+	 * Hash code int.
 	 *
-	 * @return Aresta em formato string
+	 * @return the int
 	 */
 	@Override
-	public String toString() {
-		return "Aresta(" + origem + "," + destino + ") = " + peso;
+	public int hashCode() {
+		
+		return Objects.hash( origem, destino, peso );
 	}
 	
 	/**
@@ -92,13 +95,12 @@ public class Aresta {
 	}
 	
 	/**
-	 * Hash code int.
+	 * To string da aresta
 	 *
-	 * @return the int
+	 * @return Aresta em formato string
 	 */
 	@Override
-	public int hashCode() {
-		
-		return Objects.hash( origem, destino, peso );
+	public String toString() {
+		return "Aresta(" + origem + "," + destino + ") = " + peso;
 	}
 }

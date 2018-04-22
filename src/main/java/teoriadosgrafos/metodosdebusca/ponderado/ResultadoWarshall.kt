@@ -1,5 +1,6 @@
 package teoriadosgrafos.metodosdebusca.ponderado
 
+import java.io.PrintStream
 import java.util.Arrays
 
 /**
@@ -7,15 +8,17 @@ import java.util.Arrays
  * @property distancias Array -- A matriz contendo as menores distâncias
  * @property proximos Array -- A matriz indicando os próximos elementos
  * @constructor
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
-data class ResultadoWarshall(val distancias: Array<Array<Int>>, val proximos: Array<Array<Int>>) : Buscavel {
+data class ResultadoWarshall(private val distancias: Array<Array<Int>>, private val proximos: Array<Array<Int>>) {
 	/**
 	 * Retorna o menor caminho saindo da origem geradora do resultado atual em direção ao destino informado
 	 * @param origem Int -- O vértice origem
 	 * @param destino Int -- O vértice que se deseja alcançar apartir da origem
 	 * @return List<Int> -- O menor caminho partindo da origem ao destino
 	 */
-	override fun buscar(origem: Int, destino: Int): List<Int> {
+	fun buscar(origem: Int, destino: Int): List<Int> {
 		val o = origem - 1
 		val d = destino - 1
 		if (proximos[o][d] == -1) {
@@ -37,7 +40,7 @@ data class ResultadoWarshall(val distancias: Array<Array<Int>>, val proximos: Ar
 	 */
 	fun getDistanciasAsStringArray(): Array<Array<String>> {
 		/* Criar a matriz de strings */
-		val stringArray = Array<Array<String>>(distancias.size) { Array<String>(distancias.size) { "" } }
+		val stringArray = Array(distancias.size) { Array(distancias.size) { "" } }
 		
 		for (i in 0 until distancias.size) {
 			for (j in 0 until distancias.size) {
@@ -75,6 +78,29 @@ data class ResultadoWarshall(val distancias: Array<Array<Int>>, val proximos: Ar
 		var result = Arrays.hashCode(distancias)
 		result = 31 * result + Arrays.hashCode(proximos)
 		return result
+	}
+	
+	
+	/**
+	 * Imprimir a matriz de distâncias
+	 * @param out PrintStream -- A saída onde será impressa a matriz
+	 */
+	@Suppress("MemberVisibilityCanBePrivate")
+	fun printDistancias(out: PrintStream) {
+		distancias.forEach { linha ->
+			linha.forEach { elem ->
+				out.print("$elem ")
+			}
+			out.println()
+		}
+	}
+	
+	/**
+	 * Imprimir a matriz de distâncias no console
+	 */
+	@Suppress("unused")
+	fun printDistancias() {
+		printDistancias(System.out)
 	}
 	
 }

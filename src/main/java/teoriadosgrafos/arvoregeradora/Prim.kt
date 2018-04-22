@@ -6,6 +6,8 @@ import teoriadosgrafos.GrafoPonderado
 
 /**
  * Classe representando o método gerador de árvore de custo mínimo Prim
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
 abstract class Prim {
 	companion object {
@@ -14,21 +16,24 @@ abstract class Prim {
 			grafo.inicializar()
 			/* Quantidade de vértices */
 			val tamanho = grafo.matrizDeAdjacencia.size
-			/* Criar MST que conterá o resultado */
+			/* Criar MST que conterá o resultado, com suas arestas representando T */
 			val mst = MST(tamanho)
-			/* Array contendo os vértices visitados */
+			/* Array contendo os vértices visitados, representando V */
 			val visitados = grafo.visitados
-			/* Lista que irá controlar a iteração, inicializar com o primeiro vértice do grafo */
+			/* Lista que irá controlar a iteração, inicializar com o primeiro vértice do grafo,
+			 * representando B */
 			val b = mutableListOf(0)
-			/* Marcar */
+			/* Marcar o primeiro vértice*/
 			visitados[b[0]] = true
-			/* Laço que gerará a árvore */
+			/* Laço que gerará a árvore:
+			 * Que durará enquanto B não conter todos os vértices */
 			while (b.size < tamanho) {
-				/* (u,v) = aresta de menor peso tal que u pertence a V-B e v pertence a B */
+				/* (u,v) = aresta de menor peso tal que u pertence a V-B e v pertence a B,
+				 * V-B Representa pertencer a V sem pertencer a B */
 				val menorAresta = menorPeso(grafo, b)
 				/* Tratamento de erros */
 				if (menorAresta.peso == Grafo.INFINITO) {
-					break
+					throw RuntimeException("O grafo não contém arestas suficientes para gerar uma MST")
 				}
 				/* T = T união {(u,v)} */
 				mst.addAresta(menorAresta)
@@ -58,6 +63,9 @@ abstract class Prim {
 			/* A matriz de pesos */
 			val w = grafo.matrizDeAdjacencia
 			
+			/* Para cada aresta concreta ou não dentro do grafo,
+			 * Com V representando os Vértices abertos
+		     * E B representando a lista de vértices já conectados à árvore*/
 			for (u in 0 until visitados.size) {
 				for (v in 0 until visitados.size) {
 					/* Para cada aresta, pegar a que tem menor peso que a menor registrada */

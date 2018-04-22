@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Classe representando um grafo e suas operações
  *
- * @author Icaro D. Temponi
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
 public abstract class Grafo {
 	/**
@@ -44,7 +44,7 @@ public abstract class Grafo {
 	/**
 	 * Retorna a matriz de adjacência do grafo instanciado
 	 *
-	 * @return um array bidimensional de valores inteiros referentes à 		adjacencia vértice x vértice
+	 * @return um array bidimensional de valores inteiros referentes à adjacencia vértice x vértice
 	 */
 	public int[][] getMatrizDeAdjacencia() {
 		return matrizDeAdjacencia;
@@ -55,6 +55,7 @@ public abstract class Grafo {
 	 *
 	 * @return the string [ ] [ ]
 	 */
+	@SuppressWarnings( "unused" )
 	public String[][] getMatrizDeAdjacenciaAsString() {
 		/* Matriz que conterá a conversão da matriz de adjacência para uma matriz de strings */
 		String[][] matrizDeAdjacenciaString = new String[matrizDeAdjacencia.length][matrizDeAdjacencia[0].length];
@@ -111,6 +112,7 @@ public abstract class Grafo {
 				}
 			}
 		}
+		/* Por fim, retornar a lista de arestas */
 		return arestas;
 	}
 	
@@ -122,27 +124,33 @@ public abstract class Grafo {
 	public boolean existeAberto() {
 		for ( boolean vertice : visitados ) {
 			if ( !vertice ) {
+				/* Passa por todos os vértices e retorna verdadeiro
+				 * no primeiro vértice aberto encontrado */
 				return true;
 			}
 		}
+		/* Retorna falso se não há vértice aberto */
 		return false;
 	}
 	
 	/**
 	 * Retorna uma lista contendo os vizinhos abertos do vértice informado
 	 *
-	 * @param vertice       O vértice do qual se deseja obter os vizinhos
-	 * @param naoAdjacencia O valor utilizado para marcar um vértice como não adjacente a outro
+	 * @param vertice O vértice do qual se deseja obter os vizinhos
 	 *
 	 * @return Uma lista contendo os vizinhos abertos do vértice informado
 	 */
-	public LinkedList<Integer> getVizinhos( int vertice, int naoAdjacencia ) {
+	public LinkedList<Integer> getVizinhos( int vertice ) {
+		/* Criar lista de vizinhos */
 		LinkedList<Integer> vizinhos = new LinkedList<>();
 		for ( int i = 0; i < matrizDeAdjacencia.length; i++ ) {
-			if ( matrizDeAdjacencia[vertice][i] != naoAdjacencia ) {
+			if ( matrizDeAdjacencia[vertice][i] != INFINITO ) {
+				/* Passando por elemento da matriz de adjacência,
+				 * adicionar os vizinhos à lista */
 				vizinhos.add( i );
 			}
 		}
+		/* Por fim, retornar os vizinhos */
 		return vizinhos;
 	}
 	
@@ -151,11 +159,12 @@ public abstract class Grafo {
 	 *
 	 * @param out the out
 	 */
+	@SuppressWarnings( "unused" )
 	public void printMatriz( PrintStream out ) {
-		for ( int u = 0; u < matrizDeAdjacencia.length; u++ ) {
-			for ( int v = 0; v < matrizDeAdjacencia[0].length; v++ ) {
+		for ( int[] linha : matrizDeAdjacencia ) {
+			for ( int v : linha ) {
 				/* Para cada aresta, imprimi-la, mesmo as não existentes */
-				out.print( matrizDeAdjacencia[u][v] + " " );
+				out.print( v + " " );
 			}
 			/* Ao fim de cada linha da matriz, quebrar a linha na impressão */
 			out.println();
@@ -167,6 +176,7 @@ public abstract class Grafo {
 	 *
 	 * @param out the out
 	 */
+	@SuppressWarnings( "unused" )
 	public void printArestas( PrintStream out ) {
 		for ( int u = 0; u < matrizDeAdjacencia.length; u++ ) {
 			for ( int v = 0; v < matrizDeAdjacencia[0].length; v++ ) {

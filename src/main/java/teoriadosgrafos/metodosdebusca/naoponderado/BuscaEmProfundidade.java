@@ -6,6 +6,12 @@ import java.util.Stack;
 import teoriadosgrafos.Grafo;
 import teoriadosgrafos.excecoes.CaminhoNaoEncontradoException;
 
+/**
+ * Classe representando o algoritmo de busca em profundidade
+ * dentro de um grafo não ponderado
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
+ */
 public abstract class BuscaEmProfundidade {
 	
 	/**
@@ -48,6 +54,7 @@ public abstract class BuscaEmProfundidade {
 	 *
 	 * @param origem           O nó a partir do qual a busca será iniciada
 	 * @param destino          O nó que se deseja encontrar partindo da origem
+	 * @param grafo            the grafo
 	 * @param caminhoInvertido Pilha utilizada para armazenar o caminho
 	 *
 	 * @return Verdadeiro se o caminho for encontrado e Falso caso contrário

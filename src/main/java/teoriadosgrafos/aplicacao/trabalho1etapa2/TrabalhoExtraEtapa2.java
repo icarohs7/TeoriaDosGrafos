@@ -14,30 +14,68 @@ import javax.swing.JTable;
 
 import teoriadosgrafos.Grafo;
 import teoriadosgrafos.GrafoPonderado;
+import teoriadosgrafos.metodosdebusca.ponderado.BellmanFord;
 import teoriadosgrafos.metodosdebusca.ponderado.ResultadoPonderado;
 
+/**
+ * Trabalho Extra, Etapa 2, Teoria dos Grafos
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
+ */
 public class TrabalhoExtraEtapa2 {
+	/**
+	 * Root.
+	 */
 	private JPanel root;
+	/**
+	 * Lbl 1.
+	 */
 	private JLabel lbl1;
+	/**
+	 * Tbl distancias.
+	 */
 	private JTable tblDistancias;
+	/**
+	 * Lbl 2.
+	 */
 	private JLabel lbl2;
+	/**
+	 * Tbl predecessores.
+	 */
 	private JTable tblPredecessores;
+	/**
+	 * Lbl res.
+	 */
 	private JLabel lblRes;
+	/**
+	 * Lbl 13.
+	 */
 	private JLabel lbl13;
+	/**
+	 * Resultado.
+	 */
 	private ResultadoPonderado resultado;
 	
+	/**
+	 * The entry point of application.
+	 *
+	 * @param args the input arguments
+	 */
 	public static void main( String[] args ) {
 		TrabalhoExtraEtapa2 app = new TrabalhoExtraEtapa2();
-		JFrame frame = new JFrame( "Trabalho1Etapa1" );
+		JFrame frame = new JFrame( "TrabalhoExtraEtapa2" );
 		frame.setContentPane( app.root );
 		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 		frame.pack();
 		frame.setVisible( true );
 		frame.setLocationRelativeTo( null );
 		frame.setSize( 400, 250 );
-		app.lblRes.setText( app.resultado.buscar( 1, 12 ).toString() );
+		app.lblRes.setText( app.resultado.buscar( 12 ).toString() );
 	}
 	
+	/**
+	 * Create ui components.
+	 */
 	private void createUIComponents() {
 		int NA = Grafo.INFINITO;
 		int matriz[][] = new int[][] {
@@ -58,7 +96,7 @@ public class TrabalhoExtraEtapa2 {
 		GrafoPonderado grafo = new GrafoPonderado( matriz, true );
 		
 		//Destino ignorado utilizando o algoritmo de Dijkstra
-		resultado = (ResultadoPonderado) grafo.buscar( 1, GrafoPonderado.MetodoDeBusca.BELLMAN_FORD );
+		resultado = BellmanFord.Companion.buscar( 1, grafo );
 		//Definição dos dados a serem inseridos na tabela de distâncias
 		Object[] colunas = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m" };
 		Object[] distancias = new Object[matriz.length];

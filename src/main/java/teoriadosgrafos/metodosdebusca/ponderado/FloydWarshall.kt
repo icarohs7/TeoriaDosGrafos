@@ -3,6 +3,12 @@ package teoriadosgrafos.metodosdebusca.ponderado
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
 
+/**
+ * Representação do algoritmo de busca
+ * de menor caminho de Floyd-Warshall em um grafo ponderado
+ *
+ * * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
+ */
 class FloydWarshall {
 	companion object {
 		fun buscar(grafo: GrafoPonderado): ResultadoWarshall {
@@ -11,15 +17,19 @@ class FloydWarshall {
 			/* Pesos */
 			val w = grafo.matrizDeAdjacencia
 			/* Criar e Inicializar as matrizes de distâncias e próximos */
-			val d = Array<Array<Int>>(tamanho) { Array<Int>(tamanho) { Grafo.INFINITO } }
-			val prox = Array<Array<Int>>(tamanho) { Array<Int>(tamanho) { -1 } }
-			/* Definir os valores iniciais das distâncias */
+			val d = Array(tamanho) { Array(tamanho) { Grafo.INFINITO } }
+			val prox = Array(tamanho) { Array(tamanho) { -1 } }
+			/* Processo de inicialização */
 			for (u in 0 until tamanho) {
 				for (v in 0 until tamanho) {
+					/* Para cada aresta (u,v) definir
+					 * dist[u][v] para w[u][v] */
 					if (w[u][v] != Grafo.INFINITO) {
 						d[u][v] = w[u][v]
 						prox[u][v] = v
 					}
+					/* Para cada vértice v definir
+					 * dist[v][v] para 0 */
 					if (u == v) {
 						d[u][v] = 0
 					}
@@ -27,12 +37,19 @@ class FloydWarshall {
 			}
 			
 			/* Executar a busca */
-			for (u in 0 until d.size) {
-				for (s in 0 until d.size) {
-					for (v in 0 until d.size) {
-						if (d[s][u] + w[u][v] < d[s][v]) {
-							d[s][v] = d[s][u] + w[u][v]
-							prox[s][v] = u
+			/* K representa a definição da distância mínima partindo de cada vértice para todos os outros */
+			for (k in 0 until tamanho) {
+				for (i in 0 until tamanho) {
+					for (j in 0 until tamanho) {
+						/* Para cada distância de I para J, se a mesma for
+						 * maior que a distância de I para K somada à distância
+						 * de K para J, tornar a distância de I para J para a distância
+						 * de I para K somada à distância de K para J, sendo K o vértice
+						 * entre eles e fazendo o próximo de I para J ser o próximo de
+						 * I para K*/
+						if (d[i][j] > d[i][k] + d[k][j]) {
+							d[i][j] = d[i][k] + d[k][j]
+							prox[i][j] = prox[i][k]
 						}
 					}
 				}

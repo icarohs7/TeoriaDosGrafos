@@ -1,9 +1,14 @@
 package teoriadosgrafos.metodosdebusca.ponderado
 
-import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
 import teoriadosgrafos.excecoes.CicloNegativoException
 
+/**
+ * Classe representando o algoritmo de custo
+ * mínimo de Bellman-Ford em um grafo ponderado
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
+ */
 abstract class BellmanFord {
 	companion object {
 		fun buscar(origem: Int, grafo: GrafoPonderado): ResultadoPonderado {
@@ -17,11 +22,14 @@ abstract class BellmanFord {
 			/* Enquanto existirem vértices abertos */
 			while (grafo.existeAberto()) {
 				/* u Recebe o vértice aberto mais próximo à origem */
-				val u = grafo.menorDistancia(origem)
+				val u = grafo.menorDistancia()
+				/* Fechar o vértice u */
 				grafo.visitados[u] = true
 				/* Relaxar todos os vizinhos abertos de u */
-				grafo.getVizinhos(u, Grafo.INFINITO).forEach { v ->
+				grafo.getVizinhos(u).forEach { v ->
 					val alternativo = d[u] + grafo.matrizDeAdjacencia[u][v]
+					/* Se a distância da aresta E(u,v) somada à distância
+					 * d(s,u) for menor que a distância d(s,v), alterar a última */
 					if (alternativo < d[v]) {
 						d[v] = alternativo
 						p[v] = u

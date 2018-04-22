@@ -2,102 +2,92 @@ package teoriadosgrafos.arvoregeradora
 
 import teoriadosgrafos.GrafoPonderado
 
+/**
+ * Classe representandoo algoritmo para da
+ * Árvore Geradora de Custo Mínimo
+ * de Kruskal
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
+ */
 abstract class Kruskal {
 	companion object {
 		fun gerar(grafo: GrafoPonderado): MST {
+			/* Variável contendo a matriz de adjacência */
 			val w = grafo.matrizDeAdjacencia
 			/* Criar a árvore geradora */
 			val mst = MST(w.size)
 			/* Criar lista de subconjuntos */
-			val subsets = Array(w.size) { SubConjunto(0, 0) }
-			/* Definir subconjuntos iniciais */
+			val conjuntos = mutableSetOf<SubConjunto>()
+			/* Definir conjuntos iniciais */
 			for (i in 0 until w.size) {
-				subsets[i].parent = i
-				subsets[i].rank = 0
+				conjuntos.add(SubConjunto(i, mutableSetOf(i)))
 			}
 			/* Arestas contidas no grafo */
 			val arestas = grafo.arestas
 					.sortedBy { aresta -> aresta.peso }
 					.toMutableList()
 			
-			var i = 0
-			/* Número de arestas a serem utilizadas é igual a V-1 */
-			while (i < w.size) {
-				/* Pegar a menor aresta */
-				val proxAresta = arestas.removeAt(0)
-				i++
+			/* Para cada aresta dentro do grafo */
+			arestas.forEach { aresta ->
+				/* X recebe o conjunto em que o vértice de origem da aresta se encontra */
+				val x = find(conjuntos, aresta.origem)
+				/* Y recebe o conjunto em que o vértice de destino da aresta se encontra */
+				val y = find(conjuntos, aresta.destino)
 				
-				val x = find(subsets, proxAresta.origem)
-				val y = find(subsets, proxAresta.destino)
-				
-				/* Se as arestas não pertencerem ao mesmo ciclo,
-				 * inclui-las no resultado */
+				/* Se os vértices não pertencerem ao mesmo conjunto,
+				 * Uni-los e adicionar a aresta à Árvore Geradora de Custo Mínimo */
 				if (x != y) {
-					mst.addAresta(proxAresta)
-					union(subsets, x, y)
+					mst.addAresta(aresta)
+					union(conjuntos, x, y)
 				}
 			}
 			
+			/* Por fim, retornar a árvore */
 			return mst
 		}
 		
-		/**
-		 * Função auxiliar utilizada para executar funções repetidas
-		 * @param repetitions Int -- Quantas vezes uma ação vai se repetir
-		 * @param func Function0<Unit> -- A função que será repetida
-		 */
-		fun exec(repetitions: Int, func: () -> Unit) {
-			for (i in 0 until repetitions) {
-				func()
-			}
-		}
 		
 		/**
 		 * Encontrar o subconjunto de um elemento
-		 * @param subsets Array<subConjunto> -- A lista de subconjuntos
+		 * @param conjuntos Array<subConjunto> -- A lista de subconjuntos
 		 * @param i Int -- O elemento a ser encontrado
 		 * @return Int -- O índice do subconjunto ao qual o elemento pertence
 		 */
-		fun find(subsets: Array<SubConjunto>, i: Int): Int {
-			// find root and make root as parent of i (path compression)
-			if (subsets[i].parent != i)
-				subsets[i].parent = find(subsets, subsets[i].parent)
-			
-			return subsets[i].parent
+		private fun find(conjuntos: MutableSet<SubConjunto>, i: Int): SubConjunto {
+			conjuntos.forEach { conjunto ->
+				/* Passar por todos os conjuntos e retornar aquele
+				 * que contem o elemento I */
+				if (conjunto.members.contains(i)) {
+					return conjunto
+				}
+			}
+			/* Caso haja algum erro e o elemento não pertencer a nenhum conjunto,
+			 * retornar */
+			throw RuntimeException("Elemento não pertence a nenhum conjunto")
 		}
 		
 		/**
-		 * Realiza a união de dois conjuntos x e y
-		 * @param subsets Array<SubConjunto> -- A lista de subconjuntos
-		 * @param x Int -- O índice do primeiro conjunto
-		 * @param y Int -- O índice do segundo conjunto
+		 * Realiza a união de dois conjuntos U e V
+		 * @param conjuntos MutableSet<SubConjunto> -- A lista contendo todos os conjuntos
+		 * @param u SubConjunto -- O primeiro conjunto
+		 * @param v SubConjunto -- O segundo conjunto
 		 */
-		fun union(subsets: Array<SubConjunto>, x: Int, y: Int) {
-			val xroot = find(subsets, x)
-			val yroot = find(subsets, y)
-			
-			// Attach smaller rank tree under root of high rank tree
-			// (union by Rank)
-			if (subsets[xroot].rank < subsets[yroot].rank) {
-				subsets[xroot].parent = yroot
-			} else if (subsets[xroot].rank > subsets[yroot].rank) {
-				subsets[yroot].parent = xroot
+		private fun union(conjuntos: MutableSet<SubConjunto>, u: SubConjunto, v: SubConjunto) {
+			/* Unir os conjuntos */
+			v.members.forEach { membro ->
+				/* Adicionar cada membro de V a U */
+				u.members.add(membro)
 			}
-			// If ranks are same, then make one as root and increment
-			// its rank by one
-			else {
-				subsets[yroot].parent = xroot
-				subsets[xroot].rank++
-			}
+			/* Apagar V */
+			conjuntos.remove(v)
 		}
 		
 		/**
 		 * Classe representando um subconjunto
-		 * @property parent Int
-		 * @property rank Int
+		 * @property id Int -- O identificador do subconjunto
+		 * @property members MutableSet<Int> -- Os membros do conjunto
 		 * @constructor
 		 */
-		data class SubConjunto(var parent: Int, var rank: Int)
+		data class SubConjunto(var id: Int, val members: MutableSet<Int>)
 	}
-	
 }

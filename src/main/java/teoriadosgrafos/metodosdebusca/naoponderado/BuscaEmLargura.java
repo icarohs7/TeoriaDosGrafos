@@ -6,6 +6,12 @@ import java.util.Stack;
 import teoriadosgrafos.GrafoNaoPonderado;
 import teoriadosgrafos.excecoes.CaminhoNaoEncontradoException;
 
+/**
+ * Classe representando o algoritmo de busca em largura em um grafo
+ * não ponderado
+ *
+ * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
+ */
 public abstract class BuscaEmLargura {
 	/**
 	 * Executa uma busca em largura no grafo
@@ -54,8 +60,8 @@ public abstract class BuscaEmLargura {
 	 * @param origem           O nó a partir do qual a busca será iniciada
 	 * @param destino          O nó que se deseja encontrar partindo da origem
 	 * @param grafo            O grafo no qual a busca será executada
-	 * @param proximosVertices Fila utilizada para armazenar os próximos
-	 *                         vértices a serem visitados
+	 * @param proximosVertices Fila utilizada para armazenar os próximos                         vértices a serem
+	 *                         visitados
 	 * @param caminhoInvertido Pilha utilizada para armazenar o caminho
 	 *
 	 * @return Verdadeiro se o caminho for encontrado e Falso caso contrário
