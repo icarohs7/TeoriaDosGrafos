@@ -60,8 +60,8 @@ public class EditableTableModel extends javax.swing.table.AbstractTableModel {
 	/**
 	 * Retorna o valor contido na célula selecionada
 	 *
-	 * @param row    Índice da linha da célula a ser selecionada, de 0 a n
-	 * @param column Índice da coluna da célula a ser selecionada, de 0 a n
+	 * @param row    Indice da linha da célula a ser selecionada, de 0 a n
+	 * @param column Indice da coluna da célula a ser selecionada, de 0 a n
 	 *
 	 * @return O conteúdo da célula selecionada
 	 */
@@ -73,7 +73,7 @@ public class EditableTableModel extends javax.swing.table.AbstractTableModel {
 	/**
 	 * Retorna o nome da coluna selecionada
 	 *
-	 * @param column Índice da coluna que se deseja obter o nome, de 0 a n
+	 * @param column Indice da coluna que se deseja obter o nome, de 0 a n
 	 *
 	 * @return O nome da coluna indicada
 	 */
@@ -85,8 +85,8 @@ public class EditableTableModel extends javax.swing.table.AbstractTableModel {
 	/**
 	 * Retorna se a célula indicada é ou não editável
 	 *
-	 * @param row    Índice da linha da célula a ser selecionada, de 0 a n
-	 * @param column Índice da coluna da célula a ser selecionada, de 0 a n
+	 * @param row    Indice da linha da célula a ser selecionada, de 0 a n
+	 * @param column Indice da coluna da célula a ser selecionada, de 0 a n
 	 *
 	 * @return Se a célula é ou não editável
 	 */
@@ -99,9 +99,8 @@ public class EditableTableModel extends javax.swing.table.AbstractTableModel {
 	 * Edita uma célula da tabela
 	 *
 	 * @param value  O conteúdo que se deseja inserir na célula
-	 * @param row    Índice da linha onde a célula desejada se encontra, de 0 a n
-	 * @param column Índice da coluna onde a célula desejada se encontra, de 0 a
-	 *               n
+	 * @param row    Indice da linha onde a célula desejada se encontra, de 0 a n
+	 * @param column Indice da coluna onde a célula desejada se encontra, de 0 a n
 	 */
 	@Override
 	public void setValueAt( Object value, int row, int column ) {
