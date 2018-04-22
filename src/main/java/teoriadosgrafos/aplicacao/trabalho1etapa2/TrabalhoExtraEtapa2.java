@@ -96,7 +96,7 @@ public class TrabalhoExtraEtapa2 {
 		GrafoPonderado grafo = new GrafoPonderado( matriz, true );
 		
 		//Destino ignorado utilizando o algoritmo de Dijkstra
-		resultado = BellmanFord.Companion.buscar( 1, grafo );
+		resultado = BellmanFord.INSTANCE.buscar( 1, grafo );
 		//Definição dos dados a serem inseridos na tabela de distâncias
 		Object[] colunas = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m" };
 		Object[] distancias = new Object[matriz.length];

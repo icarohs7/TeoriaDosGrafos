@@ -126,7 +126,7 @@ class Questao1 {
 		/* Criação do grafo */
 		GrafoPonderado grafo = new GrafoPonderado( matriz, false );
 		/* Gerar a matriz de menores distâncias utilizando o algoritmo de Floyd-Warshall */
-		return FloydWarshall.Companion.buscar( grafo );
+		return FloydWarshall.INSTANCE.buscar( grafo );
 	}
 }
 
@@ -220,7 +220,7 @@ class Questao2 {
 		/* Vértice 5 */
 		grafo.addAresta( 5, 6, 2 );
 		/* Gerar MST */
-		return Prim.Companion.gerar( grafo );
+		return Prim.INSTANCE.gerar( grafo );
 	}
 	
 	/**
@@ -260,7 +260,7 @@ class Questao2 {
 		/* Vértice 9 */
 		grafo.addAresta( 9, 10, 4 );
 		/* Gerar MST */
-		return Prim.Companion.gerar( grafo );
+		return Prim.INSTANCE.gerar( grafo );
 	}
 	
 	/**
@@ -310,7 +310,7 @@ class Questao2 {
 		/* Vértice l */
 		grafo.addAresta( 12, 13, 3 );
 		/* Gerar MST */
-		return Prim.Companion.gerar( grafo );
+		return Prim.INSTANCE.gerar( grafo );
 	}
 }
 
@@ -405,7 +405,7 @@ class Questao3 {
 		/* Vértice i */
 		grafo.addAresta( 9, 10, 26 );
 		/* Gerar MST utilizando o algoritmo de Kruskal */
-		return Kruskal.Companion.gerar( grafo );
+		return Kruskal.INSTANCE.gerar( grafo );
 	}
 	
 	/**
@@ -436,6 +436,6 @@ class Questao3 {
 		/* Vértice 7 */
 		grafo.addAresta( 6, 7, 7 );
 		/* Gerar MST utilizando o algoritmo de Kruskal */
-		return Kruskal.Companion.gerar( grafo );
+		return Kruskal.INSTANCE.gerar( grafo );
 	}
 }

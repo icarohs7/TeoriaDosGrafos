@@ -110,7 +110,6 @@ public class GrafoNaoPonderado extends Grafo {
 	/**
 	 * The enum Metodo de busca.
 	 */
-	//Enumeração dos tipos de busca
 	public enum MetodoDeBusca {
 		/**
 		 * Largura metodo de busca.
