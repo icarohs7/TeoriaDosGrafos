@@ -39,7 +39,7 @@ public class Trabalho2Etapa2 {
 		/* Scroll pane que embrulhará o painel raiz, permitindo o scroll */
 		JScrollPane scroll = new JScrollPane( panel );
 		/* Adicionar componentes ao painel */
-		panel.add( new Questao1().rootPanel, "dock north,dock west" );
+		panel.add( new Questao1().rootPanel, "north, west" );
 		panel.add( new Questao2().rootPanel );
 		panel.add( new Questao3().rootPanel );
 		/* Definir painel raiz da aplicação no frame */

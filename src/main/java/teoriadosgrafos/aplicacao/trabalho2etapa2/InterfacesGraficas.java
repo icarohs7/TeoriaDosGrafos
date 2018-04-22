@@ -90,7 +90,6 @@ class Questao1 {
 		String[] colunas = new String[] { "1", "2", "3", "4", "5" };//, "6", "7", "8", "9", "10" };
 		/* Dados da tabela */
 		String[][] dados = InterfacesGraficas.replaceInfinity( primeiroGrafo().getDistanciasAsStringArray() );
-		System.out.println( primeiroGrafo().buscar( 1, 4 ) );
 		/* Título */
 		JLabel titulo = new JLabel( "Questão 1. Menor caminho Floyd-Warshall" );
 		titulo.setFont( InterfacesGraficas.h1 );
