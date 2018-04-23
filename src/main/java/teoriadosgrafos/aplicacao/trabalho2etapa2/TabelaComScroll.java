@@ -19,7 +19,7 @@ public class TabelaComScroll extends JTable {
 	 * @param objects  objects
 	 * @param objects1 objects 1
 	 */
-	TabelaComScroll( @NotNull Object[][] objects, @NotNull Object[] objects1 ) {
+	public TabelaComScroll( @NotNull Object[][] objects, @NotNull Object[] objects1 ) {
 		super( objects, objects1 );
 		/* Desativar a reordenação das colunas */
 		tableHeader.setReorderingAllowed( false );
@@ -32,7 +32,7 @@ public class TabelaComScroll extends JTable {
 	 *
 	 * @return the scrollable table
 	 */
-	JScrollPane getScrollableTable() {
+	public JScrollPane getScrollableTable() {
 		return new JScrollPane( this );
 	}
 	

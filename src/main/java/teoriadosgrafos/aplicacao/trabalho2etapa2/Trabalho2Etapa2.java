@@ -1,6 +1,6 @@
 package teoriadosgrafos.aplicacao.trabalho2etapa2;
 
-import com.jtattoo.plaf.graphite.GraphiteLookAndFeel;
+import com.jtattoo.plaf.acryl.AcrylLookAndFeel;
 
 import net.miginfocom.swing.MigLayout;
 
@@ -29,7 +29,7 @@ public class Trabalho2Etapa2 {
 	public static void main( String[] args ) {
 		/* Definir o Look And Feel da aplicação */
 		try {
-			UIManager.setLookAndFeel( new GraphiteLookAndFeel() );
+			UIManager.setLookAndFeel( new AcrylLookAndFeel() );
 		} catch ( UnsupportedLookAndFeelException e ) {
 			e.printStackTrace();
 		}
