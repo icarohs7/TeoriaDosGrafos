@@ -107,6 +107,10 @@ class Questao1 {
 			rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
 		} catch ( CicloNegativoException e ) {
 			/* Caso haja ciclo negativo, tratar */
+			/* Adicionar tabela em branco */
+			dados = new String[10][10];
+			rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+			/* Adicionar label com o texto de aviso */
 			rootPanel.add(
 					new JLabel( "Erro: Não foi possível gerar a" +
 					            " tabela de distâncias, há um ciclo" +
