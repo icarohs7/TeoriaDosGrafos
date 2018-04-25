@@ -2,6 +2,7 @@ package teoriadosgrafos.metodosdebusca.ponderado
 
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
+import teoriadosgrafos.excecoes.CicloNegativoException
 
 /**
  * Representação do algoritmo de busca
@@ -14,8 +15,12 @@ object FloydWarshall {
 	 * Realiza a busca de menor caminho no grafo utilizando o algoritmo de Floyd-Warshall
 	 * @param grafo GrafoPonderado -- O grafo onde a busca será executada
 	 * @return ResultadoWarshall -- O conjunto resultado contendo as Matrizes de Distâncias e Precedentes
+	 * @throws CicloNegativoException -- Caso um ciclo negativo seja encontrado
 	 */
+	@Throws(CicloNegativoException::class)
 	fun buscar(grafo: GrafoPonderado): ResultadoWarshall {
+		/* Inicializar o grafo */
+		grafo.inicializar()
 		/* Quantidade de vértices */
 		val tamanho = grafo.matrizDeAdjacencia.size
 		/* Pesos */
@@ -31,11 +36,6 @@ object FloydWarshall {
 				if (w[u][v] != Grafo.INFINITO) {
 					d[u][v] = w[u][v]
 					prox[u][v] = v
-				}
-				/* Para cada vértice v definir
-				 * dist[v][v] para 0 */
-				if (u == v) {
-					d[u][v] = 0
 				}
 			}
 		}
@@ -56,6 +56,13 @@ object FloydWarshall {
 						prox[i][j] = prox[i][k]
 					}
 				}
+			}
+		}
+		
+		/* Verificação para ciclos negativos no grafo */
+		for (i in 0 until tamanho) {
+			if (d[i][i] < 0) {
+				throw CicloNegativoException("Existe um ciclo negativo no grafo")
 			}
 		}
 		

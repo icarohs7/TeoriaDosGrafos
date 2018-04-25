@@ -12,6 +12,7 @@ import teoriadosgrafos.GrafoPonderado;
 import teoriadosgrafos.arvoregeradora.Kruskal;
 import teoriadosgrafos.arvoregeradora.MST;
 import teoriadosgrafos.arvoregeradora.Prim;
+import teoriadosgrafos.excecoes.CicloNegativoException;
 import teoriadosgrafos.metodosdebusca.ponderado.FloydWarshall;
 import teoriadosgrafos.metodosdebusca.ponderado.ResultadoWarshall;
 
@@ -88,9 +89,10 @@ class Questao1 {
 	 */
 	private void criarComponentes() {
 		/* Colunas da tabela */
-		String[] colunas = new String[] { "1", "2", "3", "4", "5" };//, "6", "7", "8", "9", "10" };
+		String[] colunas = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 		/* Dados da tabela */
-		String[][] dados = InterfacesGraficas.replaceInfinity( primeiroGrafo().getDistanciasAsStringArray() );
+		String[][] dados;
+		
 		/* Título */
 		JLabel titulo = new JLabel( "Questão 1. Menor caminho Floyd-Warshall" );
 		titulo.setFont( InterfacesGraficas.h1 );
@@ -99,7 +101,19 @@ class Questao1 {
 		/* Título */
 		rootPanel.add( titulo, "align center" );
 		/* Tabela */
-		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		try {
+			/* Tentar gerar a tabela */
+			dados = InterfacesGraficas.replaceInfinity( primeiroGrafo().getDistanciasAsStringArray() );
+			rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		} catch ( CicloNegativoException e ) {
+			/* Caso haja ciclo negativo, tratar */
+			rootPanel.add(
+					new JLabel( "Erro: Não foi possível gerar a" +
+					            " tabela de distâncias, há um ciclo" +
+					            " negativo no grafo " ),
+					"align center"
+			);
+		}
 	}
 	
 	/**

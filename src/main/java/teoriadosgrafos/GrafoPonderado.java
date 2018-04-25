@@ -78,6 +78,11 @@ public class GrafoPonderado extends Grafo {
 		
 		//Marcar todos os vértices como abertos ou seja, não visitados
 		resetVisitados();
+		
+		//Fazer todas as distâncias do vértice até ele mesmo sendo 0
+		for ( int i = 0; i < matrizDeAdjacencia.length; i++ ) {
+			matrizDeAdjacencia[i][i] = 0;
+		}
 	}
 	
 	/**
@@ -138,7 +143,7 @@ public class GrafoPonderado extends Grafo {
 				matrizDeAdjacencia[destino][origem] = peso;
 			}
 		} catch ( IndexOutOfBoundsException e ) {
-			throw new ForaDoGrafoException( "Tentou acessar uma aresta fora do grafo: "+e.getMessage() );
+			throw new ForaDoGrafoException( "Tentou acessar uma aresta fora do grafo: " + e.getMessage() );
 		}
 	}
 }
