@@ -1,7 +1,6 @@
 package teoriadosgrafos
 
 import java.io.PrintStream
-import java.util.LinkedList
 
 /**
  * Classe representando um grafo e suas operações
@@ -35,19 +34,16 @@ protected constructor(val matrizDeAdjacencia: Array<IntArray>, internal val dire
 	 */
 	val arestas: List<Aresta>
 		get() {
-			return LinkedList<Aresta>().apply {
+			return ArrayList<Aresta>().apply {
 				matrizDeAdjacencia.indices.forEach { i ->
-					matrizDeAdjacencia[i].indices.forEach { j ->
-						if (matrizDeAdjacencia[i][j] != INFINITO) {
-							val novaAresta = Aresta(i, j, matrizDeAdjacencia[i][j])
-							if (direcionado) {
-								add(novaAresta)
-							} else if (!arestas.contains(novaAresta)) {
-								add(novaAresta)
-							}
+					matrizDeAdjacencia[0].indices.forEach { j ->
+						val aresta = Aresta(i, j, matrizDeAdjacencia[i][j])
+						if (aresta.peso != INFINITO && !contains(aresta)) {
+							add(Aresta(i, j, matrizDeAdjacencia[i][j]))
 						}
 					}
 				}
+				distinct()
 			}
 		}
 	

@@ -57,4 +57,19 @@ class GrafoPonderado(matrizDeAdjacencia: Array<IntArray>, direcionado: Boolean) 
 		}
 		
 	}
+	
+	/**
+	 * To string de um grafo
+	 * @return String
+	 */
+	override fun toString(): String {
+		return buildString {
+			matrizDeAdjacenciaAsString.forEach { linha ->
+				linha.forEach { elem ->
+					append("$elem, ")
+				}
+				append("\n")
+			}
+		}
+	}
 }
