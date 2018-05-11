@@ -16,36 +16,41 @@ object Dijkstra {
 	 * @param grafo GrafoPonderado -- O grafo onde a busca será executada
 	 * @return ResultadoPonderado -- O conjunto resultado contendo os Arrays de distâncias e Precedentes
 	 */
+	@Suppress("NAME_SHADOWING")
 	fun buscar(origem: Int, grafo: GrafoPonderado): ResultadoPonderado {
+		val origem = origem - 1
 		/* Processo de inicialização do grafo */
-		val d = grafo.distancia
-		val p = grafo.precedentes
 		grafo.inicializar()
-		d[origem] = 0
-		p[origem] = 0
+		val dist = IntArray(grafo.matrizDeAdjacencia.size) { grafo.matrizDeAdjacencia[origem][it] }
+		val prev = IntArray(grafo.matrizDeAdjacencia.size) { 0 }
+		grafo.visitados[origem] = true
+		/* Conjunto de vértices do grafo */
+		val q = (0 until grafo.matrizDeAdjacencia.size)
+				.filter { it != origem }
+				.toMutableList()
 		
 		/* Enquanto existirem vértices abertos */
-		while (grafo.existeAberto()) {
-			/* u Recebe o vértice aberto mais próximo à origem */
-			val u = grafo.menorDistancia()
-			grafo.visitados[u] = true
+		while (!q.isEmpty()) {
+			/* u recebe o vértice contendo a menor distância */
+			val u = q.reduce { acc, i -> if (dist[i] < dist[acc]) i else acc }
+			/* Remover u de q */
+			q.remove(u)
 			/* Relaxar todos os vizinhos abertos de u */
-			grafo.getVizinhos(u).forEach { v ->
-				val alternativo = d[u] + grafo.matrizDeAdjacencia[u][v]
+			grafo.getVizinhos(u, true).forEach { v ->
 				/* Caso haja alguma aresta negativa no grafo, lançar um erro */
 				if (grafo.matrizDeAdjacencia[u][v] < 0) {
 					throw ArestaNegativaException("Existe uma ou mais arestas de peso negativo no grafo")
 				}
+				val alternativo = dist[u] + grafo.matrizDeAdjacencia[u][v]
 				/* Se a distância da aresta E(u,v) somada à distância
-				 * d(s,u) for menor que a distância d(s,v), alterar a última */
-				if (alternativo < d[v]) {
-					d[v] = alternativo
-					p[v] = u
+				 * dist(s,u) for menor que a distância dist(s,v), alterar a última */
+				if (alternativo < dist[v]) {
+					dist[v] = alternativo
+					prev[v] = u
 				}
 			}
 		}
-		
 		/* Retornar o resultado contendo as distâncias e os precedentes */
-		return ResultadoPonderado(d, p)
+		return ResultadoPonderado(dist, prev)
 	}
 }

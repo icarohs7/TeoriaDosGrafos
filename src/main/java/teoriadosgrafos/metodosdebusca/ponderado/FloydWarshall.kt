@@ -13,11 +13,9 @@ import teoriadosgrafos.excecoes.CicloNegativoException
 object FloydWarshall {
 	/**
 	 * Realiza a busca de menor caminho no grafo utilizando o algoritmo de Floyd-Warshall
-	 * @param grafo GrafoPonderado -- O grafo onde a busca será executada
-	 * @return ResultadoWarshall -- O conjunto resultado contendo as Matrizes de Distâncias e Precedentes
-	 * @throws CicloNegativoException -- Caso um ciclo negativo seja encontrado
+	 * @param grafo GrafoPonderado: O grafo onde a busca será executada
+	 * @return ResultadoWarshall: O conjunto resultado contendo as Matrizes de Distâncias e Precedentes
 	 */
-	@Throws(CicloNegativoException::class)
 	fun buscar(grafo: GrafoPonderado): ResultadoWarshall {
 		/* Inicializar o grafo */
 		grafo.inicializar()

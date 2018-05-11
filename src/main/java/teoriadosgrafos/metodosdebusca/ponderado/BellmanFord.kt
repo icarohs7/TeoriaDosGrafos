@@ -16,28 +16,33 @@ object BellmanFord {
 	 * @param grafo GrafoPonderado -- O grafo onde a busca será executada
 	 * @return ResultadoPonderado -- O conjunto resultado contendo os Arrays de distâncias e Precedentes
 	 */
+	@Suppress("NAME_SHADOWING")
 	fun buscar(origem: Int, grafo: GrafoPonderado): ResultadoPonderado {
+		val origem = origem - 1
 		/* Processo de inicialização do grafo */
-		val d = grafo.distancia
-		val p = grafo.precedentes
 		grafo.inicializar()
-		d[origem] = 0
-		p[origem] = 0
+		val dist = IntArray(grafo.matrizDeAdjacencia.size) { grafo.matrizDeAdjacencia[origem][it] }
+		val prev = IntArray(grafo.matrizDeAdjacencia.size) { 0 }
+		grafo.visitados[origem] = true
+		/* Conjunto de vértices do grafo */
+		val q = (0 until grafo.matrizDeAdjacencia.size)
+				.filter { it != origem }
+				.toMutableList()
 		
 		/* Enquanto existirem vértices abertos */
-		while (grafo.existeAberto()) {
-			/* u Recebe o vértice aberto mais próximo à origem */
-			val u = grafo.menorDistancia()
-			/* Fechar o vértice u */
-			grafo.visitados[u] = true
+		while (!q.isEmpty()) {
+			/* u recebe o vértice contendo a menor distância */
+			val u = q.reduce { acc, i -> if (dist[i] < dist[acc]) i else acc }
+			/* Remover u de q */
+			q.remove(u)
 			/* Relaxar todos os vizinhos abertos de u */
-			grafo.getVizinhos(u).forEach { v ->
-				val alternativo = d[u] + grafo.matrizDeAdjacencia[u][v]
+			grafo.getVizinhos(u, true).forEach { v ->
+				val alternativo = dist[u] + grafo.matrizDeAdjacencia[u][v]
 				/* Se a distância da aresta E(u,v) somada à distância
-				 * d(s,u) for menor que a distância d(s,v), alterar a última */
-				if (alternativo < d[v]) {
-					d[v] = alternativo
-					p[v] = u
+				 * dist(s,u) for menor que a distância dist(s,v), alterar a última */
+				if (alternativo < dist[v]) {
+					dist[v] = alternativo
+					prev[v] = u
 				}
 			}
 		}
@@ -45,15 +50,15 @@ object BellmanFord {
 		/* Verificar se há ciclo de peso negativo */
 		/* Para cada aresta */
 		grafo.arestas.forEach { aresta ->
-			val alternativo = d[aresta.origem] + aresta.peso
+			val alternativo = dist[aresta.origem] + aresta.peso
 			/* Se o peso da aresta somado à distância da origem for maior que a distância do destino,
 			 * lançar uma exceção informando que há peso negativo no grafo */
-			if (alternativo < d[aresta.destino]) {
+			if (alternativo < dist[aresta.destino]) {
 				throw CicloNegativoException("O grafo contem um ciclo negativo")
 			}
 		}
 		
 		/* Retornar o resultado contendo as distâncias e os precedentes */
-		return ResultadoPonderado(d, p)
+		return ResultadoPonderado(dist, prev)
 	}
 }

@@ -1,5 +1,7 @@
 package teoriadosgrafos.aplicacao.trabalho2etapa2;
 
+import com.github.icarohs7.unoxlib.tables.ScrollTable;
+
 import net.miginfocom.swing.MigLayout;
 
 import java.awt.Font;
@@ -40,9 +42,7 @@ abstract class InterfacesGraficas {
 	
 	/**
 	 * Substitui o valor infinito em uma matriz pelo símbolo infinito
-	 *
 	 * @param matriz the matriz
-	 *
 	 * @return string [ ] [ ]
 	 */
 	static String[][] replaceInfinity( String[][] matriz ) {
@@ -104,12 +104,12 @@ class Questao1 {
 		try {
 			/* Tentar gerar a tabela */
 			dados = InterfacesGraficas.replaceInfinity( primeiroGrafo().getDistanciasAsStringArray() );
-			rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+			rootPanel.add( new ScrollTable( dados, colunas ).getScrollableTable(), "align center" );
 		} catch ( CicloNegativoException e ) {
 			/* Caso haja ciclo negativo, tratar */
 			/* Adicionar tabela em branco */
 			dados = new String[10][10];
-			rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+			rootPanel.add( new ScrollTable( dados, colunas ).getScrollableTable(), "align center" );
 			/* Adicionar label com o texto de aviso */
 			rootPanel.add(
 					new JLabel( "Erro: Não foi possível gerar a" +
@@ -122,7 +122,6 @@ class Questao1 {
 	
 	/**
 	 * Primeiro grafo resultado warshall.
-	 *
 	 * @return the resultado warshall
 	 */
 	private ResultadoWarshall primeiroGrafo() {
@@ -198,25 +197,24 @@ class Questao2 {
 		rootPanel.add( label1, "align center" );
 		/* Tabela1 */
 		dados = InterfacesGraficas.replaceInfinity( primeiroGrafo().getTreeAsString() );
-		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		rootPanel.add( new ScrollTable( dados, colunas ).getScrollableTable(), "align center" );
 		/* Segunda Label */
 		rootPanel.add( label2, "align center" );
 		/* Tabela 2 */
 		dados = InterfacesGraficas.replaceInfinity( segundoGrafo().getTreeAsString() );
 		colunas = new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		rootPanel.add( new ScrollTable( dados, colunas ).getScrollableTable(), "align center" );
 		/* Terceira Label */
 		rootPanel.add( label3, "align center" );
 		/* Tabela 3 */
 		dados = InterfacesGraficas.replaceInfinity( terceiroGrafo().getTreeAsString() );
 		colunas = new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m" };
-		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		rootPanel.add( new ScrollTable( dados, colunas ).getScrollableTable(), "align center" );
 		
 	}
 	
 	/**
 	 * Primeiro grafo mst.
-	 *
 	 * @return the mst
 	 */
 	private MST primeiroGrafo() {
@@ -243,7 +241,6 @@ class Questao2 {
 	
 	/**
 	 * Segundo grafo mst.
-	 *
 	 * @return the mst
 	 */
 	private MST segundoGrafo() {
@@ -283,7 +280,6 @@ class Questao2 {
 	
 	/**
 	 * Terceiro grafo mst.
-	 *
 	 * @return the mst
 	 */
 	private MST terceiroGrafo() {
@@ -376,18 +372,17 @@ class Questao3 {
 		/* Tabela 1 */
 		dados = InterfacesGraficas.replaceInfinity( primeiroGrafo().getTreeAsString() );
 		colunas = new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
-		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		rootPanel.add( new ScrollTable( dados, colunas ).getScrollableTable(), "align center" );
 		/* Label 2 */
 		rootPanel.add( label2, "align center" );
 		/* Tabela 2 */
 		dados = InterfacesGraficas.replaceInfinity( segundoGrafo().getTreeAsString() );
 		colunas = new String[] { "1", "2", "3", "4", "6", "7", "8" };
-		rootPanel.add( new TabelaComScroll( dados, colunas ).getScrollableTable(), "align center" );
+		rootPanel.add( new ScrollTable( dados, colunas ).getScrollableTable(), "align center" );
 	}
 	
 	/**
 	 * Primeiro grafo mst.
-	 *
 	 * @return the mst
 	 */
 	private MST primeiroGrafo() {
@@ -428,7 +423,6 @@ class Questao3 {
 	
 	/**
 	 * Segundo grafo mst.
-	 *
 	 * @return the mst
 	 */
 	private MST segundoGrafo() {
