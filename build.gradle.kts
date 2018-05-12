@@ -57,7 +57,7 @@ val dokka by tasks.getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
 val fatJar = task("fatJar", type = Jar::class) {
 	baseName = "${project.name}-fat"
 	manifest {
-		attributes["Main-Class"] = ""/* TODO: put main class here */
+		attributes["Main-Class"] = "teoriadosgrafos.aplicacao.trabalho2etapa2.Trabalho2Etapa2Kt"
 	}
 	from(
 		configurations.runtime.map {
