@@ -1,22 +1,19 @@
 /* Dados do projeto: */
-allprojects {
-	/* Domínio */
-	group = "teoriadosgrafos"
-	/* Descrição */
-	description = "Projeto contendo todo o conteúdo da matéria Teoria dos Grafos" +
-			" do curso de Ciência da Computação da Faculdade Única de Ipatinga," +
-			" utilizado também para desenvolver os trabalhos avaliativos" +
-			" referentes à matéria"
-	
-	/**
-	 * Lista de dependências
-	 */
-	dependencies {
-		implementation(kotlin("stdlib-jdk8"))
-		implementation("com.miglayout:miglayout:3.7.4")
-		implementation("com.jtattoo:JTattoo:1.6.11")
-		implementation("com.github.icarohs7.unoxlib:UNoxLib:0.1.1")
-	}
+/* Domínio */
+group = "teoriadosgrafos"
+/* Descrição */
+description = "Projeto contendo todo o conteúdo da matéria Teoria dos Grafos" +
+		" do curso de Ciência da Computação da Faculdade Única de Ipatinga," +
+		" utilizado também para desenvolver os trabalhos avaliativos" +
+		" referentes à matéria"
+/**
+ * Lista de dependências
+ */
+dependencies {
+	implementation(kotlin("stdlib-jdk8"))
+	implementation("com.miglayout:miglayout:3.7.4")
+	implementation("com.jtattoo:JTattoo:1.6.11")
+	implementation("com.github.icarohs7.unoxlib:UNoxLib:0.1.1")
 }
 
 /**
@@ -25,15 +22,9 @@ allprojects {
 plugins {
 	application
 	java
-	kotlin("jvm") version "1.2.41"
-	id("org.jetbrains.dokka") version "0.9.16"
-}
-
-/**
- * Definições da aplicação
- */
-application {
-	mainClassName = "teoriadosgrafos.aplicacao.trabalho2etapa2.Trabalho2Etapa2"
+	kotlin("jvm").version("1.2.41")
+	id("org.jetbrains.dokka").version("0.9.16")
+	id("com.cinnober.gradle.semver-git").version("2.3.1")
 }
 
 /**
@@ -53,27 +44,34 @@ repositories {
 }
 
 /**
- * Definição do autoversionamento
- */
-autoversion {
-	versionFile = "version.json"
-}
-
-/**
  * Definir tarefa de geração de documentação utilizando dokka
  */
 val dokka by tasks.getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
 	outputFormat = "javadoc"
-	outputDirectory = "$buildDir/docs"
+	outputDirectory = "$projectDir/docs"
 }
 
 /**
  * Definir tarefa de geração de jar
  */
-tasks.withType<Jar> {
-	configurations["compileClasspath"].forEach { file: File ->
-		from(zipTree(file.absoluteFile))
+val fatJar = task("fatJar", type = Jar::class) {
+	baseName = "${project.name}-fat"
+	manifest {
+		attributes["Main-Class"] = ""/* TODO: put main class here */
 	}
+	from(
+		configurations.runtime.map {
+			if (it.isDirectory) it else zipTree(it)
+		}
+	)
+	with(tasks["jar"] as CopySpec)
 }
 
-
+/**
+ * Definição das tarefas em geral
+ */
+tasks {
+	"build" {
+		dependsOn(fatJar)
+	}
+}
