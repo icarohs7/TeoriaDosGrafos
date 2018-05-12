@@ -62,7 +62,7 @@ object BuscaEmLargura {
 		
 		/* Laço utilizado para enfileirar os visinhos do vértice atual */
 		grafo.matrizDeAdjacencia.indices.forEach { i ->
-			if (grafo.matrizDeAdjacencia[origem][i] == 1) {
+			if (grafo.matrizDeAdjacencia[origem][i] == 1.0) {
 				if (!grafo.visitados[i]) {
 					grafo.visitados[i] = true
 					proximosVertices.add(i)

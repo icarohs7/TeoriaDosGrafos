@@ -13,7 +13,7 @@ import java.io.PrintStream
  * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
 class MST(val tamanho: Int) {
-	val tree: Array<IntArray> = Array(tamanho) { IntArray(tamanho) }
+	val tree: Array<DoubleArray> = Array(tamanho) { DoubleArray(tamanho) }
 	
 	init {
 		for (u in 0 until tamanho) {

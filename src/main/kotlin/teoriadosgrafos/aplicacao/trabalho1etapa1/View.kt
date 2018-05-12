@@ -4,6 +4,7 @@ import com.github.icarohs7.unoxlib.tables.EditableTableModel
 import teoriadosgrafos.GrafoNaoPonderado
 import teoriadosgrafos.excecoes.CaminhoNaoEncontradoException
 import teoriadosgrafos.extensoes.getResource
+import teoriadosgrafos.extensoes.toDouble2DArray
 import java.awt.Toolkit.getDefaultToolkit
 import javax.swing.JFrame
 import javax.swing.JTable
@@ -31,9 +32,9 @@ internal class View : JFrame() {
 		/* 17*/ intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0),
 		/* 18*/ intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0),
 		/* 19*/ intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0),
-		/* 20*/ intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+		/* 20*/ intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)).toDouble2DArray()
 	//Cópia original da matriz utilizada no grafo, utilizada para reiniciar o grafo
-	private val matrizOriginal: Array<IntArray>
+	private val matrizOriginal: Array<DoubleArray>
 	//Atributo utilizado para armazenar o grafo
 	private var grafo: GrafoNaoPonderado? = null
 	// Variables declaration - do not modify//GEN-BEGIN:variables
@@ -55,7 +56,7 @@ internal class View : JFrame() {
 		initComponents()
 		
 		//Instanciar a matriz secundária e copiar o conteúdo da matriz primária para ela
-		matrizOriginal = Array(matriz.size, { IntArray(matriz.size) })
+		matrizOriginal = Array(matriz.size) { DoubleArray(matriz.size) }
 		copiarMatriz(matriz, matrizOriginal)
 		
 		//Instanciar grafo e configurar alguns valores padrão da aplicação
@@ -309,8 +310,8 @@ internal class View : JFrame() {
 		exclusaoResultado!!.isFocusable = false
 		
 		tipoDeBusca!!.model = javax.swing.DefaultComboBoxModel<String>(arrayOf("Busca em Profundidade", ("Busca" +
-		                                                                                                 " " +
-		                                                                                                 "em Largura")))
+				" " +
+				"em Largura")))
 		tipoDeBusca!!.isFocusable = false
 		tipoDeBusca!!.nextFocusableComponent = buscaOrigem
 		
@@ -495,7 +496,7 @@ internal class View : JFrame() {
 	 * @param m1 Matriz origem
 	 * @param m2 Matriz que receberá a cópia da matriz origem
 	 */
-	private fun copiarMatriz(m1: Array<IntArray>, m2: Array<IntArray>) {
+	private fun copiarMatriz(m1: Array<DoubleArray>, m2: Array<DoubleArray>) {
 		if (m1.size != m2.size) {
 			return
 		}
@@ -587,7 +588,7 @@ internal class View : JFrame() {
 			val destino = Integer.parseInt(exclusaoDestino!!.text)
 			
 			//Verificar se há uma aresta conectando os 2 vértices informados
-			if (grafo!!.matrizDeAdjacencia[origem - 1][destino - 1] == 0) {
+			if (grafo!!.matrizDeAdjacencia[origem - 1][destino - 1] == 0.0) {
 				exclusaoResultado!!.text = "Não há aresta conectando esses 2 pontos"
 			} else {
 				

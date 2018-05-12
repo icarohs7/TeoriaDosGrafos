@@ -14,14 +14,14 @@ import java.util.Queue
 class GrafoNaoPonderado
 @JvmOverloads
 constructor
-	(matrizDeAdjacencia: Array<IntArray>, direcionado: Boolean = false)
+	(matrizDeAdjacencia: Array<DoubleArray>, direcionado: Boolean = false)
 	: Grafo(matrizDeAdjacencia, direcionado) {
 	
 	init {
 		//Permitir somente 0 ou 1 nos valores das células da matriz de adjacência
 		for (linha in matrizDeAdjacencia) {
 			for (celula in linha) {
-				if (!(celula == 0 || celula == 1)) {
+				if (!(celula == 0.0 || celula == 1.0)) {
 					throw CaminhoNaoEncontradoException("A matriz de adjacência para grafos ponderados só suporta os valores 0 ou 1")
 				}
 			}
@@ -54,9 +54,9 @@ constructor
 		val origem = origem - 1
 		val destino = destino - 1
 		
-		matrizDeAdjacencia[origem][destino] = 0
+		matrizDeAdjacencia[origem][destino] = 0.0
 		if (!direcionado) {
-			matrizDeAdjacencia[destino][origem] = 0
+			matrizDeAdjacencia[destino][origem] = 0.0
 		}
 	}
 	
@@ -69,7 +69,7 @@ constructor
 		val conexoes = LinkedList<Int>()
 		
 		for (i in matrizDeAdjacencia.indices) {
-			if (matrizDeAdjacencia[vertice][i] == 1) {
+			if (matrizDeAdjacencia[vertice][i] == 1.0) {
 				conexoes.offer(i + 1)
 			}
 		}

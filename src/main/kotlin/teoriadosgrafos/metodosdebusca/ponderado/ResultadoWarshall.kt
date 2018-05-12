@@ -11,7 +11,7 @@ import java.util.Arrays
  *
  * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
-data class ResultadoWarshall(private val distancias: Array<Array<Int>>, private val proximos: Array<Array<Int>>) {
+data class ResultadoWarshall(private val distancias: Array<DoubleArray>, private val proximos: Array<Array<Int>>) {
 	/**
 	 * Retorna o menor caminho saindo da origem geradora do resultado atual em direção ao destino informado
 	 * @param origem Int -- O vértice origem

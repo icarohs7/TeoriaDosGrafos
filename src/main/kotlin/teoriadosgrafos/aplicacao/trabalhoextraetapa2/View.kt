@@ -1,9 +1,10 @@
-package teoriadosgrafos.aplicacao.trabalho1etapa2
+package teoriadosgrafos.aplicacao.trabalhoextraetapa2
 
 import com.github.icarohs7.unoxlib.tables.ScrollTable
 import net.miginfocom.swing.MigLayout
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
+import teoriadosgrafos.extensoes.toDouble2DArray
 import teoriadosgrafos.metodosdebusca.ponderado.Dijkstra
 import javax.swing.JFrame
 import javax.swing.JLabel
@@ -31,7 +32,7 @@ internal class View constructor(s: String) : JFrame(s) {
 	
 	private fun criarComponentes() {
 		@Suppress("LocalVariableName")
-		val NA = Grafo.INFINITO
+		val NA = Grafo.INFINITO.toInt()
 		/* Matriz geradora do grafo */
 		val matriz = arrayOf(
 			/*                a   b   c   d   e   f   g   h   i   j   l   m */
@@ -46,7 +47,7 @@ internal class View constructor(s: String) : JFrame(s) {
 			/*i*/ intArrayOf(NA, NA, NA, NA, 73, NA, 60, NA, NA, NA, NA, 50),
 			/*j*/ intArrayOf(NA, 17, NA, NA, NA, 30, NA, NA, NA, NA, 30, NA),
 			/*l*/ intArrayOf(NA, NA, NA, NA, NA, 45, NA, 50, NA, 30, NA, NA),
-			/*m*/ intArrayOf(NA, NA, NA, NA, NA, 32, NA, 21, 50, NA, NA, NA))
+			/*m*/ intArrayOf(NA, NA, NA, NA, NA, 32, NA, 21, 50, NA, NA, NA)).toDouble2DArray()
 		
 		/* Instanciar o grafo */
 		val grafo = GrafoPonderado(matriz, true)

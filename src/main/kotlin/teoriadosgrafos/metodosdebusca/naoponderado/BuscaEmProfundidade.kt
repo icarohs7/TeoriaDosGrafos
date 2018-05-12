@@ -60,7 +60,7 @@ object BuscaEmProfundidade {
 		
 		grafo.matrizDeAdjacencia.indices.forEach { i ->
 			//Para cada vértice adjacente
-			if (grafo.matrizDeAdjacencia[origem][i] == 1) {
+			if (grafo.matrizDeAdjacencia[origem][i] == 1.0) {
 				//e não visitado
 				if (!grafo.visitados[i]) {
 					//descer um nível na busca

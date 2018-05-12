@@ -21,13 +21,13 @@ object Dijkstra {
 		val origem = origem - 1
 		/* Processo de inicialização do grafo */
 		grafo.inicializar()
-		val dist = IntArray(grafo.matrizDeAdjacencia.size) { grafo.matrizDeAdjacencia[origem][it] }
+		val dist = DoubleArray(grafo.matrizDeAdjacencia.size) { grafo.matrizDeAdjacencia[origem][it] }
 		val prev = IntArray(grafo.matrizDeAdjacencia.size) { 0 }
 		grafo.visitados[origem] = true
 		/* Conjunto de vértices do grafo */
 		val q = (0 until grafo.matrizDeAdjacencia.size)
-				.filter { it != origem }
-				.toMutableList()
+			.filter { it != origem }
+			.toMutableList()
 		
 		/* Enquanto existirem vértices abertos */
 		while (!q.isEmpty()) {

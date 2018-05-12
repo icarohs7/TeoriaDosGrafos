@@ -8,12 +8,12 @@ import java.io.PrintStream
  * @author [Icaro D Temponi](https://github.com/icarohs7)
  */
 abstract class Grafo
-protected constructor(val matrizDeAdjacencia: Array<IntArray>, internal val direcionado: Boolean) {
+protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, internal val direcionado: Boolean) {
 	companion object {
 		/**
 		 * Valor representanto infinito, sua função pode variar de acordo com o grafo e algoritmo usado
 		 */
-		const val INFINITO = Int.MAX_VALUE / 2
+		const val INFINITO = (Int.MAX_VALUE / 2).toDouble()
 	}
 	
 	/**
@@ -51,7 +51,6 @@ protected constructor(val matrizDeAdjacencia: Array<IntArray>, internal val dire
 	 * Inicializar o grafo
 	 */
 	fun inicializar() = visitados.indices.forEach {
-		matrizDeAdjacencia[it][it] = 0
 		visitados[it] = false
 	}
 	
@@ -68,9 +67,9 @@ protected constructor(val matrizDeAdjacencia: Array<IntArray>, internal val dire
 	 * @return LinkedList<Int>: Uma lista contendo os vizinhos abertos do vértice informado
 	 */
 	fun getVizinhos(vertice: Int, abertos: Boolean = false): List<Int> {
-		val desconexo = if (this is GrafoPonderado) Grafo.INFINITO else 0
+		val desconexo = if (this is GrafoPonderado) Grafo.INFINITO else 0.0
 		val vizinhos = (0 until matrizDeAdjacencia.size)
-				.filter { matrizDeAdjacencia[vertice][it] != desconexo }
+			.filter { matrizDeAdjacencia[vertice][it] != desconexo }
 		return if (abertos) vizinhos.filter { !visitados[it] } else vizinhos
 	}
 	

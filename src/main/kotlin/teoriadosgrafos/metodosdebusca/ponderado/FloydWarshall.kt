@@ -24,7 +24,7 @@ object FloydWarshall {
 		/* Pesos */
 		val w = grafo.matrizDeAdjacencia
 		/* Criar e Inicializar as matrizes de distâncias e próximos */
-		val d = Array(tamanho) { Array(tamanho) { Grafo.INFINITO } }
+		val d = Array(tamanho) { DoubleArray(tamanho) { Grafo.INFINITO } }
 		val prox = Array(tamanho) { Array(tamanho) { -1 } }
 		/* Processo de inicialização */
 		for (u in 0 until tamanho) {

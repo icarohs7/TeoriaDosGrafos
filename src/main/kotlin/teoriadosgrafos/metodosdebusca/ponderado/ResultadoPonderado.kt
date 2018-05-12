@@ -11,7 +11,7 @@ import java.util.Arrays
  *
  * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
-data class ResultadoPonderado(val distancias: IntArray, val predecessores: IntArray) {
+data class ResultadoPonderado(val distancias: DoubleArray, val predecessores: IntArray) {
 	/**
 	 * Retorna o menor caminho saindo da origem geradora do resultado atual em direção ao destino informado
 	 * @param destino Int -- O vértice que se deseja alcançar apartir da origem

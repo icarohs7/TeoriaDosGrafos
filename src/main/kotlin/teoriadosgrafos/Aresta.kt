@@ -7,7 +7,7 @@ import java.util.Objects
  *
  * @author [Icaro D Temponi](https://github.com/icarohs7)
  */
-data class Aresta(val origem: Int, val destino: Int, val peso: Int) {
+data class Aresta(val origem: Int, val destino: Int, val peso: Double) {
 	
 	/**
 	 * Hash code int.
@@ -32,8 +32,8 @@ data class Aresta(val origem: Int, val destino: Int, val peso: Int) {
 			return false
 		}
 		return (origem == other.origem && destino == other.destino
-		        || destino == other.origem && origem == other.destino)
-		       && peso == other.peso
+				|| destino == other.origem && origem == other.destino)
+				&& peso == other.peso
 	}
 	
 	/**

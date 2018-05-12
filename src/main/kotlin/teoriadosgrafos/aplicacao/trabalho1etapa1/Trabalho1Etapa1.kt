@@ -14,20 +14,18 @@ import javax.swing.UnsupportedLookAndFeelException
  * Daniel G Moura - CCO5<br></br>
  * <br></br>
  * Look and Feel utilizado: [WebLaF](http://weblookandfeel.com/)
+ * @param args
  */
-private object Trabalho1Etapa1 {
-	@JvmStatic
-	fun main(args: Array<String>) {
-		// Selecionar o Look & Feel da aplicação
-		try {
-			javax.swing.UIManager.setLookAndFeel(GraphiteLookAndFeel())
-		} catch (e: UnsupportedLookAndFeelException) {
-			println(Arrays.toString(e.stackTrace))
-		}
-		
-		//Instanciar e tornar visível a interface da aplicação
-		View().apply {
-			isVisible = true
-		}
+fun main(args: Array<String>) {
+	// Selecionar o Look & Feel da aplicação
+	try {
+		javax.swing.UIManager.setLookAndFeel(GraphiteLookAndFeel())
+	} catch (e: UnsupportedLookAndFeelException) {
+		println(Arrays.toString(e.stackTrace))
+	}
+	
+	//Instanciar e tornar visível a interface da aplicação
+	View().apply {
+		isVisible = true
 	}
 }
