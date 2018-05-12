@@ -26,6 +26,8 @@ private object Trabalho1Etapa1 {
 		}
 		
 		//Instanciar e tornar visível a interface da aplicação
-		java.awt.EventQueue.invokeLater({ View().isVisible = true })
+		View().apply {
+			isVisible = true
+		}
 	}
 }

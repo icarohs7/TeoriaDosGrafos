@@ -10,5 +10,5 @@ import java.net.URL
  */
 @Suppress("unused")
 fun Any.getResource(resource: String): URL {
-	return javaClass.getResource(resource)
+	return javaClass.classLoader.getResource(resource)
 }

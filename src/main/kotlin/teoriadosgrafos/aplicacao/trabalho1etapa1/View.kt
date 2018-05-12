@@ -3,6 +3,8 @@ package teoriadosgrafos.aplicacao.trabalho1etapa1
 import com.github.icarohs7.unoxlib.tables.EditableTableModel
 import teoriadosgrafos.GrafoNaoPonderado
 import teoriadosgrafos.excecoes.CaminhoNaoEncontradoException
+import teoriadosgrafos.extensoes.getResource
+import java.awt.Toolkit.getDefaultToolkit
 import javax.swing.JFrame
 import javax.swing.JTable
 
@@ -71,8 +73,7 @@ internal class View : JFrame() {
 		tblCol4!!.tableHeader.isEnabled = false
 		
 		try {
-			iconImage = java.awt.Toolkit.getDefaultToolkit()
-					.getImage(javaClass.classLoader.getResource("drawable/icon.png"))
+			iconImage = getDefaultToolkit().getImage(getResource("drawable/icon.png"))
 		} catch (e: Exception) {
 			e.printStackTrace()
 		}
@@ -321,168 +322,168 @@ internal class View : JFrame() {
 		contentPane.layout = layout
 		layout.setHorizontalGroup(
 			layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-					.addGroup(layout.createSequentialGroup()
-							          .addContainerGap()
-							          .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
-									          .GroupLayout.DEFAULT_SIZE, java.lang.Short.MAX_VALUE.toInt())
-							          .addContainerGap())
-					.addGroup(layout.createSequentialGroup()
-							          .addGap(37, 37, 37)
-							          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
-									                                               .LEADING)
-									                    .addComponent(lblBuscaResultado)
-									                    .addGroup(layout.createSequentialGroup()
-											                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout
-													                                                                   .Alignment
-													                                                                   .TRAILING, false)
-													                                        .addComponent(
-														                                        buscaResultado, javax.swing.GroupLayout.Alignment.LEADING)
-													                                        .addGroup(javax
-															                                                  .swing.GroupLayout.Alignment.LEADING, layout
-															                                                  .createSequentialGroup()
-															                                                  .addGroup(
-																                                                  layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-																		                                                  .addGroup(layout.createSequentialGroup()
-																				                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-																						                                                                      .addComponent(jLabel2)
-																						                                                                      .addComponent(jLabel3)
-																						                                                                      .addComponent(buscaOrigem!!, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-																				                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																				                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-																						                                                                      .addComponent(jLabel4)
-																						                                                                      .addComponent(buscaDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-																		                                                  .addComponent(tipoDeBusca!!, 0, javax.swing.GroupLayout.DEFAULT_SIZE, java.lang.Short.MAX_VALUE.toInt()))
-															                                                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-															                                                  .addComponent(btnBuscar)))
-											                              .addGap(49, 49, 49)
-											                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout
-													                                                                   .Alignment.LEADING,
-											                                                                   false
-											                              )
-													                                        .addComponent(
-														                                        jLabel5)
-													                                        .addGroup(layout
-															                                                  .createSequentialGroup()
-															                                                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-																	                                                            .addComponent(jLabel7)
-																	                                                            .addComponent(exclusaoOrigem!!, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-															                                                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-															                                                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-																	                                                            .addComponent(exclusaoDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-																	                                                            .addComponent(jLabel6))
-															                                                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-															                                                  .addComponent(btnExcluir))
-													                                        .addComponent(
-														                                        exclusaoResultado)))
-									                    .addGroup(layout.createParallelGroup(javax.swing
-											                                                         .GroupLayout.Alignment.TRAILING)
-											                              .addComponent(btnReiniciar)
-											                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout
-													                                                                   .Alignment.LEADING,
-											                                                                   false
-											                              )
-													                                        .addComponent(
-														                                        jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 694, java.lang.Short.MAX_VALUE.toInt())
-													                                        .addComponent(
-														                                        jScrollPane3)
-													                                        .addComponent(
-														                                        jScrollPane2)
-													                                        .addComponent(
-														                                        jScrollPane1))))
-							          .addGap(0, 41, java.lang.Short.MAX_VALUE.toInt()))
+				.addGroup(layout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
+						.GroupLayout.DEFAULT_SIZE, java.lang.Short.MAX_VALUE.toInt())
+					.addContainerGap())
+				.addGroup(layout.createSequentialGroup()
+					.addGap(37, 37, 37)
+					.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
+						.LEADING)
+						.addComponent(lblBuscaResultado)
+						.addGroup(layout.createSequentialGroup()
+							.addGroup(layout.createParallelGroup(javax.swing.GroupLayout
+								.Alignment
+								.TRAILING, false)
+								.addComponent(
+									buscaResultado, javax.swing.GroupLayout.Alignment.LEADING)
+								.addGroup(javax
+									.swing.GroupLayout.Alignment.LEADING, layout
+									.createSequentialGroup()
+									.addGroup(
+										layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+											.addGroup(layout.createSequentialGroup()
+												.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+													.addComponent(jLabel2)
+													.addComponent(jLabel3)
+													.addComponent(buscaOrigem!!, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+												.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+												.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+													.addComponent(jLabel4)
+													.addComponent(buscaDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+											.addComponent(tipoDeBusca!!, 0, javax.swing.GroupLayout.DEFAULT_SIZE, java.lang.Short.MAX_VALUE.toInt()))
+									.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+									.addComponent(btnBuscar)))
+							.addGap(49, 49, 49)
+							.addGroup(layout.createParallelGroup(javax.swing.GroupLayout
+								.Alignment.LEADING,
+								false
+							)
+								.addComponent(
+									jLabel5)
+								.addGroup(layout
+									.createSequentialGroup()
+									.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+										.addComponent(jLabel7)
+										.addComponent(exclusaoOrigem!!, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+									.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+									.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+										.addComponent(exclusaoDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+										.addComponent(jLabel6))
+									.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+									.addComponent(btnExcluir))
+								.addComponent(
+									exclusaoResultado)))
+						.addGroup(layout.createParallelGroup(javax.swing
+							.GroupLayout.Alignment.TRAILING)
+							.addComponent(btnReiniciar)
+							.addGroup(layout.createParallelGroup(javax.swing.GroupLayout
+								.Alignment.LEADING,
+								false
+							)
+								.addComponent(
+									jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 694, java.lang.Short.MAX_VALUE.toInt())
+								.addComponent(
+									jScrollPane3)
+								.addComponent(
+									jScrollPane2)
+								.addComponent(
+									jScrollPane1))))
+					.addGap(0, 41, java.lang.Short.MAX_VALUE.toInt()))
 		)
 		layout.setVerticalGroup(
 			layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-					.addGroup(layout.createSequentialGroup()
-							          .addContainerGap()
-							          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
-									                                               .TRAILING)
-									                    .addComponent(jLabel1)
-									                    .addComponent(btnReiniciar))
-							          .addGap(2, 2, 2)
-							          .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
-							                        javax.swing.GroupLayout.PREFERRED_SIZE
-							          )
-							          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-							          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
-							                        javax.swing.GroupLayout.PREFERRED_SIZE
-							          )
-							          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-							          .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
-							                        javax.swing.GroupLayout.PREFERRED_SIZE
-							          )
-							          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-							          .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
-							                        javax.swing.GroupLayout.PREFERRED_SIZE
-							          )
-							          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
-									                                               .LEADING)
-									                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-									                              layout
-											                              .createSequentialGroup()
-											                              .addGap(0, 0, java.lang.Short.MAX_VALUE.toInt())
-											                              .addComponent(btnBuscar!!, javax.swing
-													                              .GroupLayout
-													                              .PREFERRED_SIZE,
-											                                            54, javax
-													                                            .swing
-													                                            .GroupLayout
-													                                            .PREFERRED_SIZE
-											                              )
-									                    )
-									                    .addGroup(layout.createSequentialGroup()
-											                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout
-													                                                                   .Alignment
-													                                                                   .BASELINE)
-													                                        .addComponent(
-														                                        jLabel5)
-													                                        .addComponent(
-														                                        jLabel2))
-											                              .addPreferredGap(javax.swing
-													                                               .LayoutStyle.ComponentPlacement.RELATED)
-											                              .addGroup(layout.createParallelGroup(javax.swing.GroupLayout
-													                                                                   .Alignment.LEADING)
-													                                        .addGroup(layout
-															                                                  .createSequentialGroup()
-															                                                  .addComponent(tipoDeBusca!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-															                                                  .addGap(7, 7, 7)
-															                                                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-																	                                                            .addGroup(layout.createSequentialGroup()
-																			                                                                      .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-																					                                                                                .addComponent(buscaDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-																					                                                                                .addComponent(buscaOrigem!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-																			                                                                      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																			                                                                      .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-																					                                                                                .addComponent(jLabel3)
-																					                                                                                .addComponent(jLabel4)))
-																	                                                            .addGroup(layout.createSequentialGroup()
-																			                                                                      .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-																					                                                                                .addComponent(exclusaoOrigem!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-																					                                                                                .addComponent(exclusaoDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-																			                                                                      .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-																			                                                                      .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-																					                                                                                .addComponent(jLabel7)
-																					                                                                                .addComponent(jLabel6)))))
-													                                        .addGroup(layout
-															                                                  .createSequentialGroup()
-															                                                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, java.lang.Short.MAX_VALUE.toInt())
-															                                                  .addComponent(btnExcluir!!, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-							          .addGap(18, 18, 18)
-							          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
-									                                               .BASELINE)
-									                    .addComponent(buscaResultado!!, javax.swing.GroupLayout
-											                    .PREFERRED_SIZE, javax.swing.GroupLayout
-											                                  .DEFAULT_SIZE, javax.swing
-											                                  .GroupLayout
-											                                  .PREFERRED_SIZE)
-									                    .addComponent(exclusaoResultado!!, javax.swing
-											                    .GroupLayout.PREFERRED_SIZE, javax.swing
-											                                  .GroupLayout.DEFAULT_SIZE, javax
-											                                  .swing
-											                                  .GroupLayout.PREFERRED_SIZE))
-							          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-							          .addComponent(lblBuscaResultado)
-							          .addGap(22, 22, 22))
+				.addGroup(layout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
+						.TRAILING)
+						.addComponent(jLabel1)
+						.addComponent(btnReiniciar))
+					.addGap(2, 2, 2)
+					.addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
+						javax.swing.GroupLayout.PREFERRED_SIZE
+					)
+					.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+					.addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
+						javax.swing.GroupLayout.PREFERRED_SIZE
+					)
+					.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+					.addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
+						javax.swing.GroupLayout.PREFERRED_SIZE
+					)
+					.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+					.addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
+						javax.swing.GroupLayout.PREFERRED_SIZE
+					)
+					.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
+						.LEADING)
+						.addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+							layout
+								.createSequentialGroup()
+								.addGap(0, 0, java.lang.Short.MAX_VALUE.toInt())
+								.addComponent(btnBuscar!!, javax.swing
+									.GroupLayout
+									.PREFERRED_SIZE,
+									54, javax
+										.swing
+										.GroupLayout
+										.PREFERRED_SIZE
+								)
+						)
+						.addGroup(layout.createSequentialGroup()
+							.addGroup(layout.createParallelGroup(javax.swing.GroupLayout
+								.Alignment
+								.BASELINE)
+								.addComponent(
+									jLabel5)
+								.addComponent(
+									jLabel2))
+							.addPreferredGap(javax.swing
+								.LayoutStyle.ComponentPlacement.RELATED)
+							.addGroup(layout.createParallelGroup(javax.swing.GroupLayout
+								.Alignment.LEADING)
+								.addGroup(layout
+									.createSequentialGroup()
+									.addComponent(tipoDeBusca!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+									.addGap(7, 7, 7)
+									.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+										.addGroup(layout.createSequentialGroup()
+											.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+												.addComponent(buscaDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+												.addComponent(buscaOrigem!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+											.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+											.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+												.addComponent(jLabel3)
+												.addComponent(jLabel4)))
+										.addGroup(layout.createSequentialGroup()
+											.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+												.addComponent(exclusaoOrigem!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+												.addComponent(exclusaoDestino!!, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+											.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+											.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+												.addComponent(jLabel7)
+												.addComponent(jLabel6)))))
+								.addGroup(layout
+									.createSequentialGroup()
+									.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, java.lang.Short.MAX_VALUE.toInt())
+									.addComponent(btnExcluir!!, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+					.addGap(18, 18, 18)
+					.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment
+						.BASELINE)
+						.addComponent(buscaResultado!!, javax.swing.GroupLayout
+							.PREFERRED_SIZE, javax.swing.GroupLayout
+							.DEFAULT_SIZE, javax.swing
+							.GroupLayout
+							.PREFERRED_SIZE)
+						.addComponent(exclusaoResultado!!, javax.swing
+							.GroupLayout.PREFERRED_SIZE, javax.swing
+							.GroupLayout.DEFAULT_SIZE, javax
+							.swing
+							.GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+					.addComponent(lblBuscaResultado)
+					.addGap(22, 22, 22))
 		)
 		
 		pack()
@@ -560,10 +561,10 @@ internal class View : JFrame() {
 			//Fazer a busca ->(índice 0 = profundidade,índice 1 = largura)
 			if (tipoDeBusca!!.selectedIndex == 0) {
 				buscaResultado!!.text = grafo!!.buscar(origem, destino, GrafoNaoPonderado.MetodoDeBusca.PROFUNDIDADE)
-						.toString()
+					.toString()
 			} else {
 				buscaResultado!!.text = grafo!!.buscar(origem, destino, GrafoNaoPonderado.MetodoDeBusca.LARGURA)
-						.toString()
+					.toString()
 			}
 			
 			exclusaoResultado!!.text = ""
