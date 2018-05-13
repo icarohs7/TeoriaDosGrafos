@@ -28,8 +28,8 @@ object Kruskal {
 		}
 		/* Arestas contidas no grafo */
 		val arestas = grafo.arestas
-				.sortedBy { aresta -> aresta.peso }
-				.toMutableList()
+			.sortedBy { aresta -> aresta.peso }
+			.toMutableList()
 		
 		/* Para cada aresta dentro do grafo */
 		arestas.forEach { aresta ->
@@ -41,7 +41,7 @@ object Kruskal {
 			/* Se os vértices não pertencerem ao mesmo conjunto,
 			 * Uni-los e adicionar a aresta à Árvore Geradora de Custo Mínimo */
 			if (x != y) {
-				mst.addAresta(aresta)
+				mst.addAresta(aresta, grafo.direcionado)
 				union(conjuntos, x, y)
 			}
 		}

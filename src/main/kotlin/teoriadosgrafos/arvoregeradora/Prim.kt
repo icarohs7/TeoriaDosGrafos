@@ -28,7 +28,7 @@ object Prim {
 		 * representando B */
 		val b = mutableListOf(0)
 		/* Marcar o primeiro vértice*/
-		visitados[b[0]] = true
+		visitados[0] = true
 		/* Laço que gerará a árvore:
 		 * Que durará enquanto B não conter todos os vértices */
 		while (b.size < tamanho) {
@@ -40,7 +40,7 @@ object Prim {
 				throw RuntimeException("O grafo não contém arestas suficientes para gerar uma MST")
 			}
 			/* T = T união {(u,v)} */
-			mst.addAresta(menorAresta)
+			mst.addAresta(menorAresta, grafo.direcionado)
 			/* B = B união {u} */
 			b.add(menorAresta.origem)
 			/* Retirar u de V */
@@ -70,8 +70,8 @@ object Prim {
 		/* Para cada aresta concreta ou não dentro do grafo,
 		 * Com V representando os Vértices abertos
 		 * E B representando a lista de vértices já conectados à árvore*/
-		for (u in 0 until visitados.size) {
-			for (v in 0 until visitados.size) {
+		visitados.indices.forEach { u ->
+			visitados.indices.forEach { v ->
 				/* Para cada aresta, pegar a que tem menor peso que a menor registrada */
 				if (w[u][v] < menor.peso) {
 					/* Verificar se a origem desta aresta está contida em V e não contida em B */

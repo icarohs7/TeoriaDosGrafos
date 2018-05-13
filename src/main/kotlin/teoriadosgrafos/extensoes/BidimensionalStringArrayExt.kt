@@ -11,8 +11,8 @@ fun Array<Array<String>>.replaceInfinity(): Array<Array<String>> {
 	/* String que armazenará a matriz com o símbolo já substituído */
 	val novaString = Array(size) { Array(this[0].size) { "" } }
 	
-	for (i in indices) {
-		for (j in 0 until this[0].size) {
+	indices.forEach { i ->
+		this[0].indices.forEach { j ->
 			if (this[i][j] == Grafo.INFINITO.toString()) {
 				/* Substituir os valores infinitos pelo símbolo */
 				novaString[i][j] = Character.toString('\u221e')

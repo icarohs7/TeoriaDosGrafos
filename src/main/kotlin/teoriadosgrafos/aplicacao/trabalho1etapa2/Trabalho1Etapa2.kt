@@ -42,7 +42,7 @@ fun main(args: Array<String>) {
 		}
 	
 	/* Criar frame */
-	JFrame("Etapa 2 Trabalho 2 TeoriaDosGrafos").apply {
+	JFrame("Etapa 2 Trabalho 1 TeoriaDosGrafos").apply {
 		/* Definir painel raiz da aplicação no frame */
 		contentPane = scroll
 		/* Operação de fechamento */

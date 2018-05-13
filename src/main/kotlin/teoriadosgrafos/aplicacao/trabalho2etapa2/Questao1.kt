@@ -1,90 +1,82 @@
 package teoriadosgrafos.aplicacao.trabalho2etapa2
 
-import com.github.icarohs7.unoxlib.tables.ScrollTable
-import net.miginfocom.swing.MigLayout
-import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
-import teoriadosgrafos.excecoes.CicloNegativoException
-import teoriadosgrafos.metodosdebusca.ponderado.FloydWarshall
-import teoriadosgrafos.metodosdebusca.ponderado.ResultadoWarshall
-import javax.swing.JLabel
-import javax.swing.JPanel
+import teoriadosgrafos.metodosdebusca.ponderado.Dijkstra
+import teoriadosgrafos.metodosdebusca.ponderado.ResultadoPonderado
 
 /**
- * The type Questao 1.
+ * A faculdade Única de Ipatinga está necessitando de um software que auxilie o setor de
+ * marketing a planejar a campanha para o vestibular do 2º semestre de 2018 e 1º
+ * semestre 2019. O problema consiste em planejar o roteiro de viagem para cidades de
+ * forma que minimize o custo de viagem e consiga fazer a campanha (visitar todas as
+ * cidades). Ela dispõe de um efetivo de 10 pessoas e um veículo para transporte.
  */
-internal class Questao1 {
+object Questao1 {
 	/**
-	 * Root panel.
+	 * Tabela de distâncias pedida na questão
 	 */
-	val rootPanel = JPanel(MigLayout("wrap 1"))
+	val buscaDeDistancias: ResultadoPonderado
+		get() {
+			/* Distância em kilômetros entre as cidades */
+			val tabelaDeDistancias = mapOf(
+				Cidades.IPATINGA to intArrayOf(0, 30, 20, 50, 80, 200, 60),
+				Cidades.TIMOTEO to intArrayOf(30, 0, 15, 60, 100, 280, 90),
+				Cidades.CORONEL_FABRICIANO to intArrayOf(20, 15, 0, 55, 85, 250, 75),
+				Cidades.NAQUE to intArrayOf(50, 60, 55, 0, 30, 150, 30),
+				Cidades.PERIQUITO to intArrayOf(80, 100, 85, 30, 0, 100, 50),
+				Cidades.GOVERNADOR_VALADARES to intArrayOf(200, 280, 250, 150, 100, 0, 120),
+				Cidades.SANTANA_DO_PARAISO to intArrayOf(60, 90, 75, 30, 50, 120, 0)
+			)
+			
+			/* Pessoal necessário por cidade */
+			val tabelaDePessoal = mapOf(
+				Cidades.IPATINGA to 10,
+				Cidades.TIMOTEO to 5,
+				Cidades.CORONEL_FABRICIANO to 10,
+				Cidades.NAQUE to 3,
+				Cidades.PERIQUITO to 3,
+				Cidades.GOVERNADOR_VALADARES to 10,
+				Cidades.SANTANA_DO_PARAISO to 5
+			)
+			
+			/* Tabela com os pesos das arestas calculados */
+			val tabelaDeCustos = tabelaDeDistancias.map { (_, distancias) ->
+				distancias.mapIndexed { index, aresta ->
+					(
+							aresta
+									+ tabelaDePessoal[findCidade(index)]!! * 5
+									+ (aresta / 12) * 3.5
+							)
+				}.toDoubleArray()
+			}.toTypedArray()
+			return Dijkstra.buscar(1, GrafoPonderado(tabelaDeCustos))
+		}
 	
 	/**
-	 * Instantiates a new Questao 1.
+	 * Enum contendo as cidades
+	 * @property index Int: Índice da cidade
+	 * @constructor
 	 */
-	init {
-		/* Criar e Definir componentes gráficos */
-		criarComponentes()
+	enum class Cidades(val index: Int) {
+		IPATINGA(0),
+		TIMOTEO(1),
+		CORONEL_FABRICIANO(2),
+		NAQUE(3),
+		PERIQUITO(4),
+		GOVERNADOR_VALADARES(5),
+		SANTANA_DO_PARAISO(6);
 	}
 	
 	/**
-	 * Criar componentes.
+	 * Encontrar uma cidade pelo seu índice
+	 * @param index Int
+	 * @return Cidades
 	 */
-	private fun criarComponentes() {
-		/* Colunas da tabela */
-		val colunas = arrayOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
-		/* Dados da tabela */
-		var dados: Array<Array<String>>
-		
-		/* Título */
-		val titulo = JLabel("Questão 1. Menor caminho Floyd-Warshall")
-		titulo.font = ViewUtil.h1
-		
-		/* Adição dos componentes ao painel */
-		/* Título */
-		rootPanel.add(titulo, "align center")
-		/* Tabela */
-		try {
-			/* Tentar gerar a tabela */
-			dados = ViewUtil.replaceInfinity(primeiroGrafo().getDistanciasAsStringArray())
-			rootPanel.add(ScrollTable(dados, colunas).scrollableTable, "align center")
-		} catch (e: CicloNegativoException) {
-			/* Caso haja ciclo negativo, tratar */
-			/* Adicionar tabela em branco */
-			dados = Array(10) { Array(10) { "" } }
-			rootPanel.add(ScrollTable(dados, colunas).scrollableTable, "align center")
-			/* Adicionar label com o texto de aviso */
-			rootPanel.add(
-				JLabel("Erro: Não foi possível gerar a" +
-				       " tabela de distâncias, há um ciclo" +
-				       " negativo no grafo "),
-				"align center"
-			)
+	fun findCidade(index: Int): Cidades {
+		if (index > 7) {
+			throw RuntimeException("Indíce inexistente")
 		}
 		
-	}
-	
-	/**
-	 * Primeiro grafo resultado warshall.
-	 * @return the resultado warshall
-	 */
-	private fun primeiroGrafo(): ResultadoWarshall {
-		/* Definir o valor para a não adjacência(NA) */
-		@Suppress("LocalVariableName")
-		val NA = Grafo.INFINITO
-		/* Definição da matriz de adjacência */
-		val matriz = arrayOf(
-			intArrayOf(NA, 5, NA, NA, NA, 8, NA, NA, NA, 2),
-			intArrayOf(5, NA, -1, NA, NA, 3, NA, NA, NA, 3),
-			intArrayOf(NA, -1, NA, -1, NA, 3, 3, 2, 3, 3),
-			intArrayOf(NA, NA, -1, NA, 8, 1, 7, 4, 1, 6),
-			intArrayOf(NA, NA, NA, 8, NA, NA, 9, NA, 4, NA),
-			intArrayOf(8, 3, 3, 1, NA, NA, 4, -1, NA, NA),
-			intArrayOf(NA, NA, 3, 7, 9, 4, NA, -4, 6, NA),
-			intArrayOf(NA, NA, 2, 4, NA, -1, -4, NA, NA, NA),
-			intArrayOf(NA, NA, 3, 1, 4, NA, 6, NA, NA, 7),
-			intArrayOf(2, 3, 3, 6, NA, NA, NA, NA, 7, NA))
-		/* Gerar a matriz de menores distâncias utilizando o algoritmo de Floyd-Warshall */
-		return FloydWarshall.buscar(GrafoPonderado(matriz, false))
+		return Cidades.values()[index]
 	}
 }

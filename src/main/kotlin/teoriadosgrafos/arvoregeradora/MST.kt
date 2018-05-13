@@ -27,13 +27,17 @@ class MST(val tamanho: Int) {
 	 * Adicionar uma aresta à arvore
 	 * @param aresta Aresta -- A aresta a ser adicionada
 	 */
-	fun addAresta(aresta: Aresta) {
+	fun addAresta(aresta: Aresta, direcionado: Boolean = false) {
+		/* Não permitir a inserção de aresta repetida */
 		if (tree[aresta.origem][aresta.destino] != Grafo.INFINITO) {
 			return
 		}
 		
 		tree[aresta.origem][aresta.destino] = aresta.peso
-		tree[aresta.destino][aresta.origem] = aresta.peso
+		/* Adicionar a volta caso o grafo seja não direcionado */
+		if (!direcionado) {
+			tree[aresta.destino][aresta.origem] = aresta.peso
+		}
 	}
 	
 	/**

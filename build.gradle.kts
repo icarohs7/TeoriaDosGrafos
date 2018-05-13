@@ -6,6 +6,11 @@ description = "Projeto contendo todo o conteúdo da matéria Teoria dos Grafos" 
 		" do curso de Ciência da Computação da Faculdade Única de Ipatinga," +
 		" utilizado também para desenvolver os trabalhos avaliativos" +
 		" referentes à matéria"
+
+application {
+	mainClassName = "teoriadosgrafos.aplicacao.trabalho2etapa2.Trabalho2E2Kt"
+}
+
 /**
  * Lista de dependências
  */
@@ -57,7 +62,7 @@ val dokka by tasks.getting(org.jetbrains.dokka.gradle.DokkaTask::class) {
 val fatJar = task("fatJar", type = Jar::class) {
 	baseName = "${project.name}-fat"
 	manifest {
-		attributes["Main-Class"] = "teoriadosgrafos.aplicacao.trabalho2etapa2.Trabalho2Etapa2Kt"
+		attributes["Main-Class"] = "teoriadosgrafos.aplicacao.trabalho2etapa2.Trabalho2E2Kt"
 	}
 	from(
 		configurations.runtime.map {
