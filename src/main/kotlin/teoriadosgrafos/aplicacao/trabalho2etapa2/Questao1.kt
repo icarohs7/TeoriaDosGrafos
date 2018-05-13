@@ -1,6 +1,8 @@
 package teoriadosgrafos.aplicacao.trabalho2etapa2
 
 import teoriadosgrafos.GrafoPonderado
+import teoriadosgrafos.extensoes.toDoubleArray
+import teoriadosgrafos.extensoes.toFixed
 import teoriadosgrafos.metodosdebusca.ponderado.Dijkstra
 import teoriadosgrafos.metodosdebusca.ponderado.ResultadoPonderado
 
@@ -19,13 +21,13 @@ object Questao1 {
 		get() {
 			/* Distância em kilômetros entre as cidades */
 			val tabelaDeDistancias = mapOf(
-				Cidades.IPATINGA to intArrayOf(0, 30, 20, 50, 80, 200, 60),
-				Cidades.TIMOTEO to intArrayOf(30, 0, 15, 60, 100, 280, 90),
-				Cidades.CORONEL_FABRICIANO to intArrayOf(20, 15, 0, 55, 85, 250, 75),
-				Cidades.NAQUE to intArrayOf(50, 60, 55, 0, 30, 150, 30),
-				Cidades.PERIQUITO to intArrayOf(80, 100, 85, 30, 0, 100, 50),
-				Cidades.GOVERNADOR_VALADARES to intArrayOf(200, 280, 250, 150, 100, 0, 120),
-				Cidades.SANTANA_DO_PARAISO to intArrayOf(60, 90, 75, 30, 50, 120, 0)
+				Cidades.IPATINGA to intArrayOf(0, 30, 20, 50, 80, 200, 60).toDoubleArray(),
+				Cidades.TIMOTEO to intArrayOf(30, 0, 15, 60, 100, 280, 90).toDoubleArray(),
+				Cidades.CORONEL_FABRICIANO to intArrayOf(20, 15, 0, 55, 85, 250, 75).toDoubleArray(),
+				Cidades.NAQUE to intArrayOf(50, 60, 55, 0, 30, 150, 30).toDoubleArray(),
+				Cidades.PERIQUITO to intArrayOf(80, 100, 85, 30, 0, 100, 50).toDoubleArray(),
+				Cidades.GOVERNADOR_VALADARES to intArrayOf(200, 280, 250, 150, 100, 0, 120).toDoubleArray(),
+				Cidades.SANTANA_DO_PARAISO to intArrayOf(60, 90, 75, 30, 50, 120, 0).toDoubleArray()
 			)
 			
 			/* Pessoal necessário por cidade */
@@ -40,31 +42,37 @@ object Questao1 {
 			)
 			
 			/* Tabela com os pesos das arestas calculados */
-			val tabelaDeCustos = tabelaDeDistancias.map { (_, distancias) ->
+			val tabelaDeCustos = tabelaDeDistancias.map { (cidade, distancias) ->
 				distancias.mapIndexed { index, aresta ->
-					(
-							aresta
-									+ tabelaDePessoal[findCidade(index)]!! * 5
-									+ (aresta / 12) * 3.5
-							)
+					if (cidade == findCidade(index)) {
+						/* Se o destino for a própria cidade, zerar o custo */
+						0.0
+					} else {
+						/* Do contrário, Peso da aresta =
+						 * distancia + pessoal * 5 + (distancia / 12) * 3,5 */
+						(aresta + tabelaDePessoal[findCidade(index)]!! * 5 + (aresta / 12) * 3.5)
+							.toFixed(2)
+					}
 				}.toDoubleArray()
 			}.toTypedArray()
+			
+			tabelaDeCustos.forEach { it.forEach { print("$it, ") };println() }
+			
 			return Dijkstra.buscar(1, GrafoPonderado(tabelaDeCustos))
 		}
 	
 	/**
 	 * Enum contendo as cidades
-	 * @property index Int: Índice da cidade
 	 * @constructor
 	 */
-	enum class Cidades(val index: Int) {
-		IPATINGA(0),
-		TIMOTEO(1),
-		CORONEL_FABRICIANO(2),
-		NAQUE(3),
-		PERIQUITO(4),
-		GOVERNADOR_VALADARES(5),
-		SANTANA_DO_PARAISO(6);
+	enum class Cidades {
+		IPATINGA,
+		TIMOTEO,
+		CORONEL_FABRICIANO,
+		NAQUE,
+		PERIQUITO,
+		GOVERNADOR_VALADARES,
+		SANTANA_DO_PARAISO;
 	}
 	
 	/**

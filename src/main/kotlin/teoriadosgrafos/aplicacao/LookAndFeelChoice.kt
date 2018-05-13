@@ -118,6 +118,7 @@ class LookAndFeelChoice(private val filho: JFrame) : JFrame() {
 			add(JButton("Ok").apply {
 				addActionListener {
 					dispose()
+					SwingUtilities.updateComponentTreeUI(filho)
 					filho.pack()
 					filho.isVisible = true
 				}

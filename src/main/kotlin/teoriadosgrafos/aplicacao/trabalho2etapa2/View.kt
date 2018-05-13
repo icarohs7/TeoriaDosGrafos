@@ -80,6 +80,10 @@ class View(titulo: String) : JFrame(titulo) {
 				.map { Aresta(origem = it.origem + 1, destino = it.destino + 1, peso = it.peso) }
 				.chunked(3)
 				.forEach { chunk ->
+					/* Mapear todas as arestas incrementando sua origem e destino em 1,
+					 * Depois quebrar a lista em listas menores com tamanho máximo de 3 elementos,
+					 * Por fim, criar paineis contendo cada sublista gerada com cada elemento sendo
+					 * Uma label*/
 					add(JPanel(MigLayout()).apply {
 						chunk.forEach {
 							add(JLabel("De ${it.origem} para ${it.destino} com peso ${it.peso}"), "gap 20 20")
