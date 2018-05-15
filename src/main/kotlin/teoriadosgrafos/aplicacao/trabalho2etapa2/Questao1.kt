@@ -56,8 +56,6 @@ object Questao1 {
 				}.toDoubleArray()
 			}.toTypedArray()
 			
-			tabelaDeCustos.forEach { it.forEach { print("$it, ") };println() }
-			
 			return Dijkstra.buscar(1, GrafoPonderado(tabelaDeCustos))
 		}
 	

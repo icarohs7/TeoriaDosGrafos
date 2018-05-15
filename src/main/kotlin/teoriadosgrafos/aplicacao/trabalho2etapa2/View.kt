@@ -5,6 +5,7 @@ import net.miginfocom.swing.MigLayout
 import teoriadosgrafos.Aresta
 import teoriadosgrafos.aplicacao.h1
 import teoriadosgrafos.aplicacao.h2
+import teoriadosgrafos.extensoes.getResource
 import teoriadosgrafos.extensoes.replaceInfinity
 import javax.swing.JFrame
 import javax.swing.JLabel
@@ -21,6 +22,8 @@ class View(titulo: String) : JFrame(titulo) {
 	private val root = JPanel(MigLayout("fillx, wrap 3"))
 	
 	init {
+		/* Ícone da janela */
+		iconImage = toolkit.getImage(getResource("drawable/icon.png"))
 		/* Procedimento de definição de componentes */
 		criarComponentes()
 		/* Definir painel contendo os componentes */
@@ -55,7 +58,8 @@ class View(titulo: String) : JFrame(titulo) {
 				ScrollTable(arrayOf(Questao1.buscaDeDistancias.distanciasAsStringArray()), colunas)
 					.scrollableTable
 			
-			val precedentes = Questao1.buscaDeDistancias.predecessores.map { Questao1.findCidade(it) }
+			val precedentes = Questao1.buscaDeDistancias.predecessores
+				.map { Questao1.findCidade(it) }
 			val tblPredQuestao1 =
 				ScrollTable(arrayOf(precedentes.map { it.toString() }.toTypedArray()), colunas)
 					.scrollableTable
@@ -76,19 +80,23 @@ class View(titulo: String) : JFrame(titulo) {
 			add(lblMST, "span, center, wrap")
 			add(tblMSTQuestao2, "span, grow, center, wrap")
 			add(lblArestas, "span, center, wrap")
+			
+			/* Mapear todas as arestas incrementando sua origem e destino em 1,
+			 * Depois quebrar a lista em listas menores com tamanho máximo de 3 elementos,
+			 * Por fim, criar paineis contendo cada sublista gerada com cada elemento sendo
+			 * Uma label */
 			Questao2.arvoreMinima.getArestas()
-				.map { Aresta(origem = it.origem + 1, destino = it.destino + 1, peso = it.peso) }
+				.map { Aresta(it.origem + 1, it.destino + 1, it.peso) }
 				.chunked(3)
 				.forEach { chunk ->
-					/* Mapear todas as arestas incrementando sua origem e destino em 1,
-					 * Depois quebrar a lista em listas menores com tamanho máximo de 3 elementos,
-					 * Por fim, criar paineis contendo cada sublista gerada com cada elemento sendo
-					 * Uma label*/
-					add(JPanel(MigLayout()).apply {
-						chunk.forEach {
-							add(JLabel("De ${it.origem} para ${it.destino} com peso ${it.peso}"), "gap 20 20")
-						}
-					}, "span, center, wrap")
+					add(JPanel(MigLayout())
+						.apply {
+							chunk.forEach {
+								add(JLabel(
+									"De ${it.origem} para ${it.destino} com peso ${it.peso}"),
+									"gap 20 20")
+							}
+						}, "span, center, wrap")
 				}
 		}
 	}
