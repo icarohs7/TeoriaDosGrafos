@@ -10,16 +10,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="v1.5.2 - Pequenas otimizações no código do algoritmo de Kruskal&#10;&#10;Adicionado ícone à janela do trabalho2etapa2">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,20 +99,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="View.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt">
+      <file leaf-file-name="Questao2.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
+            <state relative-caret-position="398">
+              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Questao2.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.kt">
+      <file leaf-file-name="Kruskal.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="168">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -667,18 +661,18 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Trabalho1Etapa2.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao2.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao3.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Prim.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/BidimensionalStringArrayExt.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Trabalho2Etapa2.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/LookAndFeelChoice.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao1.kt" />
         <option value="$PROJECT_DIR$/build.gradle.kts" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt" />
       </list>
     </option>
   </component>
@@ -740,22 +734,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
-              <item name="TeoriaDosGrafos_main" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -827,6 +805,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
+              <item name="TeoriaDosGrafos_main" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -841,7 +835,7 @@
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.392779" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1012,27 +1006,27 @@
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" weight="0.32897604" />
       <window_info anchor="right" id="Maven Projects" order="5" show_stripe_button="false" weight="0.3296" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.332244" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.33006537" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32897604" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28624734" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.21895425" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28944564" />
       <window_info anchor="right" id="Gradle" order="9" weight="0.16044776" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39803708" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32715377" />
+      <window_info anchor="right" id="Copy/Paste" order="8" weight="0.3296" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Kotlin Bytecode" order="6" weight="0.32980332" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="CodeHelp" order="7" side_tool="true" weight="0.3296" />
-      <window_info anchor="right" id="Copy/Paste" order="8" weight="0.3296" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32715377" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Gradle View" order="12" weight="0.32897604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.21895425" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
     </layout>
   </component>
@@ -1089,7 +1083,8 @@
     <MESSAGE value="v1.4.0 -&gt; Adições&#10;--&gt;trabalho2etapa2 {&#10;&gt;Adicionado pacote com as classes&#10;&gt;para o Trabalho 2 da Etapa 2&#10;}&#10;--&gt;LookAndFeelChoice {&#10;&gt;Adicionada classe para um frame&#10;&gt;seletor de temas&#10;}" />
     <MESSAGE value="v1.5.0 -&gt; Adições e correções&#10;--&gt;Double.toFixed() {&#10;&gt;Adicionada função de extensão para definir&#10;&gt;número de casas decimais de um valor double&#10;}&#10;--&gt;Questao1 {&#10;&gt;Conversão da matriz de distâncias para matriz de doubles,&#10;&gt;corrigindo um bug de arredondamento, que tornava os valores inválidos&#10;}" />
     <MESSAGE value="v1.5.1 -&gt; Adição de badge de versionamento" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.5.1 -&gt; Adição de badge de versionamento" />
+    <MESSAGE value="v1.5.2 - Pequenas otimizações no código do algoritmo de Kruskal&#10;&#10;Adicionado ícone à janela do trabalho2etapa2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.5.2 - Pequenas otimizações no código do algoritmo de Kruskal&#10;&#10;Adicionado ícone à janela do trabalho2etapa2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1332,13 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Prim.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1405,24 +1393,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="315">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        <state relative-caret-position="398">
+          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
+        <state relative-caret-position="-1345">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
         </state>
       </provider>
     </entry>

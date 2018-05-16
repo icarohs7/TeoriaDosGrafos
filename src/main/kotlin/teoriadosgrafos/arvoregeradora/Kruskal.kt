@@ -6,56 +6,48 @@ import teoriadosgrafos.GrafoPonderado
  * Singleton representandoo algoritmo para da
  * Árvore Geradora de Custo Mínimo
  * de Kruskal
- *
- *
  * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
 object Kruskal {
-	private val conjuntos = mutableSetOf<SubConjunto>()
+	private val conjuntos = mutableListOf<SubConjunto>()
 	/**
 	 * Gera a MST utilizando o argoritmo de Kruskal
 	 * @param grafo GrafoPonderado -- O grafo em que a operação será executada
 	 * @return MST -- A Árvore Geradora de Custo Mínimo
 	 */
 	fun gerar(grafo: GrafoPonderado): MST {
-		/* Variável contendo a matriz de adjacência */
-		val w = grafo.matrizDeAdjacencia
 		/* Criar a árvore geradora */
-		val mst = MST(w.size)
+		val mst = MST(grafo.matrizDeAdjacencia.size)
 		/* Limpar conjuntos */
 		conjuntos.clear()
 		/* Definir conjuntos iniciais */
-		w.indices.forEach { conjuntos.add(SubConjunto(it, mutableSetOf(it))) }
-		/* Arestas contidas no grafo */
-		val arestas = grafo.arestas.sortedBy { aresta -> aresta.peso }
+		grafo.matrizDeAdjacencia.indices.forEach { conjuntos.add(SubConjunto(it, mutableListOf(it))) }
 		
-		/* Para cada aresta dentro do grafo */
-		arestas.forEach { aresta ->
-			/* Se os vértices não pertencerem ao mesmo conjunto,
-			 * Uni-los e adicionar a aresta à Árvore Geradora de Custo Mínimo */
-			if (find(aresta.origem) != find(aresta.destino)) {
-				mst.addAresta(aresta, grafo.direcionado)
-				union(find(aresta.origem), find(aresta.destino))
+		/* Para cada aresta dentro do grafo em ordem ascendente de peso */
+		grafo.arestas
+			.sortedBy { it.peso }
+			.forEach { aresta ->
+				/* Se os vértices não pertencerem ao mesmo conjunto,
+				 * Uni-los e adicionar a aresta à Árvore Geradora de Custo Mínimo */
+				if (find(aresta.origem) != find(aresta.destino)) {
+					mst.addAresta(aresta, grafo.direcionado)
+					union(find(aresta.origem), find(aresta.destino))
+				}
 			}
-		}
 		
 		/* Por fim, retornar a árvore */
 		return mst
 	}
 	
-	
 	/**
-	 * Encontrar o subconjunto de um elemento
+	 * Encontrar o subconjunto de um elemento ou
+	 * lançar uma exceção caso o mesmo não seja encontrado
 	 * @param i Int -- O elemento a ser encontrado
 	 * @return Int -- O índice do subconjunto ao qual o elemento pertence
 	 */
-	private fun find(i: Int): Int {
-		/* Retorna o identificador do conjunto do elemento passado
-		 * e caso o conjunto não seja encontrado, lançar uma exceção */
-		return conjuntos
-			.find { it.members.contains(i) }?.id
-				?: throw RuntimeException("Elemento não pertence a nenhum conjunto")
-	}
+	private fun find(i: Int) = conjuntos.find { it.members.contains(i) }?.id
+			?: throw RuntimeException("Elemento não pertence a nenhum conjunto")
+	
 	
 	/**
 	 * Realiza a união de dois conjuntos U e V
@@ -86,5 +78,5 @@ object Kruskal {
 	 * @property members MutableSet<Int> -- Os membros do conjunto
 	 * @constructor
 	 */
-	data class SubConjunto(val id: Int, val members: MutableSet<Int>)
+	data class SubConjunto(val id: Int, val members: MutableList<Int>)
 }

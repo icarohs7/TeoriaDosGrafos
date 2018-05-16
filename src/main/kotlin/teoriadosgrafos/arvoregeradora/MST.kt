@@ -12,16 +12,9 @@ import java.io.PrintStream
  * @constructor
  * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
-class MST(val tamanho: Int) {
-	val tree: Array<DoubleArray> = Array(tamanho) { DoubleArray(tamanho) }
-	
-	init {
-		for (u in 0 until tamanho) {
-			for (v in 0 until tamanho) {
-				tree[u][v] = Grafo.INFINITO
-			}
-		}
-	}
+class MST(private val tamanho: Int) {
+	@Suppress("MemberVisibilityCanBePrivate")
+	val tree: Array<DoubleArray> = Array(tamanho) { DoubleArray(tamanho) { Grafo.INFINITO } }
 	
 	/**
 	 * Adicionar uma aresta à arvore
@@ -33,6 +26,7 @@ class MST(val tamanho: Int) {
 			return
 		}
 		
+		/* Adicionar aresta */
 		tree[aresta.origem][aresta.destino] = aresta.peso
 		/* Adicionar a volta caso o grafo seja não direcionado */
 		if (!direcionado) {
@@ -44,11 +38,10 @@ class MST(val tamanho: Int) {
 	 * Imprimir a árvore
 	 * @param out PrintStream -- A saída onde será impressa a árvore
 	 */
+	@Suppress("MemberVisibilityCanBePrivate")
 	fun printTree(out: PrintStream) {
-		tree.forEach { linha ->
-			linha.forEach { elem ->
-				out.print("$elem ")
-			}
+		tree.forEach {
+			it.forEach { print("$it ") }
 			out.println()
 		}
 	}
@@ -56,6 +49,7 @@ class MST(val tamanho: Int) {
 	/**
 	 * Imprimir a árvore no console
 	 */
+	@Suppress("unused")
 	fun printTree() {
 		printTree(System.out)
 	}
@@ -64,6 +58,7 @@ class MST(val tamanho: Int) {
 	 * Imprimir as arestas continas na árvore
 	 * @param out PrintStream -- A saída onde as arestas serão impressas
 	 */
+	@Suppress("MemberVisibilityCanBePrivate")
 	fun printEdges(out: PrintStream) {
 		getArestas().forEach { aresta ->
 			out.println(aresta)
@@ -73,6 +68,7 @@ class MST(val tamanho: Int) {
 	/**
 	 * Imprimir as arestas contidas na árvore no console
 	 */
+	@Suppress("unused")
 	fun printEdges() {
 		printEdges(System.out)
 	}
