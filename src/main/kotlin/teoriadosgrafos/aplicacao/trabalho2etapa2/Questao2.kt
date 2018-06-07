@@ -2,8 +2,8 @@ package teoriadosgrafos.aplicacao.trabalho2etapa2
 
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
-import teoriadosgrafos.arvoregeradora.Kruskal
 import teoriadosgrafos.arvoregeradora.MST
+import teoriadosgrafos.arvoregeradora.kruskal
 import teoriadosgrafos.extensoes.toDouble2DArray
 
 /**
@@ -22,6 +22,7 @@ import teoriadosgrafos.extensoes.toDouble2DArray
 object Questao2 {
 	val arvoreMinima: MST
 		get() {
+			@Suppress("LocalVariableName")
 			val NA = Grafo.INFINITO.toInt()
 			
 			/* Matriz do grafo */
@@ -36,6 +37,6 @@ object Questao2 {
 				/* 8 */intArrayOf(NA, NA, NA, NA, NA, NA, NA, NA)
 			).toDouble2DArray()
 			
-			return Kruskal.gerar(GrafoPonderado(matriz, true))
+			return GrafoPonderado(matriz, true).arvoreGeradora.kruskal()
 		}
 }

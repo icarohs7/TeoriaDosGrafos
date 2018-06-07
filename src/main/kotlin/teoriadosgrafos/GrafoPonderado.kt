@@ -23,6 +23,18 @@ class GrafoPonderado(matrizDeAdjacencia: Array<DoubleArray>, direcionado: Boolea
 			: this(Array<DoubleArray>(tamanho) { DoubleArray(tamanho) { INFINITO } }, direcionado)
 	
 	/**
+	 * Propriedade fornecendo acesso aos métodos de custo mínimo
+	 */
+	val custoMinimo: CustoMinimo
+		get() = CustoMinimo(this)
+	
+	/**
+	 * Propriedade fornecendo acesso aos métodos para arvore geradora de custo mínimo
+	 */
+	val arvoreGeradora: ArvoreGeradora
+		get() = ArvoreGeradora(this)
+	
+	/**
 	 * Adicionar uma aresta ao grafo
 	 * @param origem  Vértice de origem da aresta
 	 * @param destino Vértice de destino da aresta
@@ -57,4 +69,18 @@ class GrafoPonderado(matrizDeAdjacencia: Array<DoubleArray>, direcionado: Boolea
 			}
 		}
 	}
+	
+	/**
+	 * Classe utilizada para agrupar os métodos de custo mínimo em um grafo
+	 * @property grafo GrafoPonderado
+	 * @constructor
+	 */
+	class CustoMinimo(val grafo: GrafoPonderado)
+	
+	/**
+	 * Classe utilizada para agrupar os métodos geradores de árvore de custo mínimo
+	 * @property grafo GrafoPonderado
+	 * @constructor
+	 */
+	class ArvoreGeradora(val grafo: GrafoPonderado)
 }

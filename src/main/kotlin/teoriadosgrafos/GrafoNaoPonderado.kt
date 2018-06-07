@@ -1,8 +1,6 @@
 package teoriadosgrafos
 
 import teoriadosgrafos.excecoes.CaminhoNaoEncontradoException
-import teoriadosgrafos.metodosdebusca.naoponderado.BuscaEmLargura
-import teoriadosgrafos.metodosdebusca.naoponderado.BuscaEmProfundidade
 import java.util.LinkedList
 import java.util.Queue
 
@@ -29,20 +27,10 @@ constructor
 	}
 	
 	/**
-	 * Executar a busca em um grafo não ponderado partindo de um vértice origem em direção a um vértice destino
-	 * @param origem Int: O vértice de origem
-	 * @param destino Int: O vértice que se deseja alcançar apartir da origem
-	 * @param metodo MetodoDeBusca: O método de busca a ser utilizado (PROFUNDIDADE se omitido)
-	 * @return Queue<*>: Uma fila contendo o caminho da origem ao destino
+	 * Propriedade fornecendo acesso aos métodos de busca
 	 */
-	@JvmOverloads
-	fun buscar(origem: Int, destino: Int, metodo: MetodoDeBusca = MetodoDeBusca.PROFUNDIDADE): List<Int> {
-		/* Definir abordagem de busca baseando-se no método informado pelo usuáro */
-		return when (metodo) {
-			GrafoNaoPonderado.MetodoDeBusca.LARGURA      -> BuscaEmLargura.buscar(origem, destino, this)
-			GrafoNaoPonderado.MetodoDeBusca.PROFUNDIDADE -> BuscaEmProfundidade.buscar(origem, destino, this)
-		}
-	}
+	val metodosDeBusca: MetodosDeBusca
+		get() = MetodosDeBusca(this)
 	
 	/**
 	 * Exclui uma aresta conectando 2 vértices
@@ -78,16 +66,9 @@ constructor
 	}
 	
 	/**
-	 * Enum contendo os métodos de busca disponíveis para um grafo não ponderado
+	 * Classe fornecendo acesso aos métodos de busca
+	 * @property grafo GrafoNaoPonderado
+	 * @constructor
 	 */
-	enum class MetodoDeBusca {
-		/**
-		 * Busca em larguda
-		 */
-		LARGURA,
-		/**
-		 * Busca em profundidade
-		 */
-		PROFUNDIDADE
-	}
+	class MetodosDeBusca(val grafo: GrafoNaoPonderado)
 }

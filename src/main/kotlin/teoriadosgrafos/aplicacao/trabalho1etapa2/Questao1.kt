@@ -5,11 +5,11 @@ import net.miginfocom.swing.MigLayout
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
 import teoriadosgrafos.aplicacao.h1
+import teoriadosgrafos.custominimo.FloydWarshall
+import teoriadosgrafos.custominimo.ResultadoWarshall
 import teoriadosgrafos.excecoes.CicloNegativoException
 import teoriadosgrafos.extensoes.replaceInfinity
 import teoriadosgrafos.extensoes.toDouble2DArray
-import teoriadosgrafos.metodosdebusca.ponderado.FloydWarshall
-import teoriadosgrafos.metodosdebusca.ponderado.ResultadoWarshall
 import javax.swing.JLabel
 import javax.swing.JPanel
 

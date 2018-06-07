@@ -5,6 +5,8 @@ import teoriadosgrafos.GrafoNaoPonderado
 import teoriadosgrafos.excecoes.CaminhoNaoEncontradoException
 import teoriadosgrafos.extensoes.getResource
 import teoriadosgrafos.extensoes.toDouble2DArray
+import teoriadosgrafos.metodosdebusca.buscaEmLargura
+import teoriadosgrafos.metodosdebusca.buscaEmProfundidade
 import java.awt.Toolkit.getDefaultToolkit
 import javax.swing.JFrame
 import javax.swing.JTable
@@ -561,10 +563,10 @@ internal class View : JFrame() {
 			
 			//Fazer a busca ->(índice 0 = profundidade,índice 1 = largura)
 			if (tipoDeBusca!!.selectedIndex == 0) {
-				buscaResultado!!.text = grafo!!.buscar(origem, destino, GrafoNaoPonderado.MetodoDeBusca.PROFUNDIDADE)
+				buscaResultado!!.text = grafo!!.metodosDeBusca.buscaEmProfundidade(origem, destino)
 					.toString()
 			} else {
-				buscaResultado!!.text = grafo!!.buscar(origem, destino, GrafoNaoPonderado.MetodoDeBusca.LARGURA)
+				buscaResultado!!.text = grafo!!.metodosDeBusca.buscaEmLargura(origem, destino)
 					.toString()
 			}
 			

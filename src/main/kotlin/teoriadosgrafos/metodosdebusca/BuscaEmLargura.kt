@@ -1,4 +1,4 @@
-package teoriadosgrafos.metodosdebusca.naoponderado
+package teoriadosgrafos.metodosdebusca
 
 import teoriadosgrafos.GrafoNaoPonderado
 import teoriadosgrafos.excecoes.CaminhoNaoEncontradoException

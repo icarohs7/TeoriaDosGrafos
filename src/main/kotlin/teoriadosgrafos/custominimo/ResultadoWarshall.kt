@@ -1,4 +1,4 @@
-package teoriadosgrafos.metodosdebusca.ponderado
+package teoriadosgrafos.custominimo
 
 import java.io.PrintStream
 import java.util.Arrays

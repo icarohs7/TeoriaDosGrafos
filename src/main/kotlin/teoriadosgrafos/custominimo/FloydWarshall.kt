@@ -1,4 +1,4 @@
-package teoriadosgrafos.metodosdebusca.ponderado
+package teoriadosgrafos.custominimo
 
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado

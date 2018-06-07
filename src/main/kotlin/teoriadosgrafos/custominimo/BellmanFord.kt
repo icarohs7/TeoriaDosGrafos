@@ -1,4 +1,4 @@
-package teoriadosgrafos.metodosdebusca.ponderado
+package teoriadosgrafos.custominimo
 
 import teoriadosgrafos.GrafoPonderado
 import teoriadosgrafos.excecoes.CicloNegativoException

@@ -1,10 +1,10 @@
 package teoriadosgrafos.aplicacao.trabalho2etapa2
 
 import teoriadosgrafos.GrafoPonderado
+import teoriadosgrafos.custominimo.ResultadoPonderado
+import teoriadosgrafos.custominimo.dijkstra
 import teoriadosgrafos.extensoes.toDoubleArray
 import teoriadosgrafos.extensoes.toFixed
-import teoriadosgrafos.metodosdebusca.ponderado.Dijkstra
-import teoriadosgrafos.metodosdebusca.ponderado.ResultadoPonderado
 
 /**
  * A faculdade Única de Ipatinga está necessitando de um software que auxilie o setor de
@@ -56,7 +56,7 @@ object Questao1 {
 				}.toDoubleArray()
 			}.toTypedArray()
 			
-			return Dijkstra.buscar(1, GrafoPonderado(tabelaDeCustos))
+			return GrafoPonderado(tabelaDeCustos).custoMinimo.dijkstra(1)
 		}
 	
 	/**

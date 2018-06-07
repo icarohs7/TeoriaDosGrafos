@@ -4,8 +4,8 @@ import com.github.icarohs7.unoxlib.tables.ScrollTable
 import net.miginfocom.swing.MigLayout
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
+import teoriadosgrafos.custominimo.dijkstra
 import teoriadosgrafos.extensoes.toDouble2DArray
-import teoriadosgrafos.metodosdebusca.ponderado.Dijkstra
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JPanel
@@ -53,7 +53,7 @@ internal class View constructor(s: String) : JFrame(s) {
 		val grafo = GrafoPonderado(matriz, true)
 		
 		/* Guardar o resultado da busca */
-		val resultado = Dijkstra.buscar(1, grafo)
+		val resultado = grafo.custoMinimo.dijkstra(1)
 		
 		/* Nomes das colunas das tabelas */
 		val colunas = arrayOf("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m")
