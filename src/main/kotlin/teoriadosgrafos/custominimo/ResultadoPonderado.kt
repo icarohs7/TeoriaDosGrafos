@@ -11,6 +11,7 @@ import java.util.Arrays
  *
  * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
  */
+@Suppress("MemberVisibilityCanBePrivate")
 data class ResultadoPonderado(val distancias: DoubleArray, val predecessores: IntArray) {
 	/**
 	 * Retorna o menor caminho saindo da origem geradora do resultado atual em direção ao destino informado

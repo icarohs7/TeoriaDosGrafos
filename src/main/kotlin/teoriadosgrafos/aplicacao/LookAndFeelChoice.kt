@@ -130,7 +130,7 @@ class LookAndFeelChoice(private val filho: JFrame) : JFrame() {
 		try {
 			val theme = "Default"
 			when (selectedLaf) {
-				acryl      -> {
+				acryl -> {
 					// First set the theme of the look and feel. This must be done first because there
 					// is some static initializing (color values etc.) when calling setTheme.
 					// Another reason is that the theme variables are shared with all look and feels, so
@@ -141,67 +141,67 @@ class LookAndFeelChoice(private val filho: JFrame) : JFrame() {
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				aero       -> {
+				aero -> {
 					com.jtattoo.plaf.aero.AeroLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(AeroLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				aluminium  -> {
+				aluminium -> {
 					com.jtattoo.plaf.aluminium.AluminiumLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(AluminiumLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				bernstein  -> {
+				bernstein -> {
 					com.jtattoo.plaf.bernstein.BernsteinLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(BernsteinLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				fast       -> {
+				fast -> {
 					com.jtattoo.plaf.fast.FastLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(FastLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				graphite   -> {
+				graphite -> {
 					com.jtattoo.plaf.graphite.GraphiteLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(GraphiteLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				hifi       -> {
+				hifi -> {
 					com.jtattoo.plaf.hifi.HiFiLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(HiFiLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				luna       -> {
+				luna -> {
 					com.jtattoo.plaf.luna.LunaLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(LunaLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				mcwin      -> {
+				mcwin -> {
 					com.jtattoo.plaf.mcwin.McWinLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(McWinLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				lafMint    -> {
+				lafMint -> {
 					com.jtattoo.plaf.mint.MintLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(MintLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				noire      -> {
+				noire -> {
 					com.jtattoo.plaf.noire.NoireLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(NoireLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)
 					pack()
 				}
-				lafSmart   -> {
+				lafSmart -> {
 					com.jtattoo.plaf.smart.SmartLookAndFeel.setTheme(theme)
 					UIManager.setLookAndFeel(SmartLookAndFeel())
 					SwingUtilities.updateComponentTreeUI(this)

@@ -26,8 +26,8 @@ object BellmanFord {
 		grafo.visitados[origem] = true
 		/* Conjunto de vértices do grafo */
 		val q = (0 until grafo.matrizDeAdjacencia.size)
-				.filter { it != origem }
-				.toMutableList()
+			.filter { it != origem }
+			.toMutableList()
 		
 		/* Enquanto existirem vértices abertos */
 		while (!q.isEmpty()) {

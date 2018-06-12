@@ -51,7 +51,8 @@ object BuscaEmLargura {
 	 * @param caminhoInvertido Stack<Int>: Pilha utilizada para armazenar o caminho
 	 * @return Boolean: Verdadeiro se o caminho for encontrado e Falso caso contrário
 	 */
-	private fun bfs(origem: Int, destino: Int, grafo: GrafoNaoPonderado, proximosVertices: LinkedList<Int>, caminhoInvertido: Stack<Int>): Boolean {
+	private tailrec fun bfs(origem: Int, destino: Int, grafo: GrafoNaoPonderado, proximosVertices: LinkedList<Int>, caminhoInvertido:
+	Stack<Int>): Boolean {
 		/* Empilhar vértice visitado */
 		caminhoInvertido.push(origem + 1)
 		
