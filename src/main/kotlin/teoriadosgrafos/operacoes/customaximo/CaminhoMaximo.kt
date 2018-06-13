@@ -34,6 +34,6 @@ object CaminhoMaximo {
 		}
 		
 		// Retornar a lista contento o caminho máximo corrigida
-		return res.reversed().dropLast(1)
+		return res.drop(1)
 	}
 }
