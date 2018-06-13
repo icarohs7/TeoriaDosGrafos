@@ -10,137 +10,60 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="v1.6.0 - Adição de funções de extensão às classes de grafos">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/E3T1Aplicacao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/controller/E3T1Controller.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1Styles.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1View.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoExt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Extensoes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Khan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/taskHistory/taskHistory.lock" afterDir="false" />
+    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="v1.7.0 - Mudança da DSL de build, Adição de algoritmo&#10;&#10;Alterada DSL de build de kotlin para groovy&#10;&#10;Adição do algoritmo de ordenação topológica de Khan&#10;&#10;Melhorias de código">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-noframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/constant-values.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/deprecated-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/Aresta.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/Grafo.Companion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/Grafo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/GrafoNaoPonderado.MetodoDeBusca.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/GrafoNaoPonderado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/GrafoPonderado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/LookAndFeelChoice.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/ViewUtilKt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa1/Trabalho1Etapa1Kt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa1/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa1/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa1/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa2/Trabalho1Etapa2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa2/Trabalho1Etapa2Kt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa2/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa2/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho1etapa2/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao1.Cidades.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/Trabalho2E2Kt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/Trabalho2Etapa2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/View.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalho2etapa2/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalhoextraetapa2/Trabalho1Etapa2Kt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalhoextraetapa2/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalhoextraetapa2/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/aplicacao/trabalhoextraetapa2/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/arvoregeradora/Kruskal.SubConjunto.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/arvoregeradora/Kruskal.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/arvoregeradora/MST.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/arvoregeradora/Prim.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/arvoregeradora/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/arvoregeradora/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/arvoregeradora/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/excecoes/ArestaNegativaException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/excecoes/CicloNegativoException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/excecoes/ForaDoGrafoException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/excecoes/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/excecoes/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/excecoes/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/AnyExtKt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/BidimensionalIntArrayExtKt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/BidimensionalStringArrayExtKt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/DoubleArrayExtKt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/DoubleExtKt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/IntArrayExtKt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/extensoes/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/naoponderado/BuscaEmLargura.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/naoponderado/BuscaEmProfundidade.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/naoponderado/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/naoponderado/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/naoponderado/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/BellmanFord.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/Dijkstra.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/FloydWarshall.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/ResultadoPonderado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/ResultadoWarshall.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/metodosdebusca/ponderado/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/teoriadosgrafos/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/LookAndFeelChoice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/LookAndFeelChoice.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa1/Trabalho1Etapa1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/Trabalho1Etapa1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa1/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/View.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Trabalho1Etapa2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Trabalho1Etapa2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Trabalho2E2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Trabalho2E2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/View.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalhoextraetapa2/Trabalho1Etapa2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalhoextra/Trabalho1Etapa2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalhoextraetapa2/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalhoextra/View.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/BellmanFord.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/BellmanFord.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoPonderado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmLargura.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmLargura.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/LookAndFeelChoice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/LookAndFeelChoice.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/ViewUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/ViewUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/Trabalho1Etapa1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa1trabalho1/Trabalho1Etapa1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa1trabalho1/View.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Trabalho1Etapa2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Trabalho1Etapa2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Trabalho2E2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Trabalho2E2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/View.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalhoextra/Trabalho1Etapa2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalhoextra/Trabalho1Etapa2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalhoextra/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalhoextra/View.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/E3T1Aplicacao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/controller/E3T1Controller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1Styles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Prim.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/BellmanFord.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/Dijkstra.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/FloydWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoWarshall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ArestaNegativaException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ForaDoGrafoException.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmLargura.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmProfundidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Khan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -238,7 +161,19 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="TeoriaDosGrafos" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="shadow" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TeoriaDosGrafos" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TeoriaDosGrafos" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="versioning" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -250,10 +185,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state relative-caret-position="340">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="30" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -269,9 +240,10 @@
         <option value="GUIOnCode" />
         <option value="MigFrame" />
         <option value="Class" />
+        <option value="Kotlin File" />
+        <option value="CSS File" />
         <option value="Kotlin Class" />
         <option value="Kotlin Object" />
-        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -569,9 +541,9 @@
     <option name="modificationStamps">
       <map>
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="553374088" />
-        <entry key="$PROJECT_DIR$" value="6112575415606" />
+        <entry key="$PROJECT_DIR$" value="6112609362934" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="438485762" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3116336460" />
         <entry key="$PROJECT_DIR$/build.gradle.kts" value="2068845820" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="3031943934" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1168256157" />
@@ -728,35 +700,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Teste.java" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/customaximo/ordemtopologica/Kahn.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoPonderadoExt.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/ponderado/BellmanFord.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/ponderado/Dijkstra.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/ponderado/FloydWarshall.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Prim.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao1.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao2.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa2/Questao3.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/View.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/naoponderado/BuscaEmLargura.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/naoponderado/BuscaEmProfundidade.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoNaoPonderadoExt.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/Dijkstra.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/FloydWarshall.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoWarshall.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/arvoregeradora/Kruskal.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/BellmanFord.kt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/Extensoes.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/Extensoes.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Extensoes.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho1etapa1/View.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalhoextraetapa2/View.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao1.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/trabalho2etapa2/Questao2.kt" />
         <option value="$PROJECT_DIR$/build.gradle.kts" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmLargura.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmProfundidade.kt" />
@@ -771,14 +714,43 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Extensoes.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1View.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/controller/E3T1Controller.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoExt.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Khan.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoPonderado.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ArestaNegativaException.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ForaDoGrafoException.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/Excecoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/VerticeComEntradas.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/styles/jmetro.css" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt" />
       </list>
     </option>
   </component>
@@ -872,6 +844,61 @@
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+              <item name="customaximo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
+              <item name="TeoriaDosGrafos_main" type="616d4139:PackageViewModuleNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -898,22 +925,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
-              <item name="TeoriaDosGrafos_main" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -923,19 +934,15 @@
     <property name="SearchEverywhereHistoryKey" value="replaceInfinity&#9;null&#9;null&#10;unox&#9;FILE&#9;jar://C:/Users/icaro/.m2/repository/com/github/icarohs7/unoxlib/UNoxLib/0.1.1/UNoxLib-0.1.1.jar!/META-INF/maven/com.github.icarohs7.unoxlib/UNoxLib&#10;to kotlin&#9;ACTION&#9;ConvertJavaToKotlin&#10;table&#9;FILE&#9;file://E:/Desenvolvimento/VCS/TeoriaDosGrafos/src/main/java/teoriadosgrafos/aplicacao/trabalho1etapa1/EditableTableModel.java&#10;mst&#9;FILE&#9;file://E:/Desenvolvimento/VCS/TeoriaDosGrafos/src/main/java/teoriadosgrafos/arvoregeradora/MST.kt&#10;resulta&#9;FILE&#9;file://E:/Desenvolvimento/VCS/TeoriaDosGrafos/src/main/java/teoriadosgrafos/metodosdebusca/ponderado/ResultadoWarshall.kt&#10;flo&#9;FILE&#9;file://E:/Desenvolvimento/VCS/TeoriaDosGrafos/src/main/java/teoriadosgrafos/metodosdebusca/ponderado/FloydWarshall.kt&#10;floyd&#9;FILE&#9;file://E:/Desenvolvimento/Java/Whatever/TeoriaDosGrafos/src/main/java/teoriadosgrafos/metodosdebusca/ponderado/FloydWarshall.kt" />
     <property name="ToolWindowBuild.ShowToolbar" value="false" />
     <property name="add_unversioned_files" value="true&#10;E:/Desenvolvimento/VCS/TeoriaDosGrafos/out/production/classes/teoriadosgrafos/Aresta.class&#10;E:/Desenvolvimento/VCS/TeoriaDosGrafos/.idea/workspace.xml" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="E:/Downloads/bootstrapfx-master/bootstrapfx-master" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.392779" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\kotlin\teoriadosgrafos\metodosdebusca\" />
-      <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\kotlin\teoriadosgrafos\aplicacao" />
-      <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\resources\drawable" />
-    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="teoriadosgrafos.metodosdebusca" />
       <recent name="teoriadosgrafos.custominimo" />
@@ -944,6 +951,15 @@
       <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\kotlin\teoriadosgrafos\operacoes" />
       <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\java\teoriadosgrafos\metodosdebusca\ponderado" />
       <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\java\teoriadosgrafos\arvoregeradora" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="teoriadosgrafos.operacoes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\kotlin\teoriadosgrafos" />
+      <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\kotlin\teoriadosgrafos\metodosdebusca\" />
+      <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\kotlin\teoriadosgrafos\aplicacao" />
+      <recent name="E:\Desenvolvimento\VCS\TeoriaDosGrafos\src\main\resources\drawable" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -958,11 +974,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TeoriaDosGrafos [dokka]">
-    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.TeoriaDosGrafos [shadowJar]">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -991,43 +1003,7 @@
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
-    <configuration name="TeoriaDosGrafos [dokka]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dokka" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="TeoriaDosGrafos [printVersion]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="printVersion" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="TeoriaDosGrafos [properties]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TeoriaDosGrafos [knows]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -1038,7 +1014,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="properties" />
+            <option value="knows" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -1063,19 +1039,74 @@
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
+    <configuration name="TeoriaDosGrafos [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="TeoriaDosGrafos [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="DoubleExtTest.powerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TeoriaDosGrafos_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DoubleExtTest" />
+      <option name="METHOD_NAME" value="powerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.TeoriaDosGrafos [clean]" />
-      <item itemvalue="Gradle.TeoriaDosGrafos [properties]" />
-      <item itemvalue="Gradle.TeoriaDosGrafos [printVersion]" />
       <item itemvalue="Gradle.TeoriaDosGrafos [run]" />
-      <item itemvalue="Gradle.TeoriaDosGrafos [dokka]" />
+      <item itemvalue="Gradle.TeoriaDosGrafos [knows]" />
+      <item itemvalue="JUnit.DoubleExtTest.powerTest" />
+      <item itemvalue="Gradle.TeoriaDosGrafos [test]" />
+      <item itemvalue="Gradle.TeoriaDosGrafos [shadowJar]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TeoriaDosGrafos [dokka]" />
+        <item itemvalue="Gradle.TeoriaDosGrafos [test]" />
         <item itemvalue="Gradle.TeoriaDosGrafos [run]" />
-        <item itemvalue="Gradle.TeoriaDosGrafos [printVersion]" />
-        <item itemvalue="Gradle.TeoriaDosGrafos [properties]" />
+        <item itemvalue="JUnit.DoubleExtTest.powerTest" />
+        <item itemvalue="Gradle.TeoriaDosGrafos [shadowJar]" />
+        <item itemvalue="Gradle.TeoriaDosGrafos [knows]" />
       </list>
     </recent_temporary>
   </component>
@@ -1153,8 +1184,47 @@
       <option name="project" value="LOCAL" />
       <updated>1524620828153</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="v1.7.0 - Mudança da DSL de build, Adição de algoritmo&#10;&#10;Alterada DSL de build de kotlin para groovy&#10;&#10;Adição do algoritmo de ordenação topológica de Khan&#10;&#10;Melhorias de código">
+      <created>1528827042390</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1528827042390</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 10h 48m 32s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 10h 55m 44s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 00m 57s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 09m 43s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 10m 19s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 11m 13s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 16m 46s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 18m 34s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 19m 56s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 20m 30s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1169,23 +1239,23 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24360341" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32745314" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32855567" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3264642" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39801544" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32671082" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.1570338" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.3263506" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.15673289" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32897604" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.50606394" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.31863284" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.50441504" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.31677705" />
       <window_info anchor="bottom" id="Gradle View" order="12" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" weight="0.32745314" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
@@ -1198,7 +1268,7 @@
       <window_info anchor="right" id="Kotlin Bytecode" order="6" weight="0.32980332" />
       <window_info anchor="right" id="CodeHelp" order="7" side_tool="true" weight="0.3296" />
       <window_info anchor="right" id="Copy/Paste" order="8" weight="0.3296" />
-      <window_info anchor="right" id="Gradle" order="9" visible="true" weight="0.16044776" />
+      <window_info anchor="right" id="Gradle" order="9" weight="0.16044776" />
       <window_info anchor="right" id="Database" order="10" />
     </layout>
   </component>
@@ -1259,7 +1329,8 @@
     <MESSAGE value="v1.5.2 - Pequenas otimizações no código do algoritmo de Kruskal&#10;&#10;Adicionado ícone à janela do trabalho2etapa2" />
     <MESSAGE value="v1.5.3 - Algoritmo de Kruskal corrigido e funcionando" />
     <MESSAGE value="v1.6.0 - Adição de funções de extensão às classes de grafos" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.6.0 - Adição de funções de extensão às classes de grafos" />
+    <MESSAGE value="v1.7.0 - Mudança da DSL de build, Adição de algoritmo&#10;&#10;Alterada DSL de build de kotlin para groovy&#10;&#10;Adição do algoritmo de ordenação topológica de Khan&#10;&#10;Melhorias de código" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.7.0 - Mudança da DSL de build, Adição de algoritmo&#10;&#10;Alterada DSL de build de kotlin para groovy&#10;&#10;Adição do algoritmo de ordenação topológica de Khan&#10;&#10;Melhorias de código" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1269,309 +1340,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Extensoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-739">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/LookAndFeelChoice.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2981">
-          <caret line="226" column="8" lean-forward="true" selection-start-line="226" selection-start-column="8" selection-end-line="226" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/ViewUtil.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmProfundidade.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.icarohs7.unoxlib/UNoxLib/0.1.1/fd88a65f8906f94720558b40da4ff92d9a396d68/UNoxLib-0.1.1-sources.jar!/com/github/icarohs7/unoxlib/tables/ScrollTable.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties" />
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/E3T1Aplicacao.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.miglayout/miglayout-javafx/5.1/1de8a3346938e3c60f25bf2651598c20b08d4e16/miglayout-javafx-5.1-sources.jar!/org/tbee/javafx/scene/layout/MigPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/kotlin/collections/Collections.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="85" column="87" lean-forward="true" selection-start-line="85" selection-start-column="87" selection-end-line="85" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/generated/_Arrays.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="5323" column="27" selection-start-line="5323" selection-start-column="27" selection-end-line="5323" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/kotlin/collections/ArraysUtilJVM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="4307" column="30" selection-start-line="4307" selection-start-column="30" selection-end-line="4307" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Trabalho2E2.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao1.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="53" column="39" lean-forward="true" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/View.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ArestaNegativaException.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/View.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="520" column="25" selection-start-line="520" selection-start-column="25" selection-end-line="520" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleArrayExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1Styles.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="843" selection-start-line="843" selection-end-line="843" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/com/sun/glass/ui/win/WinApplication.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.16/83c9e9d4b80211c31a9ac0f7a5fe998645f8e0fc/tornadofx-1.7.16-sources.jar!/tornadofx/App.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.base/javafx/beans/property/ObjectPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.16/83c9e9d4b80211c31a9ac0f7a5fe998645f8e0fc/tornadofx-1.7.16-sources.jar!/tornadofx/DataGrid.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.16/83c9e9d4b80211c31a9ac0f7a5fe998645f8e0fc/tornadofx-1.7.16-sources.jar!/tornadofx/FX.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="402" selection-start-line="402" selection-end-line="402" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.16/83c9e9d4b80211c31a9ac0f7a5fe998645f8e0fc/tornadofx-1.7.16-sources.jar!/tornadofx/Component.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="477" selection-start-line="477" selection-end-line="477" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/sun/nio/ch/ServerSocketChannelImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="433" column="23" selection-start-line="433" selection-start-column="23" selection-end-line="433" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmLargura.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/Extensoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/kotlin/Collections.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="191" column="17" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Extensoes.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Khan.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoPonderado.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="71" column="4" lean-forward="true" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/controller/E3T1Controller.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1View.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -1590,20 +1370,297 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ArestaNegativaException.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ForaDoGrafoException.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/kotlin/TypeAliases.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jfoenix/jfoenix/9.0.4/145c75a995bb3164f1ebd3b632c772046f74ce92/jfoenix-9.0.4-sources.jar!/com/jfoenix/controls/JFXButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2412">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kordamp.bootstrapfx/bootstrapfx-core/0.2.3/757dd6ee3b140b084e46b3e3f8afa59de49151e0/bootstrapfx-core-0.2.3.jar!/bootstrapfx.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29553" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="48" column="83" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/LookAndFeelChoice.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/BidimensionalIntArrayExt.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/BidimensionalStringArrayExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/AnyExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleArrayExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-359">
+          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntArrayExt.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.1.0/d4b2cf00c46ec46c2d59a3ab571a00b742dda0b0/junit-jupiter-api-5.1.0-sources.jar!/org/junit/jupiter/api/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="221">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/styles/jmetro.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="1735" selection-start-line="1735" selection-end-line="1735" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/VerticeComEntradas.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="30" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="gradleExecuteTaskHistory">
     <option value="$PROJECT_DIR$" />
+    <option value="test" />
+    <option value="run" />
+    <option value="shadowJar" />
+    <option value="properties" />
     <option value="dokka" />
     <option value="clean" />
-    <option value="run" />
-    <option value="properties" />
     <option value="printVersion" />
     <option value="printGitVersion" />
   </component>
@@ -1617,7 +1674,6 @@
             <option name="proportions">
               <list>
                 <option value="0.392779" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1660,7 +1716,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>TeoriaDosGrafos_test|TeoriaDosGrafos</last-edited>
+          <last-edited>Kotlin|TeoriaDosGrafos_test|TeoriaDosGrafos</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

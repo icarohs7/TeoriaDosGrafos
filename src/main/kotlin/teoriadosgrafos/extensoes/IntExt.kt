@@ -3,10 +3,9 @@ package teoriadosgrafos.extensoes
 import teoriadosgrafos.Grafo
 
 /**
- * Retorna o número de arestas de entradas para um determinado vértice
- * --**Utiliza vértices iniciando de 0 a N**
+ * Retorna a lista de vértices incidindo sobre o vértice atual
  * @receiver Int
  * @param grafo Grafo
  * @return Int
  */
-fun Int.getEntradas(grafo: Grafo) = grafo.arestas.count { aresta -> aresta.destino == this }
+fun Int.getEntradas(grafo: Grafo) = grafo.arestas.filter { aresta -> aresta.destino == this }.map { aresta -> aresta.origem }

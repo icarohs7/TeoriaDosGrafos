@@ -1,7 +1,5 @@
 package teoriadosgrafos
 
-import teoriadosgrafos.excecoes.ForaDoGrafoException
-
 /**
  * Classe representando um grafo e suas operações
  *
@@ -51,11 +49,9 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 				}
 		}
 	
-	@Suppress("LeakingThis")
-	val ordemTopologica = OrdemTopologica(this)
+	val ordemTopologica = OrdemTopologica()
 	
-	@Suppress("LeakingThis")
-	val custoMaximo = CustoMaximo(this)
+	val custoMaximo = CustoMaximo()
 	
 	/**
 	 * Inicializar o grafo - Marcando todos os vértices como não visitados
@@ -64,10 +60,12 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 		visitados[it] = false
 	}
 	
+	
 	/**
 	 * Retorna verdadeiro se ainda existe algum elemento aberto no grafo
 	 * @return Boolean: True se existir algum elemento não visitado ou false do contrário
 	 */
+	@Suppress("unused")
 	fun existeAberto() = visitados.reduce { acc, b -> acc || b }
 	
 	/**
@@ -100,7 +98,7 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 				matrizDeAdjacencia[destino][origem] = peso
 			}
 		} catch (e: IndexOutOfBoundsException) {
-			throw ForaDoGrafoException("Tentou acessar uma aresta fora do grafo: " + e.message)
+			throw ForaDoGrafoException()
 		}
 		
 	}
@@ -162,17 +160,49 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 		}
 	}
 	
+	override fun equals(other: Any?): Boolean {
+		return when {
+			this === other -> true
+			other == null -> false
+			this is GrafoPonderado && other !is GrafoPonderado -> false
+			this is GrafoNaoPonderado && other !is GrafoNaoPonderado -> false
+			else -> {
+				val m1 = this.matrizDeAdjacencia
+				val m2 = (other as Grafo).matrizDeAdjacencia
+				
+				if (m1.size != m2.size) return false
+				else if (m1[0].size != m2[0].size) return false
+				
+				for (i in 0 until m1.size) {
+					for (j in 0 until m1[0].size) {
+						if (m1[i][j] != m2[i][j]) return false
+					}
+				}
+				
+				if (this.direcionado != other.direcionado) return false
+				
+				true
+			}
+		}
+	}
+	
+	override fun hashCode(): Int {
+		return matrizDeAdjacencia.hashCode() + direcionado.hashCode()
+	}
+	
 	/**
 	 * Classe agrupando os algoritmos de ordenação topológica
-	 * @property grafo Grafo
 	 * @constructor
 	 */
-	class OrdemTopologica(val grafo: Grafo)
+	inner class OrdemTopologica {
+		val grafo: Grafo = this@Grafo
+	}
 	
 	/**
 	 * Classe agrupando os algoritmos de caminho máximo
-	 * @property grafo Grafo
 	 * @constructor
 	 */
-	class CustoMaximo(val grafo: Grafo)
+	inner class CustoMaximo {
+		val grafo: Grafo = this@Grafo
+	}
 }
