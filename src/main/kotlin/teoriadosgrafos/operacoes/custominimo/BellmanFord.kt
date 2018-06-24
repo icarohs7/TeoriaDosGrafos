@@ -3,19 +3,8 @@ package teoriadosgrafos.operacoes.custominimo
 import teoriadosgrafos.CicloNegativoException
 import teoriadosgrafos.GrafoPonderado
 
-/**
- * Singleton representando o algoritmo de custo
- * mínimo de Bellman-Ford em um grafo ponderado
- *
- * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
- */
 object BellmanFord {
-	/**
-	 * Realiza a busca de menor caminho no grafo utilizando o algoritmo de Bellman-Ford
-	 * @param origem Int -- O vértice de origem da busca
-	 * @param grafo GrafoPonderado -- O grafo onde a busca será executada
-	 * @return ResultadoPonderado -- O conjunto resultado contendo os Arrays de distâncias e Precedentes
-	 */
+	
 	@Suppress("NAME_SHADOWING")
 	fun buscar(origem: Int, grafo: GrafoPonderado): ResultadoPonderado {
 		val origem = origem - 1

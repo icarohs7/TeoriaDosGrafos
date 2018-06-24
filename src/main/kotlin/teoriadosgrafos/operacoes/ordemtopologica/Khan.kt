@@ -5,9 +5,6 @@ import teoriadosgrafos.GrafoNaoAciclicoException
 import teoriadosgrafos.extensoes.getEntradas
 import java.util.LinkedList
 
-/**
- * Ordenação topológica segundo o algoritmo de Khan
- */
 object Khan {
 	@Suppress("LocalVariableName")
 	fun ordenar(grafo: Grafo): List<Int> {

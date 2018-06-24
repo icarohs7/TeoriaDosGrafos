@@ -4,10 +4,8 @@ import teoriadosgrafos.Grafo
 import teoriadosgrafos.extensoes.getEntradas
 import teoriadosgrafos.operacoes.ordemtopologica.khan
 
-/**
- * Calcular o caminho mais longo em um grafo
- */
 object CaminhoMaximo {
+	
 	@Suppress("LocalVariableName")
 	fun calcular(grafo: Grafo): List<Int> {
 		// Ordenar topológicamente
@@ -19,11 +17,10 @@ object CaminhoMaximo {
 				mutableListOf(v)
 			} else {
 				return mutableListOf(v) +
-						v.getEntradas(grafo)
-							.fold<Int, List<Int>>(emptyList()) { acc, i ->
-								val a = dist(i)
-								if (a.size > acc.size) a else acc
-							}
+						v.getEntradas(grafo).fold<Int, List<Int>>(emptyList()) { acc, i ->
+							val a = dist(i)
+							if (a.size > acc.size) a else acc
+						}
 			}
 		}
 		

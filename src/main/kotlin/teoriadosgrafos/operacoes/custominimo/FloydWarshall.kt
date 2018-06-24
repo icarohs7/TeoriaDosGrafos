@@ -4,18 +4,8 @@ import teoriadosgrafos.CicloNegativoException
 import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
 
-/**
- * Representação do algoritmo de busca
- * de menor caminho de Floyd-Warshall em um grafo ponderado
- *
- * * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
- */
 object FloydWarshall {
-	/**
-	 * Realiza a busca de menor caminho no grafo utilizando o algoritmo de Floyd-Warshall
-	 * @param grafo GrafoPonderado: O grafo onde a busca será executada
-	 * @return ResultadoWarshall: O conjunto resultado contendo as Matrizes de Distâncias e Precedentes
-	 */
+	
 	fun buscar(grafo: GrafoPonderado): ResultadoWarshall {
 		/* Inicializar o grafo */
 		grafo.inicializar()

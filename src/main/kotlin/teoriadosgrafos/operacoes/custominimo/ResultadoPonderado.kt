@@ -2,22 +2,9 @@ package teoriadosgrafos.operacoes.custominimo
 
 import java.util.Arrays
 
-/**
- * Classe responsável por armazenar o conjunto de dados gerados de uma busca utilizando o algoritmo de Dijkstra e
- * Bellman-Ford
- * @property distancias IntArray -- O array contendo as menores distâncias dos vértices em relação à origem
- * @property predecessores IntArray -- O array contendo os predecessores dos vértices em relação à origem
- * @constructor
- *
- * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
- */
 @Suppress("MemberVisibilityCanBePrivate")
 data class ResultadoPonderado(val distancias: DoubleArray, val predecessores: IntArray) {
-	/**
-	 * Retorna o menor caminho saindo da origem geradora do resultado atual em direção ao destino informado
-	 * @param destino Int -- O vértice que se deseja alcançar apartir da origem
-	 * @return List<Int> -- O menor caminho partindo da origem ao destino
-	 */
+	
 	fun buscar(destino: Int): List<Int> {
 		/* Variável contendo o próximo vértice */
 		var i = destino - 1

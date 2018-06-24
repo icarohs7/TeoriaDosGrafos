@@ -5,10 +5,8 @@ import teoriadosgrafos.extensoes.getEntradas
 import teoriadosgrafos.operacoes.ordemtopologica.khan
 import kotlin.math.max
 
-/**
- * Algoritmo de custo máximo de um grafo
- */
 object CustoMaximo {
+	
 	@Suppress("LocalVariableName")
 	fun calcular(grafo: Grafo): Int {
 		/* V: Vértices de G ordenados topológicamente

@@ -5,17 +5,8 @@ import teoriadosgrafos.Grafo
 import teoriadosgrafos.GrafoPonderado
 import teoriadosgrafos.MstArestasInsuficientesException
 
-/**
- * Singleton representando o método gerador de árvore de custo mínimo Prim
- *
- * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
- */
 object Prim {
-	/**
-	 * Gera a MST utilizando o argoritmo de Prim
-	 * @param grafo GrafoPonderado -- O grafo em que a operação será executada
-	 * @return MST -- A Árvore Geradora de Custo Mínimo
-	 */
+	
 	fun gerar(grafo: GrafoPonderado): MST {
 		/* Inicializar o grafo */
 		grafo.inicializar()

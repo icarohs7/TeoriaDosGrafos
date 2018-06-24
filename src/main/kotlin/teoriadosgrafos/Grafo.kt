@@ -1,27 +1,14 @@
 package teoriadosgrafos
 
-/**
- * Classe representando um grafo e suas operações
- *
- * @author [Icaro D Temponi](https://github.com/icarohs7)
- */
 abstract class Grafo
 protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionado: Boolean) {
+	
 	companion object {
-		/**
-		 * Valor representando não adjacência em grafos ponderados e não ponderados
-		 */
 		const val INFINITO = (Int.MAX_VALUE / 2).toDouble()
 	}
 	
-	/**
-	 * Tabela de vértices que foram visitados, ou vértices abertos
-	 */
 	val visitados: BooleanArray = BooleanArray(matrizDeAdjacencia.size) { false }
 	
-	/**
-	 * Property retornando a lista de arestas contidas em um grafo
-	 */
 	val arestas: List<Aresta>
 		get() {
 			return mutableListOf<Aresta>().also { arestas ->
@@ -36,9 +23,6 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 			}
 		}
 	
-	/**
-	 * Property retornando a lista de vértices contidos no grafo
-	 */
 	val vertices: List<Int>
 		get() {
 			return matrizDeAdjacencia
@@ -53,39 +37,18 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 	
 	val custoMaximo = CustoMaximo()
 	
-	/**
-	 * Inicializar o grafo - Marcando todos os vértices como não visitados
-	 */
-	fun inicializar() = visitados.indices.forEach {
-		visitados[it] = false
-	}
+	fun inicializar() = visitados.indices.forEach { vertice -> visitados[vertice] = false }
 	
 	
-	/**
-	 * Retorna verdadeiro se ainda existe algum elemento aberto no grafo
-	 * @return Boolean: True se existir algum elemento não visitado ou false do contrário
-	 */
 	@Suppress("unused")
 	fun existeAberto() = visitados.reduce { acc, b -> acc || b }
 	
-	/**
-	 * Retorna uma lista contendo os vizinhos abertos do vértice informado
-	 * @param vertice Int: O vértice do qual se deseja obter os vizinhos
-	 * @param abertos Boolean: Quando verdadeiro, retorna somente os vizinhos abertos
-	 * @return LinkedList<Int>: Uma lista contendo os vizinhos abertos do vértice informado
-	 */
 	fun getVizinhos(vertice: Int, abertos: Boolean = false): List<Int> {
 		val vizinhos = (0 until matrizDeAdjacencia.size)
 			.filter { matrizDeAdjacencia[vertice][it] != Grafo.INFINITO }
 		return if (abertos) vizinhos.filter { !visitados[it] } else vizinhos
 	}
 	
-	/**
-	 * Adicionar uma aresta ao grafo --***1..N***
-	 * @param origem  Vértice de origem da aresta
-	 * @param destino Vértice de destino da aresta
-	 * @param peso    Peso da aresta
-	 */
 	@Suppress("NAME_SHADOWING")
 	fun addAresta(origem: Int, destino: Int, peso: Double = 0.0) {
 		if (peso == Grafo.INFINITO) return
@@ -103,17 +66,8 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 		
 	}
 	
-	/**
-	 * Adiciona uma aresta ao grafo
-	 * @param aresta Aresta
-	 */
 	fun addAresta(aresta: Aresta) = addAresta(aresta.origem + 1, aresta.destino + 1, aresta.peso)
 	
-	/**
-	 * Exclui uma aresta conectando 2 vértices --***1..N***
-	 * @param origem Int: O vértice a partir de qual a aresta sairá
-	 * @param destino Int: O vértice que será conectado ao vértice origem
-	 */
 	@Suppress("NAME_SHADOWING")
 	fun excluirAresta(origem: Int, destino: Int) {
 		val origem = origem - 1
@@ -125,10 +79,6 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 		}
 	}
 	
-	/**
-	 * [excluirAresta]
-	 * @param aresta Aresta
-	 */
 	fun excluirAresta(aresta: Aresta) = excluirAresta(aresta.origem + 1, aresta.destino + 1)
 	
 	/**
@@ -137,10 +87,6 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 	@Suppress("unused")
 	fun toStringBidimensionalList() = matrizDeAdjacencia.map { it.map { it.toString() } }
 	
-	/**
-	 * To string de um grafo
-	 * @return String
-	 */
 	override fun toString(): String {
 		return buildString {
 			matrizDeAdjacencia.forEach { linha ->

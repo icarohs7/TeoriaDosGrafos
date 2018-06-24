@@ -5,27 +5,13 @@ import teoriadosgrafos.GrafoNaoPonderado
 import java.util.LinkedList
 import java.util.Stack
 
-/**
- * Singleton representando o algoritmo de busca em largura em um grafo
- * não ponderado
- *
- * @author [Icaro D Temponi](https://github.com/icarohs7)
- */
 object BuscaEmLargura {
-	/**
-	 * Executa uma busca em largura no grafo
-	 * @param origem Int: O nó de origem da busca
-	 * @param destino Int: O nó de destino da busca
-	 * @param grafo GrafoNaoPonderado: O grafo no qual a busca será executada
-	 * @return LinkedList<*>: A fila contendo o caminho percorrido
-	 */
+	
 	@Suppress("NAME_SHADOWING")
 	fun buscar(origem: Int, destino: Int, grafo: GrafoNaoPonderado): List<Int> {
 		val origem = origem - 1
 		val destino = destino - 1
-		/* Resetar o vetor de vértices visitados */
 		grafo.inicializar()
-		/* Marcar o primeiro vértice visitado */
 		grafo.visitados[origem] = true
 		
 		/* Instanciar fila e pilha usadas no processo de busca */
@@ -40,7 +26,6 @@ object BuscaEmLargura {
 		/* Retornar o caminho da origem para o destino */
 		return caminhoInvertido
 	}
-	
 	
 	/**
 	 * Procedimento recursivo responsável pela busca em largura

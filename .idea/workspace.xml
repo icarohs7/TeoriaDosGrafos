@@ -10,60 +10,61 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="v1.7.0 - Mudança da DSL de build, Adição de algoritmo&#10;&#10;Alterada DSL de build de kotlin para groovy&#10;&#10;Adição do algoritmo de ordenação topológica de Khan&#10;&#10;Melhorias de código">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt" afterDir="false" />
+    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="v2.0.0 - Remoção">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/LookAndFeelChoice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/LookAndFeelChoice.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/ViewUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/ViewUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/Trabalho1Etapa1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa1trabalho1/Trabalho1Etapa1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa1trabalho1/View.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Questao3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho1/Trabalho1Etapa2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Trabalho1Etapa2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Trabalho2E2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Trabalho2E2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/View.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalhoextra/Trabalho1Etapa2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalhoextra/Trabalho1Etapa2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalhoextra/View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalhoextra/View.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/E3T1Aplicacao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/controller/E3T1Controller.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1Styles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1View.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Kruskal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/MST.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/arvoregeradora/Prim.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/BellmanFord.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/Dijkstra.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/FloydWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoWarshall.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ArestaNegativaException.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ForaDoGrafoException.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmLargura.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmProfundidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Khan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/LookAndFeelChoice.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/ViewUtil.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa1trabalho1/Trabalho1Etapa1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa1trabalho1/View.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Questao3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho1/Trabalho1Etapa2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Trabalho2E2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/View.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalhoextra/Trabalho1Etapa2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalhoextra/View.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoWarshall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -182,49 +183,80 @@
       </state>
     </system>
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-672909315">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gradle" value="291" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Groovy" value="290" />
+          <entry key="RegExp" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gradle" value="5" />
+          <entry key="kt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Groovy" value="5" />
+          <entry key="Kotlin" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1588614548">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gitignore" value="30" />
+          <entry key="gradle" value="12" />
+          <entry key="kt" value="191" />
+          <entry key="md" value="103" />
+          <entry key="txt" value="35" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Git file" value="30" />
+          <entry key="Groovy" value="12" />
+          <entry key="Kotlin" value="191" />
+          <entry key="Markdown" value="103" />
+          <entry key="PLAIN_TEXT" value="35" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="gitattributes" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="gradle" value="2" />
+          <entry key="kt" value="37" />
+          <entry key="md" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="Git file" value="1" />
+          <entry key="Groovy" value="2" />
+          <entry key="Kotlin" value="37" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="60">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -276,7 +308,7 @@
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.8" />
+        <entry key="$PROJECT_DIR$" value="4.8.1" />
       </map>
     </option>
     <option name="availableProjects">
@@ -284,14 +316,14 @@
         <entry>
           <key>
             <ExternalProjectPojo>
-              <option name="name" value="TeoriaDosGrafos" />
+              <option name="name" value="UNoxGraph" />
               <option name="path" value="$PROJECT_DIR$" />
             </ExternalProjectPojo>
           </key>
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="TeoriaDosGrafos" />
+                <option name="name" value="UNoxGraph" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
@@ -305,18 +337,42 @@
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'TeoriaDosGrafos'." />
+                <option name="description" value="Displays the components produced by root project 'UNoxGraph'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="inspectClassesForKotlinIC" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'UNoxGraph'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="configureRelocationShadowJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Runs this project as a JVM application" />
+                <option name="description" value="Displays the dependent components of components in root project 'UNoxGraph'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="run" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'UNoxGraph'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Generates Gradle wrapper files." />
@@ -324,14 +380,14 @@
                 <option name="name" value="wrapper" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Installs the project as a distribution as-is." />
+                <option name="description" value="Assembles test classes." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="installShadowDist" />
+                <option name="name" value="testClasses" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="startScripts" />
+                <option name="name" value="javadoc" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles a jar archive containing the main classes." />
@@ -339,7 +395,7 @@
                 <option name="name" value="jar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'TeoriaDosGrafos'. [incubating]" />
+                <option name="description" value="Displays the configuration model of root project 'UNoxGraph'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
@@ -349,24 +405,19 @@
                 <option name="name" value="processResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'TeoriaDosGrafos'." />
+                <option name="description" value="Displays the tasks runnable from root project 'UNoxGraph'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles the main distributions" />
+                <option name="description" value="Do you know who knows?" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assembleDist" />
+                <option name="name" value="knows" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Initializes a new Gradle build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="init" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates dokka documentation for Kotlin" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dokka" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs the unit tests." />
@@ -384,119 +435,19 @@
                 <option name="name" value="compileJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'TeoriaDosGrafos'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes test resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildNeeded" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Create a combined JAR of project and runtime dependencies" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="shadowJar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Bundles the project as a distribution." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="distTar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles the shadow distributions" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assembleShadowDist" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Bundles the project as a distribution." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="distZip" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'TeoriaDosGrafos'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildDependents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="classes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'TeoriaDosGrafos'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependentComponents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'TeoriaDosGrafos'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildEnvironment" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Bundles the project as a distribution." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="shadowDistTar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Bundles the project as a distribution." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="shadowDistZip" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles test classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="testClasses" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="javadoc" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs this project as a JVM application using the shadow jar" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="runShadow" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Creates OS specific scripts to run the project as a JVM application using the shadow jar" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="startShadowScripts" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Installs the project as a distribution as-is." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="installDist" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Do you know who knows?" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="knows" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Compiles the source set 'test'.kotlin." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileTestKotlin" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'TeoriaDosGrafos'." />
+                <option name="description" value="Displays the insight into a specific dependency in root project 'UNoxGraph'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles the outputs of this project." />
@@ -514,6 +465,16 @@
                 <option name="name" value="compileTestJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'UNoxGraph'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays a help message." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="help" />
@@ -529,7 +490,17 @@
                 <option name="name" value="build" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'TeoriaDosGrafos'." />
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Create a combined JAR of project and runtime dependencies" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="shadowJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'UNoxGraph'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
@@ -541,12 +512,12 @@
     <option name="modificationStamps">
       <map>
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="553374088" />
-        <entry key="$PROJECT_DIR$" value="6112609362934" />
+        <entry key="$PROJECT_DIR$" value="6115742979302" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3116336460" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1793032217" />
         <entry key="$PROJECT_DIR$/build.gradle.kts" value="2068845820" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="3031943934" />
-        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1168256157" />
+        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2077093676" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="4183989439" />
         <entry key="$PROJECT_DIR$/settings.gradle.kts" value="2108064956" />
       </map>
@@ -563,16 +534,57 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.41/18587320bcaffacd1fca5bda7fe0e3e63acc4d30/kotlin-gradle-plugin-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.dokka/dokka-gradle-plugin/0.9.17/b9558823557d2871875b9ede12b1a2a141c92f44/dokka-gradle-plugin-0.9.17.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.50/8d32337d2e1c7c7cfd928269f1094da6f977fff7/kotlin-gradle-plugin-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jengelman.gradle.plugins/shadow/2.0.3/19f3a1a4e8d19abaefb726a07bbbe8944701e2c1/shadow-2.0.3-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/gradle.plugin.com.palantir.gradle.gitversion/gradle-git-version/0.11.0/e091be40c8991b0b9207cc85dbd50c120a91da43/gradle-git-version-0.11.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.50/df58f01c989dd18bb3b95e780079a25468d55c4c/kotlin-gradle-plugin-api-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.50/e22d1f59c8bd50a275ced460dd8da3b9dfb4546e/kotlin-compiler-embeddable-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.50/d47506e18275c93811b2d04cabe3d7220be2f141/kotlin-annotation-processing-gradle-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.50/d86795978ac53e6efcbc8d0bfc35f81a7f2473ba/kotlin-android-extensions-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.50/85967885b2445232924b4f86332319e922126f6e/kotlin-compiler-runner-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.50/752ab51766af77ac8480940230438901b11ccc51/kotlin-reflect-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.2.50/17af269b60195354e1f5aa9ae86ebfd7d31b3c32/kotlin-scripting-common-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler/1.2.50/35c64db9224032ef48b099f60716ff623e968b76/kotlin-scripting-compiler-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-gradle/1.2.50/496bca863912e97e9ef77e2df4f7d1f1391f5bb9/kotlin-scripting-gradle-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/3dcf8ba7582eeac3b67ed5155ee3659e16c8dadc/jdom2-2.0.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/6.1/d70e072daf99bf59d0f55a1cc0938998674a1656/asm-6.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/6.1/6df31bd82c97f5133194d211ba29ae3ceff37b53/asm-commons-6.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/caf033a4a7c37b4a8ff3ea084cba591539b0b69/commons-io-2.5-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.7/c8c6f25c99bc5fcb1acb13f09f11d0045bedc256/ant-1.9.7-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.0.24/325807d7e6393ae4f0f389277d7ef993e3aebdfe/plexus-utils-3.0.24-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.5.2.201704071617-r/ad713d18ed0fa71279b002e2c1340a35dfbefee7/org.eclipse.jgit-4.5.2.201704071617-r-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/20.0/9c8493c7991464839b612d7547d6c263adf08f75/guava-20.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.50/9ec9cf82e5e18d990a4b4fb3b5763cd3637b6d63/kotlin-stdlib-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.50/64500cff5ed2e9a01a8c7a6b880eb92e2b191a20/kotlin-script-runtime-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.50/f05f79b8f80717ac0987b020e7ec9ba1cc6fcfc9/kotlin-build-common-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.50/6c8f0e588192567f08493042e5916dade1a9e0fb/kotlin-daemon-client-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/0.20/69aa4e6352eee317fe50ae2146ec628c59be3845/kotlinx-coroutines-core-0.20-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.2.50/b5031c8d9931aae9cc9be7432501ea51c049fdbf/kotlin-scripting-jvm-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-misc/1.2.50/af347874b9368b53738822bb2580399ffe2cb59a/kotlin-scripting-misc-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.1/7c5a7103c9caa5dd9b016a6db2a5b20ddd08af26/asm-tree-6.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.1/5edc74b41efb2437fd83c47fb5f4f10003b8f697/asm-analysis-6.1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.7/74cef5ca08d158fa5dc0d31a40a75c893ca00e6e/ant-launcher-1.9.7-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.53/791359d94d6edcace686a56d0727ee093a2f7c33/jsch-0.1.53-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/0.7.9/a50d78eb630e05439461f3130b94b3bcd1ea6f03/JavaEWAH-0.7.9-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.6/af4d76be0c46ee26b0d9d1d4a34d244a633cac84/httpclient-4.3.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/58d38f68d4a867d4552ae27960bb348d7eaa1297/slf4j-api-1.7.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.50/d3189b4b8c72c7f3a327e3c21dca8dbcba267359/kotlin-stdlib-common-1.2.50-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.3/1b0aa62a6a91e9fa00c16f0a4a2c874804ed3b1e/httpcore-4.3.3-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.6/61e9f9d11fe3e12ec62f633006e99d75fd7f19c8/commons-codec-1.6-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/1.2.50/e37e9122be9a335f8c5590de8d5ef902cf1823d/kotlin-gradle-plugin-1.2.50.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jengelman.gradle.plugins/shadow/2.0.3/a9dc1b16a12ec072669c84bb74ae803d02fbced9/shadow-2.0.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/gradle.plugin.com.palantir.gradle.gitversion/gradle-git-version/0.11.0/ecf8db72317ebc8cbaf6a64bbd01fb31750504e3/gradle-git-version-0.11.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.41/b02a60e83beaa777c13562fd3e9612ea1963091d/kotlin-gradle-plugin-api-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.41/e439cfdc216b070ebd454da892447f5dca96a934/kotlin-compiler-embeddable-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.41/870d8f3b110200303a07d4bbfc7bf9066669203b/kotlin-annotation-processing-gradle-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.41/10100eedfe2e26b9cf18b850d997b42d02af7500/kotlin-android-extensions-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.41/c2bd43e2bf7d6f26e47fbdca79502b62fe130696/kotlin-compiler-runner-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.41/e4d6728a4fa55dbfb510aeea25c072c7c51d94/kotlin-reflect-1.2.41.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.2.50/29eeaaf8cbfeabf00db1864584878643f0afc879/kotlin-gradle-plugin-api-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.2.50/6bf096d7a201b8734583b25d90dc3a70fa768628/kotlin-compiler-embeddable-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.50/807f7d867857a69a010455c9f67767055f54351/kotlin-annotation-processing-gradle-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.50/a5309d96fd097320a75947d2e9673a86c948f605/kotlin-android-extensions-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.50/369976f847653cb5c2c4008e872939f633e8fee7/kotlin-compiler-runner-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.50/9fab8887f91c8e17cce1a7522f45dc25976e57b9/kotlin-reflect-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.2.50/21153667cc03f6d39ce8355b7d96aca8e07a5c7b/kotlin-scripting-common-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler/1.2.50/ae501a0d0650e702c7612e3f3cf1793c6e33a646/kotlin-scripting-compiler-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-gradle/1.2.50/1d0741bf9f0edc82d82216e936c49660ce8a5d90/kotlin-scripting-gradle-1.2.50.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/6.1/94a0d17ba8eb24833cd54253ace9b053786a9571/asm-6.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/6.1/8a8d242d7ce00fc937a245fae5b65763d13f7cd1/asm-commons-6.1.jar" />
@@ -581,10 +593,13 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.0.24/b4ac9780b37cb1b736eae9fbcef27609b7c911ef/plexus-utils-3.0.24.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jgit/org.eclipse.jgit/4.5.2.201704071617-r/1352ebdefb10aab661b97413f651bd6ca3766ce/org.eclipse.jgit-4.5.2.201704071617-r.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/20.0/89507701249388e1ed5ddcf8c41f4ce1be7831ef/guava-20.0.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/7e34f009642702250bccd9e5255866f408962a05/kotlin-stdlib-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.41/e291b12913910c260ce878f9a76c84203cf710a1/kotlin-script-runtime-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.41/3ca2f7f659163dfdb9f180b64e9964c7c176c171/kotlin-build-common-1.2.41.jar" />
-                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.41/b9cb88843eeba0f43542daa00c7949e40e9e2852/kotlin-daemon-client-1.2.41.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.50/66d47b004c5b8a1d2d1df9e463187390ed741316/kotlin-stdlib-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.2.50/f7f5f9ae0344c2d14ca41ca740d17143ba2ed3bc/kotlin-script-runtime-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/1.2.50/21469f24e2f9ed51790536e0e7aed02d74ed9401/kotlin-build-common-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/1.2.50/3945d8aae64c257a0c8b5027c65f846728e9a093/kotlin-daemon-client-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/0.20/5f3fa9b5b2dc9cfc0d9358d5b2cab154d590a564/kotlinx-coroutines-core-0.20.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.2.50/c67d7f91d20e22e8dda8101cad1e673d37f86bf9/kotlin-scripting-jvm-1.2.50.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-misc/1.2.50/665845d3490908f847d8991a495849784fc83d4/kotlin-scripting-misc-1.2.50.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/6.1/701262d4b9bcbdc2d4b80617e82db9a2b7f4f088/asm-tree-6.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/6.1/6abbfa644f66ca7203fcdc539d1da900fec8865c/asm-analysis-6.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.7/224857a490283e72da13ffe3082dea62c558ec76/ant-launcher-1.9.7.jar" />
@@ -592,6 +607,7 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.javaewah/JavaEWAH/0.7.9/eceaf316a8faf0e794296ebe158ae110c7d72a5a/JavaEWAH-0.7.9.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.3.6/4c47155e3e6c9a41a28db36680b828ced53b8af4/httpclient-4.3.6.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.2/81d61b7f33ebeab314e07de0cc596f8e858d97/slf4j-api-1.7.2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.50/6b19a2fcc29d34878b3aab33fd5fcf70458a73df/kotlin-stdlib-common-1.2.50.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.3.3/f91b7a4aadc5cf486df6e4634748d7dd7a73f06d/httpcore-4.3.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar" />
@@ -604,86 +620,156 @@
                   </entry>
                 </map>
               </option>
-              <option name="name" value="TeoriaDosGrafos" />
+              <option name="name" value="UNoxGraph" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="C:/Gradle/lib/ant-1.9.11.jar" />
-                  <option value="C:/Gradle/lib/ant-launcher-1.9.11.jar" />
-                  <option value="C:/Gradle/lib/gradle-base-services-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-base-services-groovy-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-build-cache-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-build-option-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-cli-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-core-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-core-api-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-docs-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-installation-beacon-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-jvm-services-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-kotlin-dsl-0.17.5.jar" />
-                  <option value="C:/Gradle/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
-                  <option value="C:/Gradle/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
-                  <option value="C:/Gradle/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
-                  <option value="C:/Gradle/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
-                  <option value="C:/Gradle/lib/gradle-launcher-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-logging-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-messaging-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-model-core-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-model-groovy-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-native-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-persistent-cache-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-process-services-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-resources-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-runtime-api-info-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-tooling-api-4.8.jar" />
-                  <option value="C:/Gradle/lib/gradle-wrapper-4.8.jar" />
-                  <option value="C:/Gradle/lib/groovy-all-2.4.12.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-announce-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-antlr-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-build-cache-http-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-build-comparison-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-build-init-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-code-quality-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-composite-builds-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-dependency-management-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-diagnostics-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-ear-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-ide-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-ide-native-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-ide-play-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-ivy-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-jacoco-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-javascript-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-language-groovy-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-language-java-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-language-jvm-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-language-native-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-language-scala-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-maven-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-osgi-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-platform-base-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-platform-jvm-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-platform-native-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-platform-play-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-plugin-development-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-plugin-use-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-plugins-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-publish-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-reporting-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-resources-gcs-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-resources-http-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-resources-s3-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-resources-sftp-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-scala-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-signing-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-test-kit-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-testing-base-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-testing-junit-platform-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-testing-jvm-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-testing-native-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-tooling-api-builders-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-version-control-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/gradle-workers-4.8.jar" />
-                  <option value="C:/Gradle/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/announce" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/antlr" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/base-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/base-services-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/build-cache" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/build-cache-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/build-comparison" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/build-init" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/build-option" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/cli" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/code-quality" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/composite-builds" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/core-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/dependency-management" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/diagnostics" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/ear" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/ide" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/ide-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/ide-play" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/installation-beacon" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/internal-android-performance-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/internal-integ-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/internal-performance-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/internal-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/ivy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/jacoco" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/javascript" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/jvm-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/language-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/language-java" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/language-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/language-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/language-scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/launcher" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/logging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/maven" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/messaging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/model-core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/model-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/osgi" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/persistent-cache" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/platform-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/platform-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/platform-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/platform-play" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/plugin-development" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/plugin-use" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/plugins" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/process-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/publish" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/reporting" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/resources" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/resources-gcs" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/resources-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/resources-s3" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/resources-sftp" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/signing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/test-kit" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/testing-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/testing-junit-platform" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/testing-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/testing-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/tooling-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/tooling-api-builders" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/version-control" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/workers" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/src/wrapper" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/ant-1.9.11.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/ant-launcher-1.9.11.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-base-services-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-base-services-groovy-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-build-cache-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-build-option-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-cli-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-core-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-core-api-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-docs-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-installation-beacon-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-jvm-services-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-kotlin-dsl-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-kotlin-dsl-provider-plugins-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-kotlin-dsl-provider-spi-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-kotlin-dsl-tooling-builders-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-kotlin-dsl-tooling-models-0.17.5.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-launcher-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-logging-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-messaging-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-model-core-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-model-groovy-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-native-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-persistent-cache-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-process-services-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-resources-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-runtime-api-info-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-tooling-api-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/gradle-wrapper-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/groovy-all-2.4.12.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-announce-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-antlr-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-build-cache-http-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-build-comparison-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-build-init-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-code-quality-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-composite-builds-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-dependency-management-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-diagnostics-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-ear-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-ide-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-ide-native-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-ide-play-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-ivy-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-jacoco-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-javascript-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-language-groovy-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-language-java-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-language-jvm-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-language-native-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-language-scala-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-maven-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-osgi-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-platform-base-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-platform-jvm-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-platform-native-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-platform-play-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-plugin-development-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-plugin-use-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-plugins-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-publish-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-reporting-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-resources-gcs-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-resources-http-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-resources-s3-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-resources-sftp-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-scala-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-signing-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-test-kit-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-testing-base-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-testing-junit-platform-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-testing-jvm-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-testing-native-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-tooling-api-builders-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-version-control-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/gradle-workers-4.8.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-4.8.1-all/6fmj4nezasjg1b7kkmy10xgo2/gradle-4.8.1/lib/plugins/ivy-2.2.0.jar" />
                 </list>
               </option>
             </ExternalProjectBuildClasspathPojo>
@@ -700,21 +786,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle.kts" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmLargura.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/metodosdebusca/BuscaEmProfundidade.kt" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1Styles.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/E3T1Aplicacao.kt" />
-        <option value="$USER_HOME$/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/182.2949.4.vmoptions" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa2trabalho2/Questao1.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa1trabalho1/View.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleArrayExt.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Extensoes.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1View.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/controller/E3T1Controller.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoExt.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Khan.kt" />
@@ -724,33 +797,46 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ForaDoGrafoException.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/Excecoes.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/VerticeComEntradas.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/styles/jmetro.css" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt" />
+        <option value="$PROJECT_DIR$/UNoxGraph/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoWarshall.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -811,98 +897,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
-              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
-              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
-              <item name="customaximo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
-            </path>
-            <path>
-              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
-              <item name="TeoriaDosGrafos_main" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -924,6 +918,145 @@
           </expand>
           <select />
         </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="UNoxGraph" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UNoxGraph" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UNoxGraph" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="UNoxGraph_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UNoxGraph" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="UNoxGraph_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="kotlin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="UNoxGraph" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="UNoxGraph_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="kotlin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="teoriadosgrafos" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+              <item name="arvoregeradora" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+              <item name="customaximo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+              <item name="custominimo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+              <item name="metodosdebusca" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="teoriadosgrafos" type="462c0819:PsiDirectoryNode" />
+              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
+              <item name="ordemtopologica" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
+            </path>
+            <path>
+              <item name="TeoriaDosGrafos" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TeoriaDosGrafos" type="eaaa3913:PackageViewModuleGroupNode" />
+              <item name="TeoriaDosGrafos_main" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -940,7 +1073,7 @@
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.392779" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -974,7 +1107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TeoriaDosGrafos [shadowJar]">
+  <component name="RunManager" selected="Gradle.UNoxGraph [clean]">
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -1000,24 +1133,6 @@
           </list>
         </option>
         <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <method v="2" />
-    </configuration>
-    <configuration name="TeoriaDosGrafos [knows]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="knows" />
-          </list>
-        </option>
-        <option name="vmOptions" />
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
@@ -1075,16 +1190,41 @@
       </ExternalSystemSettings>
       <method v="2" />
     </configuration>
-    <configuration name="DoubleExtTest.powerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TeoriaDosGrafos_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DoubleExtTest" />
-      <option name="METHOD_NAME" value="powerTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="UNoxGraph [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="UNoxGraph [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -1095,18 +1235,18 @@
     <list>
       <item itemvalue="Gradle.TeoriaDosGrafos [clean]" />
       <item itemvalue="Gradle.TeoriaDosGrafos [run]" />
-      <item itemvalue="Gradle.TeoriaDosGrafos [knows]" />
-      <item itemvalue="JUnit.DoubleExtTest.powerTest" />
       <item itemvalue="Gradle.TeoriaDosGrafos [test]" />
       <item itemvalue="Gradle.TeoriaDosGrafos [shadowJar]" />
+      <item itemvalue="Gradle.UNoxGraph [build]" />
+      <item itemvalue="Gradle.UNoxGraph [clean]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TeoriaDosGrafos [test]" />
+        <item itemvalue="Gradle.UNoxGraph [clean]" />
+        <item itemvalue="Gradle.UNoxGraph [build]" />
         <item itemvalue="Gradle.TeoriaDosGrafos [run]" />
-        <item itemvalue="JUnit.DoubleExtTest.powerTest" />
         <item itemvalue="Gradle.TeoriaDosGrafos [shadowJar]" />
-        <item itemvalue="Gradle.TeoriaDosGrafos [knows]" />
+        <item itemvalue="Gradle.TeoriaDosGrafos [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -1191,16 +1331,24 @@
       <option name="project" value="LOCAL" />
       <updated>1528827042390</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="v1.8.0 - Adição de testes unitários e Algoritmo em grafo&#10;&#10;Adição de testes unitários através do JUnit&#10;&#10;Adição do Algoritmo de caminho máximo em grafos">
+      <created>1528902628266</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1528902628267</updated>
+    </task>
+    <task id="LOCAL-00012" summary="v1.8.1 - Correção de bug&#10;&#10;Correção da ordem da lista no algoritmo de caminho máximo">
+      <created>1528902954938</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1528902954938</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 10h 48m 32s.xml">
-      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 10h 55m 44s.xml">
-      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 00m 57s.xml">
       <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -1225,6 +1373,12 @@
     <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 11h 20m 30s.xml">
       <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 12h 07m 00s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="TeoriaDosGrafos_[test] - 2018.06.13 at 12h 14m 31s.xml">
+      <configuration name="TeoriaDosGrafos [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1239,26 +1393,26 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6339581" visible="true" weight="0.282516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Run" order="5" sideWeight="0.3660419" side_tool="true" visible="true" weight="0.282516" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32745314" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3264642" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39801544" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.3263506" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.15673289" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32897604" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.50441504" />
-      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.31677705" />
-      <window_info anchor="bottom" id="Gradle View" order="12" weight="0.32897604" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" weight="0.32745314" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39801544" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49946696" weight="0.3253796" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.15673289" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32855567" />
+      <window_info anchor="bottom" id="Build" order="9" weight="0.50441504" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.31677705" />
+      <window_info anchor="bottom" id="Gradle View" order="11" weight="0.32897604" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50053304" side_tool="true" weight="0.32745314" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1305,8 +1459,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Adicionado sistema de build Maven ao projeto,&#10;Diversas outras adições feitas" />
-    <MESSAGE value="Pequenas correções" />
     <MESSAGE value="Refatoração completa da base de código.&#10;Aperfeiçoamento dos Algoritmos.&#10;Algoritmo de Kruskal refeito apartir do 0, agora funcionando perfeitamente.&#10;Código documentado." />
     <MESSAGE value=".." />
     <MESSAGE value="Documentação atualizada.&#10;Abandonado modelo utilizando métodos estáticos nas classes de busca.&#10;Adotado modelo utilizando Singletons para as classes de busca." />
@@ -1330,7 +1482,9 @@
     <MESSAGE value="v1.5.3 - Algoritmo de Kruskal corrigido e funcionando" />
     <MESSAGE value="v1.6.0 - Adição de funções de extensão às classes de grafos" />
     <MESSAGE value="v1.7.0 - Mudança da DSL de build, Adição de algoritmo&#10;&#10;Alterada DSL de build de kotlin para groovy&#10;&#10;Adição do algoritmo de ordenação topológica de Khan&#10;&#10;Melhorias de código" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.7.0 - Mudança da DSL de build, Adição de algoritmo&#10;&#10;Alterada DSL de build de kotlin para groovy&#10;&#10;Adição do algoritmo de ordenação topológica de Khan&#10;&#10;Melhorias de código" />
+    <MESSAGE value="v1.8.0 - Adição de testes unitários e Algoritmo em grafo&#10;&#10;Adição de testes unitários através do JUnit&#10;&#10;Adição do Algoritmo de caminho máximo em grafos" />
+    <MESSAGE value="v1.8.1 - Correção de bug&#10;&#10;Correção da ordem da lista no algoritmo de caminho máximo" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.8.1 - Correção de bug&#10;&#10;Correção da ordem da lista no algoritmo de caminho máximo" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1340,136 +1494,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/182.2949.4.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ArestaNegativaException.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ForaDoGrafoException.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/kotlin/TypeAliases.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jfoenix/jfoenix/9.0.4/145c75a995bb3164f1ebd3b632c772046f74ce92/jfoenix-9.0.4-sources.jar!/com/jfoenix/controls/JFXButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2412">
-          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kordamp.bootstrapfx/bootstrapfx-core/0.2.3/757dd6ee3b140b084e46b3e3f8afa59de49151e0/bootstrapfx-core-0.2.3.jar!/bootstrapfx.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29553" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="48" column="83" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/LookAndFeelChoice.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1518,42 +1542,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/styles/jmetro.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="61" column="4" lean-forward="true" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/generated/_Collections.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1561,41 +1550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/VerticeComEntradas.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/DoubleExtTest.kt" />
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/OrdemTopologicaTest.kt" />
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/GrafoTest.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/VerticeComEntradas.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1603,64 +1561,219 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/E3T1Aplicacao.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/LookAndFeelChoice.kt" />
+    <entry file="file://$PROJECT_DIR$/UNoxGraph/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/settings.gradle" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="40">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/CustoMaximoTest.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="20">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1561">
+          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/jre/lib/rt.jar!/java/text/RBCollationTables.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="117" column="16" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="65" column="4" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1399">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-819">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="500">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="30" selection-end-column="56" />
+        <state relative-caret-position="120">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1Styles.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="661">
+          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/controller/E3T1Controller.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="100">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa3trabalho1/view/E3T1View.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Extensoes.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoWarshall.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1640">
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-939">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="20">
+            <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="gradleExecuteTaskHistory">
     <option value="$PROJECT_DIR$" />
+    <option value="clean" />
+    <option value="build" />
     <option value="test" />
-    <option value="run" />
     <option value="shadowJar" />
+    <option value="run" />
     <option value="properties" />
     <option value="dokka" />
-    <option value="clean" />
     <option value="printVersion" />
     <option value="printGitVersion" />
   </component>

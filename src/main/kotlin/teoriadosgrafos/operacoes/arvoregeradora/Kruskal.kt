@@ -4,19 +4,10 @@ import teoriadosgrafos.ConjuntoInexistenteException
 import teoriadosgrafos.ElementoSemConjuntoException
 import teoriadosgrafos.GrafoPonderado
 
-/**
- * Singleton representandoo algoritmo para da
- * Árvore Geradora de Custo Mínimo
- * de Kruskal
- * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
- */
 object Kruskal {
+	
 	private val conjuntos = mutableListOf<SubConjunto>()
-	/**
-	 * Gera a MST utilizando o argoritmo de Kruskal
-	 * @param grafo GrafoPonderado -- O grafo em que a operação será executada
-	 * @return MST -- A Árvore Geradora de Custo Mínimo
-	 */
+	
 	fun gerar(grafo: GrafoPonderado): MST {
 		/* Criar a árvore geradora */
 		val mst = MST(grafo.matrizDeAdjacencia.size)
@@ -50,7 +41,6 @@ object Kruskal {
 	private fun find(i: Int) = conjuntos.find { it.members.contains(i) }?.id
 			?: throw ElementoSemConjuntoException()
 	
-	
 	/**
 	 * Realiza a união de dois conjuntos U e V
 	 * @param u SubConjunto -- O primeiro conjunto
@@ -74,11 +64,5 @@ object Kruskal {
 		}
 	}
 	
-	/**
-	 * Classe representando um subconjunto
-	 * @property id Int -- O identificador do subconjunto
-	 * @property members MutableSet<Int> -- Os membros do conjunto
-	 * @constructor
-	 */
 	data class SubConjunto(val id: Int, val members: MutableList<Int>)
 }

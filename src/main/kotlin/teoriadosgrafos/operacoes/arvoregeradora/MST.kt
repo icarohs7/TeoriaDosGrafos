@@ -4,22 +4,11 @@ import teoriadosgrafos.Aresta
 import teoriadosgrafos.Grafo
 import java.io.PrintStream
 
-/**
- * Classe representando uma Árvore Geradora de Custo Mínimo
- *
- * @property tamanho Int -- A quantidade de vértices contidos na árvore
- * @property tree Array<IntArray> -- A matriz contendo a árvore
- * @constructor
- * @author <a href="https://github.com/icarohs7">Icaro D Temponi</a>
- */
 class MST(private val tamanho: Int) {
+	
 	@Suppress("MemberVisibilityCanBePrivate")
 	val tree: Array<DoubleArray> = Array(tamanho) { DoubleArray(tamanho) { Grafo.INFINITO } }
 	
-	/**
-	 * Adicionar uma aresta à arvore
-	 * @param aresta Aresta -- A aresta a ser adicionada
-	 */
 	fun addAresta(aresta: Aresta, direcionado: Boolean = false) {
 		/* Não permitir a inserção de aresta repetida */
 		if (tree[aresta.origem][aresta.destino] != Grafo.INFINITO) {
