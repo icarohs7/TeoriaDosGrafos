@@ -1,6 +1,5 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import java.io.PrintStream
 import java.util.Arrays
 
 data class ResultadoWarshall(private val distancias: Array<DoubleArray>, private val proximos: Array<Array<Int>>) {
@@ -19,25 +18,6 @@ data class ResultadoWarshall(private val distancias: Array<DoubleArray>, private
 			caminho.add(i + 1)
 		}
 		return caminho
-	}
-	
-	/**
-	 * Retorna a matriz de distâncias no formato matriz de strings
-	 * @return Array<Array<String>> -- A matriz de strings
-	 */
-	fun getDistanciasAsStringArray(): Array<Array<String>> {
-		/* Criar a matriz de strings */
-		val stringArray = Array(distancias.size) { Array(distancias.size) { "" } }
-		
-		for (i in 0 until distancias.size) {
-			for (j in 0 until distancias.size) {
-				/* Atribuir cada elemento da matriz de distâncias para a matriz de strings no devido formato */
-				stringArray[i][j] = distancias[i][j].toString()
-			}
-		}
-		
-		/* Retornar a matriz */
-		return stringArray
 	}
 	
 	/**
@@ -66,25 +46,5 @@ data class ResultadoWarshall(private val distancias: Array<DoubleArray>, private
 		result = 31 * result + Arrays.hashCode(proximos)
 		return result
 	}
-	
-	/**
-	 * Imprimir a matriz de distâncias
-	 * @param out PrintStream -- A saída onde será impressa a matriz
-	 */
-	@Suppress("MemberVisibilityCanBePrivate")
-	fun printDistancias(out: PrintStream) {
-		distancias.forEach { linha ->
-			linha.forEach { elem ->
-				out.print("$elem ")
-			}
-			out.println()
-		}
-	}
-	
-	/**
-	 * Imprimir a matriz de distâncias no console
-	 */
-	@Suppress("unused")
-	fun printDistancias() = printDistancias(System.out)
 	
 }

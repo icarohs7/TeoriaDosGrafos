@@ -10,39 +10,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="v1.9.0 - Remoção das classes executáveis, Renomeação do projeto">
+    <list default="true" id="075114ef-298d-4db8-a4f9-20cb1ce6ba7c" name="Default" comment="Alteração da estrutura de pacotes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Aresta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Aresta.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Excecoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Excecoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/Grafo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Grafo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoNaoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/GrafoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/AnyExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/AnyExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/BidimensionalIntArrayExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalIntArrayExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/BidimensionalStringArrayExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalStringArrayExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleArrayExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/DoubleArrayExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/DoubleExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/DoubleExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntArrayExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/IntArrayExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/IntExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/IntExt.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Kruskal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Kruskal.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/MST.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/MST.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/arvoregeradora/Prim.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Prim.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CaminhoMaximo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/CustoMaximo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/customaximo/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/BellmanFord.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/BellmanFord.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Dijkstra.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Dijkstra.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/FloydWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/FloydWarshall.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoPonderado.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/custominimo/ResultadoWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoWarshall.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmLargura.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmLargura.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/BuscaEmProfundidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmProfundidade.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/metodosdebusca/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Extensoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Extensoes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Grafo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Grafo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/AnyExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalIntArrayExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalStringArrayExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/DoubleArrayExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/DoubleExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/IntArrayExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/MST.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/MST.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoPonderado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoPonderado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoWarshall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoWarshall.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -192,36 +172,36 @@
         <counts>
           <entry key="gitignore" value="30" />
           <entry key="gradle" value="12" />
-          <entry key="kt" value="191" />
+          <entry key="kt" value="229" />
           <entry key="md" value="103" />
-          <entry key="txt" value="105" />
+          <entry key="txt" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="30" />
           <entry key="Groovy" value="12" />
-          <entry key="Kotlin" value="191" />
+          <entry key="Kotlin" value="229" />
           <entry key="Markdown" value="103" />
-          <entry key="PLAIN_TEXT" value="105" />
+          <entry key="PLAIN_TEXT" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
+          <entry key="class" value="4" />
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="gradle" value="2" />
-          <entry key="kt" value="37" />
+          <entry key="kt" value="81" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
+          <entry key="CLASS" value="4" />
           <entry key="Git file" value="1" />
           <entry key="Groovy" value="2" />
-          <entry key="Kotlin" value="37" />
+          <entry key="Kotlin" value="81" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -754,15 +734,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Extensoes.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/view/E3T1View.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/aplicacao/etapa3trabalho1/controller/E3T1Controller.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/extensoes/GrafoExt.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/ordemtopologica/Khan.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/custominimo/ResultadoPonderado.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ArestaNegativaException.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CaminhoNaoEncontradoException.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/CicloNegativoException.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/ForaDoGrafoException.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/excecoes/Excecoes.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/etapa2trabalho2/Questao1.kt" />
@@ -805,6 +776,15 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/operacoes/ordemtopologica/Khan.kt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoPonderado.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/MST.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoWarshall.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/Extensoes.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Grafo.kt" />
       </list>
     </option>
   </component>
@@ -980,7 +960,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.392779" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
@@ -1260,7 +1240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529872018779</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Alteração da estrutura de pacotes">
+      <created>1529872947613</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1529872947613</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1307,12 +1294,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6339581" visible="true" weight="0.282516" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6339581" visible="true" weight="0.282516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" id="Run" order="5" sideWeight="0.3660419" side_tool="true" visible="true" weight="0.282516" />
+      <window_info id="Run" order="5" sideWeight="0.3660419" side_tool="true" visible="true" weight="0.282516" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32745314" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39801544" />
@@ -1323,7 +1310,7 @@
       <window_info anchor="bottom" id="Messages" order="7" weight="0.15673289" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32855567" />
       <window_info anchor="bottom" id="Build" order="9" weight="0.50441504" />
-      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.31677705" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.3131202" />
       <window_info anchor="bottom" id="Gradle View" order="11" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50053304" side_tool="true" weight="0.32745314" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -1373,7 +1360,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value=".." />
     <MESSAGE value="Documentação atualizada.&#10;Abandonado modelo utilizando métodos estáticos nas classes de busca.&#10;Adotado modelo utilizando Singletons para as classes de busca." />
     <MESSAGE value="Classe TrabalhoExtraEtapa2 teve seu form removido e substituido&#10;por estilização no código." />
     <MESSAGE value="Adicionado tratamento para ciclo negativo no algoritmo de Floyd-Warshall" />
@@ -1398,7 +1384,8 @@
     <MESSAGE value="v1.8.0 - Adição de testes unitários e Algoritmo em grafo&#10;&#10;Adição de testes unitários através do JUnit&#10;&#10;Adição do Algoritmo de caminho máximo em grafos" />
     <MESSAGE value="v1.8.1 - Correção de bug&#10;&#10;Correção da ordem da lista no algoritmo de caminho máximo" />
     <MESSAGE value="v1.9.0 - Remoção das classes executáveis, Renomeação do projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.9.0 - Remoção das classes executáveis, Renomeação do projeto" />
+    <MESSAGE value="Alteração da estrutura de pacotes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração da estrutura de pacotes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1408,48 +1395,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalIntArrayExt.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalStringArrayExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/AnyExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/DoubleArrayExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-359">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/IntArrayExt.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.1.0/d4b2cf00c46ec46c2d59a3ab571a00b742dda0b0/junit-jupiter-api-5.1.0-sources.jar!/org/junit/jupiter/api/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/styles/jmetro.css" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.41/dc11619be6c45157a142d3753017544896da8e69/kotlin-stdlib-1.2.41-sources.jar!/generated/_Collections.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1476,38 +1421,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/teoriadosgrafos/atividades/LookAndFeelChoice.kt" />
     <entry file="file://$PROJECT_DIR$/UNoxGraph/build.gradle" />
     <entry file="file://$PROJECT_DIR$/settings.gradle" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Aresta.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Excecoes.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Grafo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1561">
-          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1532,31 +1449,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/Extensoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/Extensoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Extensoes.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Extensoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -1567,52 +1463,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/MST.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1399">
-          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Prim.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-819">
           <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/BellmanFord.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Dijkstra.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Extensoes.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -1627,27 +1481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-319">
           <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoWarshall.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1640">
-          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoPonderado.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-939">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1673,6 +1506,156 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa14432.36702/com/github/icarohs7/unoxgraph/MstArestasInsuficientesException.class">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa14432.41432/com/github/icarohs7/unoxgraph/GrafoPonderado.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="51" column="69" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa14432.45511/com/github/icarohs7/unoxgraph/Grafo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalStringArrayExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/BidimensionalIntArrayExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/DoubleExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/IntArrayExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/AnyExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/BellmanFord.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Dijkstra.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/MST.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoPonderado.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoWarshall.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Aresta.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/Extensoes.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/Grafo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1339">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="gradleExecuteTaskHistory">

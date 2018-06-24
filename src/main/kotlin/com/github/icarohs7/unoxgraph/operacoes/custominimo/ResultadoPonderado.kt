@@ -50,42 +50,4 @@ data class ResultadoPonderado(val distancias: DoubleArray, val predecessores: In
 		result = 31 * result + Arrays.hashCode(predecessores)
 		return result
 	}
-	
-	/**
-	 * Retorna o array de distâncias no formato string
-	 * @return Array<String> -- O array de strings
-	 */
-	fun distanciasAsStringArray(): Array<String> {
-		/* Criar array de strings */
-		val distanciasString = Array(distancias.size) { "" }
-		
-		for (i in 0 until distancias.size) {
-			for (j in 0 until distancias.size) {
-				/* Popular o array com o valor em string do array de distâncias */
-				distanciasString[i] = distancias[i].toString()
-			}
-		}
-		
-		/* Retornar o array */
-		return distanciasString
-	}
-	
-	/**
-	 * Retorna o array de precedentes no formato string
-	 * @return Array<String> -- O array de strings
-	 */
-	fun precedentesAsStringArray(): Array<String> {
-		/* Criar array de strings */
-		val precedentesString = Array(distancias.size) { "" }
-		
-		for (i in 0 until distancias.size) {
-			for (j in 0 until distancias.size) {
-				/* Popular o array com o valor em string do array de precedentes */
-				precedentesString[i] = predecessores[i].toString()
-			}
-		}
-		
-		/* Retornar o array */
-		return precedentesString
-	}
 }

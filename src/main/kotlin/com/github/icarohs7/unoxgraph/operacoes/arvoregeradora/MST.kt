@@ -2,7 +2,6 @@ package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
 import com.github.icarohs7.unoxgraph.Aresta
 import com.github.icarohs7.unoxgraph.Grafo
-import java.io.PrintStream
 
 class MST(private val tamanho: Int) {
 	
@@ -24,49 +23,11 @@ class MST(private val tamanho: Int) {
 	}
 	
 	/**
-	 * Imprimir a árvore
-	 * @param out PrintStream -- A saída onde será impressa a árvore
-	 */
-	@Suppress("MemberVisibilityCanBePrivate")
-	fun printTree(out: PrintStream) {
-		tree.forEach {
-			it.forEach { print("$it ") }
-			out.println()
-		}
-	}
-	
-	/**
-	 * Imprimir a árvore no console
-	 */
-	@Suppress("unused")
-	fun printTree() {
-		printTree(System.out)
-	}
-	
-	/**
-	 * Imprimir as arestas continas na árvore
-	 * @param out PrintStream -- A saída onde as arestas serão impressas
-	 */
-	@Suppress("MemberVisibilityCanBePrivate")
-	fun printEdges(out: PrintStream) {
-		getArestas().forEach { aresta ->
-			out.println(aresta)
-		}
-	}
-	
-	/**
-	 * Imprimir as arestas contidas na árvore no console
-	 */
-	@Suppress("unused")
-	fun printEdges() {
-		printEdges(System.out)
-	}
-	
-	/**
 	 * Retorna uma lista contendo as arestas presentes na árvore geradora
 	 *
 	 * @return List<Aresta> -- A lista de arestas
 	 */
+	@Suppress("MemberVisibilityCanBePrivate")
 	fun getArestas(): List<Aresta> {
 		/* Criar lista de arestas */
 		val arestas = arrayListOf<Aresta>()
@@ -85,25 +46,5 @@ class MST(private val tamanho: Int) {
 		}
 		/* Retornar arestas */
 		return arestas.distinct()
-	}
-	
-	/**
-	 * Retorna a árvore como uma matriz de strings
-	 *
-	 * @return Array<Array<String>> -- A matriz de Strings
-	 */
-	fun getTreeAsString(): Array<Array<String>> {
-		/* Criar matriz */
-		val stringTree = Array(tamanho) { Array(tamanho) { "" } }
-		
-		for (i in 0 until tamanho) {
-			for (j in 0 until tamanho) {
-				/* Converter os elementos da árvore para string */
-				stringTree[i][j] = tree[i][j].toString()
-			}
-		}
-		
-		/* Retornar matriz */
-		return stringTree
 	}
 }

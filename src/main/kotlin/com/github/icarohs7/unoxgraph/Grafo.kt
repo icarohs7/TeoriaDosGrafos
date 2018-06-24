@@ -39,8 +39,6 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 	
 	fun inicializar() = visitados.indices.forEach { vertice -> visitados[vertice] = false }
 	
-	
-	@Suppress("unused")
 	fun existeAberto() = visitados.reduce { acc, b -> acc || b }
 	
 	fun getVizinhos(vertice: Int, abertos: Boolean = false): List<Int> {
@@ -81,12 +79,6 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 	
 	fun excluirAresta(aresta: Aresta) = excluirAresta(aresta.origem + 1, aresta.destino + 1)
 	
-	/**
-	 * Converte a matriz de adjacência para uma matriz de strings
-	 */
-	@Suppress("unused")
-	fun toStringBidimensionalList() = matrizDeAdjacencia.map { it.map { it.toString() } }
-	
 	override fun toString(): String {
 		return buildString {
 			matrizDeAdjacencia.forEach { linha ->
@@ -112,6 +104,7 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 			other == null -> false
 			this is GrafoPonderado && other !is GrafoPonderado -> false
 			this is GrafoNaoPonderado && other !is GrafoNaoPonderado -> false
+			
 			else -> {
 				val m1 = this.matrizDeAdjacencia
 				val m2 = (other as Grafo).matrizDeAdjacencia
@@ -141,6 +134,7 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 	 * @constructor
 	 */
 	inner class OrdemTopologica {
+		
 		val grafo: Grafo = this@Grafo
 	}
 	
@@ -149,6 +143,7 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 	 * @constructor
 	 */
 	inner class CustoMaximo {
+		
 		val grafo: Grafo = this@Grafo
 	}
 }
