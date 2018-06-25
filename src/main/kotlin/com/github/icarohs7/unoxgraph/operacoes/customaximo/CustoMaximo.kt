@@ -1,7 +1,7 @@
 package com.github.icarohs7.unoxgraph.operacoes.customaximo
 
 import com.github.icarohs7.unoxgraph.Grafo
-import com.github.icarohs7.unoxgraph.extensoes.getEntradas
+import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
 import com.github.icarohs7.unoxgraph.operacoes.ordemtopologica.khan
 import kotlin.math.max
 
@@ -19,10 +19,10 @@ object CustoMaximo {
 		
 		// Função recursiva para cálculo da maior distância de um vértice*/
 		fun dist(v: Int): Int {
-			return if (v.getEntradas(grafo).isEmpty())
+			return if ((grafo entradasParaOVertice v).isEmpty())
 				0
 			else
-				1 + v.getEntradas(grafo).fold(0) { acc, i -> max(acc, dist(i)) }
+				1 + (grafo entradasParaOVertice v).fold(0) { acc, i -> max(acc, dist(i)) }
 		}
 		
 		// Returnar max(dist(v))

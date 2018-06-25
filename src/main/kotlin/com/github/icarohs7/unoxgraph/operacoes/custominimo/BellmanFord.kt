@@ -1,16 +1,15 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import com.github.icarohs7.unoxgraph.CicloNegativoException
 import com.github.icarohs7.unoxgraph.GrafoPonderado
+import com.github.icarohs7.unoxgraph.estatico.CicloNegativoException
 
 object BellmanFord {
 	
 	@Suppress("NAME_SHADOWING")
 	fun buscar(origem: Int, grafo: GrafoPonderado): ResultadoPonderado {
-		val origem = origem - 1
 		/* Processo de inicialização do grafo */
 		grafo.inicializar()
-		val dist = DoubleArray(grafo.matrizDeAdjacencia.size) { grafo.matrizDeAdjacencia[origem][it] }
+		val dist = DoubleArray(grafo.matrizDeAdjacencia.size) { grafo.matrizDeAdjacencia[origem][it] }.also { it[origem] = 0.0 }
 		val prev = IntArray(grafo.matrizDeAdjacencia.size) { 0 }
 		grafo.visitados[origem] = true
 		/* Conjunto de vértices do grafo */

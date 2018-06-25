@@ -1,4 +1,4 @@
-package com.github.icarohs7.unoxgraph
+package com.github.icarohs7.unoxgraph.estatico
 
 class ArestaNegativaException
 	: RuntimeException("Há uma aresta de peso negativo no grafo")
@@ -23,3 +23,6 @@ class ConjuntoInexistenteException
 
 class MstArestasInsuficientesException
 	: RuntimeException("O grafo não contém arestas suficientes para gerar uma MST")
+
+class NumeroDeVerticesInsuficienteException
+	: RuntimeException("Número de vértices insuficiente para formar um grafo")

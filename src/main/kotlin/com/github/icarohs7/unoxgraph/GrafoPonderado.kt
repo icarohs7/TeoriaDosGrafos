@@ -1,11 +1,14 @@
 package com.github.icarohs7.unoxgraph
 
-class GrafoPonderado(matrizDeAdjacencia: Array<DoubleArray>, direcionado: Boolean = false) : Grafo(matrizDeAdjacencia, direcionado) {
+import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxcommons.extensoes.por
+import com.github.icarohs7.unoxcommons.extensoes.preenchendoMatrizDoubleDeTamanho
+import com.github.icarohs7.unoxgraph.estatico.INFINITO
+
+class GrafoPonderado(matrizDeAdjacencia: MatrizDouble, direcionado: Boolean = false) : Grafo(matrizDeAdjacencia, direcionado) {
 	
-	constructor(tamanho: Int, direcionado: Boolean = false) : this(
-		Array<DoubleArray>(tamanho) {
-			DoubleArray(tamanho) { INFINITO }
-		}, direcionado)
+	constructor(tamanho: Int, direcionado: Boolean = false)
+			: this(INFINITO preenchendoMatrizDoubleDeTamanho (tamanho por tamanho), direcionado)
 	
 	val custoMinimo = CustoMinimo(this)
 	

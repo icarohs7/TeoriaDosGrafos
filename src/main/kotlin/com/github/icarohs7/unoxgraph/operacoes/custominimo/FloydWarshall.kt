@@ -1,8 +1,9 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import com.github.icarohs7.unoxgraph.CicloNegativoException
-import com.github.icarohs7.unoxgraph.Grafo
+import com.github.icarohs7.unoxcommons.estatico.MatrizInteira
 import com.github.icarohs7.unoxgraph.GrafoPonderado
+import com.github.icarohs7.unoxgraph.estatico.CicloNegativoException
+import com.github.icarohs7.unoxgraph.estatico.INFINITO
 
 object FloydWarshall {
 	
@@ -14,14 +15,14 @@ object FloydWarshall {
 		/* Pesos */
 		val w = grafo.matrizDeAdjacencia
 		/* Criar e Inicializar as matrizes de distâncias e próximos */
-		val d = Array(tamanho) { DoubleArray(tamanho) { Grafo.INFINITO } }
-		val prox = Array(tamanho) { Array(tamanho) { -1 } }
+		val d = Array(tamanho) { DoubleArray(tamanho) { INFINITO } }
+		val prox = MatrizInteira(tamanho) { IntArray(tamanho) { -1 } }
 		/* Processo de inicialização */
 		for (u in 0 until tamanho) {
 			for (v in 0 until tamanho) {
 				/* Para cada aresta (u,v) definir
 				 * dist[u][v] para w[u][v] */
-				if (w[u][v] != Grafo.INFINITO) {
+				if (w[u][v] != INFINITO) {
 					d[u][v] = w[u][v]
 					prox[u][v] = v
 				}
@@ -52,6 +53,11 @@ object FloydWarshall {
 			if (d[i][i] < 0) {
 				throw CicloNegativoException()
 			}
+		}
+		
+		/* Zerar distância dos elementos até si mesmos */
+		for (i in 0 until tamanho) {
+			d[i][i] = 0.0
 		}
 		
 		/* Retornar o resultado contendo as distâncias e os próximos */

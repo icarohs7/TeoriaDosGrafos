@@ -1,16 +1,14 @@
 package com.github.icarohs7.unoxgraph.operacoes.metodosdebusca
 
-import com.github.icarohs7.unoxgraph.CaminhoNaoEncontradoException
 import com.github.icarohs7.unoxgraph.Grafo
+import com.github.icarohs7.unoxgraph.estatico.CaminhoNaoEncontradoException
+import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import java.util.Stack
 
 object BuscaEmProfundidade {
 	
 	@Suppress("NAME_SHADOWING")
 	fun buscar(origem: Int, destino: Int, grafo: Grafo): List<Int> {
-		val origem = origem - 1
-		val destino = destino - 1
-		
 		/* Desmarcar todos os nós visitados */
 		grafo.inicializar()
 		
@@ -39,7 +37,7 @@ object BuscaEmProfundidade {
 		grafo.visitados[origem] = true
 		
 		/* adicioná-lo à pilha */
-		caminhoInvertido.push(origem + 1)
+		caminhoInvertido.push(origem)
 		
 		/* e retornar caso o destino tenha sido alcançado */
 		if (origem == destino) {
@@ -48,7 +46,7 @@ object BuscaEmProfundidade {
 		
 		grafo.matrizDeAdjacencia.indices.forEach { i ->
 			/* Para cada vértice adjacente */
-			if (grafo.matrizDeAdjacencia[origem][i] == 1.0) {
+			if (grafo.matrizDeAdjacencia[origem][i] != INFINITO) {
 				/* e não visitado */
 				if (!grafo.visitados[i]) {
 					/* descer um nível na busca */
@@ -60,8 +58,8 @@ object BuscaEmProfundidade {
 			}
 		}
 		
-		/* Desempilhar os vértices que levam ao caminho incorreto */
-		caminhoInvertido.pop()
+		//		/* Desempilhar os vértices que levam ao caminho incorreto */
+		//		caminhoInvertido.pop()
 		
 		/* e retornar avisando que o destino não foi encontrado no galho recursivo atual */
 		return false

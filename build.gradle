@@ -4,19 +4,24 @@ plugins {
 	id 'com.palantir.git-version' version '0.11.0'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-group 'com.github.icarohs7'
-version gitVersion().toString().replaceAll('\\.dirty', '')
-
 dependencies {
-	testCompile 'io.kotlintest:kotlintest-runner-junit5:3.1.7'
 	implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+	implementation 'org.slf4j:slf4j-simple:1.7.25'
+	testImplementation 'io.kotlintest:kotlintest-runner-junit5:3.1.6'
+	implementation project(':UNoxKCommons')
 }
 
 repositories {
 	mavenCentral()
 }
+
+allprojects {
+	group 'com.github.icarohs7'
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+}
+
+version gitVersion().toString().replaceAll('\\.dirty', '')
 
 compileKotlin {
 	kotlinOptions.jvmTarget = '1.8'
@@ -32,4 +37,10 @@ clean {
 
 test {
 	useJUnitPlatform()
+}
+
+kotlin {
+	experimental {
+		coroutines "enable"
+	}
 }

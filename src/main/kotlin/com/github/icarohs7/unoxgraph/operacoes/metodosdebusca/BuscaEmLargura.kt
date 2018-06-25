@@ -1,7 +1,8 @@
 package com.github.icarohs7.unoxgraph.operacoes.metodosdebusca
 
-import com.github.icarohs7.unoxgraph.CaminhoNaoEncontradoException
 import com.github.icarohs7.unoxgraph.GrafoNaoPonderado
+import com.github.icarohs7.unoxgraph.estatico.CaminhoNaoEncontradoException
+import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import java.util.LinkedList
 import java.util.Stack
 
@@ -9,8 +10,6 @@ object BuscaEmLargura {
 	
 	@Suppress("NAME_SHADOWING")
 	fun buscar(origem: Int, destino: Int, grafo: GrafoNaoPonderado): List<Int> {
-		val origem = origem - 1
-		val destino = destino - 1
 		grafo.inicializar()
 		grafo.visitados[origem] = true
 		
@@ -39,16 +38,16 @@ object BuscaEmLargura {
 	private tailrec fun bfs(origem: Int, destino: Int, grafo: GrafoNaoPonderado, proximosVertices: LinkedList<Int>, caminhoInvertido:
 	Stack<Int>): Boolean {
 		/* Empilhar vértice visitado */
-		caminhoInvertido.push(origem + 1)
+		caminhoInvertido.push(origem)
 		
 		/* Retornar caso o destino seja alcançado */
 		if (origem == destino) {
 			return true
 		}
 		
-		/* Laço utilizado para enfileirar os visinhos do vértice atual */
+		/* Laço utilizado para enfileirar os vizinhos do vértice atual */
 		grafo.matrizDeAdjacencia.indices.forEach { i ->
-			if (grafo.matrizDeAdjacencia[origem][i] == 1.0) {
+			if (grafo.matrizDeAdjacencia[origem][i] != INFINITO) {
 				if (!grafo.visitados[i]) {
 					grafo.visitados[i] = true
 					proximosVertices.add(i)

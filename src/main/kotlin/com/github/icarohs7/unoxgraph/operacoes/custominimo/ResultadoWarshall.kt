@@ -1,8 +1,10 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
+import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxcommons.estatico.MatrizInteira
 import java.util.Arrays
 
-data class ResultadoWarshall(private val distancias: Array<DoubleArray>, private val proximos: Array<Array<Int>>) {
+data class ResultadoWarshall(val distancias: MatrizDouble, val proximos: MatrizInteira) {
 	
 	fun buscar(origem: Int, destino: Int): List<Int> {
 		val o = origem - 1

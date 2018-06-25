@@ -8,17 +8,16 @@ import com.github.icarohs7.unoxgraph.Grafo
  */
 operator fun Grafo.plusAssign(aresta: Aresta) = addAresta(aresta)
 
-/**
- * Adicionar uma aresta ao grafo --***1..N***
- */
-operator fun Grafo.plusAssign(inOut: Pair<Int, Int>) = addAresta(inOut.first, inOut.second)
+operator fun Grafo.plusAssign(aresta: Pair<Int, Int>) = addAresta(aresta.first, aresta.second)
 
 /**
  * Remover uma aresta do grafo
  */
 operator fun Grafo.minusAssign(aresta: Aresta) = excluirAresta(aresta)
 
+operator fun Grafo.minusAssign(aresta: Pair<Int, Int>) = excluirAresta(aresta.first, aresta.second)
+
 /**
- * Remover uma aresta do grafo --***1..N***
+ * Retorna a lista de vértices incidindo sobre o vértice atual
  */
-operator fun Grafo.minusAssign(inOut: Pair<Int, Int>) = excluirAresta(inOut.first, inOut.second)
+infix fun Grafo.entradasParaOVertice(v: Int) = arestas.filter { aresta -> aresta.destino == v }.map { aresta -> aresta.origem }

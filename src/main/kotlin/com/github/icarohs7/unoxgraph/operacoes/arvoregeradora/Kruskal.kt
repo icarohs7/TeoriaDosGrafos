@@ -1,8 +1,8 @@
 package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
-import com.github.icarohs7.unoxgraph.ConjuntoInexistenteException
-import com.github.icarohs7.unoxgraph.ElementoSemConjuntoException
 import com.github.icarohs7.unoxgraph.GrafoPonderado
+import com.github.icarohs7.unoxgraph.estatico.ConjuntoInexistenteException
+import com.github.icarohs7.unoxgraph.estatico.ElementoSemConjuntoException
 
 object Kruskal {
 	

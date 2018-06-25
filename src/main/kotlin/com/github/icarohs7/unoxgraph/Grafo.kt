@@ -1,37 +1,31 @@
 package com.github.icarohs7.unoxgraph
 
+import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxcommons.extensoes.preenchendoArrayBooleanDeTamanho
+import com.github.icarohs7.unoxgraph.estatico.ForaDoGrafoException
+import com.github.icarohs7.unoxgraph.estatico.INFINITO
+
 abstract class Grafo
-protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionado: Boolean) {
+protected constructor(val matrizDeAdjacencia: MatrizDouble, val direcionado: Boolean) {
 	
-	companion object {
-		const val INFINITO = (Int.MAX_VALUE / 2).toDouble()
-	}
-	
-	val visitados: BooleanArray = BooleanArray(matrizDeAdjacencia.size) { false }
+	val visitados = false preenchendoArrayBooleanDeTamanho matrizDeAdjacencia.size
 	
 	val arestas: List<Aresta>
-		get() {
-			return mutableListOf<Aresta>().also { arestas ->
-				matrizDeAdjacencia.indices.forEach { i ->
-					matrizDeAdjacencia[0].indices.forEach { j ->
-						val aresta = Aresta(i, j, matrizDeAdjacencia[i][j])
-						if (aresta.peso != INFINITO && !arestas.contains(aresta)) {
-							arestas.add(Aresta(i, j, matrizDeAdjacencia[i][j]))
-						}
+		get() = mutableListOf<Aresta>().also { arestas ->
+			matrizDeAdjacencia.indices.forEach { i ->
+				matrizDeAdjacencia[0].indices.forEach { j ->
+					val aresta = Aresta(i, j, matrizDeAdjacencia[i][j])
+					if (aresta.peso != INFINITO && !arestas.contains(aresta)) {
+						arestas.add(Aresta(i, j, matrizDeAdjacencia[i][j]))
 					}
 				}
 			}
 		}
 	
 	val vertices: List<Int>
-		get() {
-			return matrizDeAdjacencia
-				.indices
-				.filter {
-					it in arestas.map { it.origem }
-							|| it in arestas.map { it.destino }
-				}
-		}
+		get() = matrizDeAdjacencia
+			.indices
+			.filter { vertice -> vertice in arestas.fold(listOf<Int>()) { acc, aresta -> acc + aresta.expandirVertices() } }
 	
 	val ordemTopologica = OrdemTopologica()
 	
@@ -43,16 +37,12 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 	
 	fun getVizinhos(vertice: Int, abertos: Boolean = false): List<Int> {
 		val vizinhos = (0 until matrizDeAdjacencia.size)
-			.filter { matrizDeAdjacencia[vertice][it] != Grafo.INFINITO }
+			.filter { matrizDeAdjacencia[vertice][it] != INFINITO }
 		return if (abertos) vizinhos.filter { !visitados[it] } else vizinhos
 	}
 	
-	@Suppress("NAME_SHADOWING")
 	fun addAresta(origem: Int, destino: Int, peso: Double = 0.0) {
-		if (peso == Grafo.INFINITO) return
-		
-		val origem = origem - 1
-		val destino = destino - 1
+		if (peso == INFINITO) return
 		try {
 			matrizDeAdjacencia[origem][destino] = peso
 			if (!direcionado) {
@@ -64,39 +54,16 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 		
 	}
 	
-	fun addAresta(aresta: Aresta) = addAresta(aresta.origem + 1, aresta.destino + 1, aresta.peso)
+	fun addAresta(aresta: Aresta) = addAresta(aresta.origem, aresta.destino, aresta.peso)
 	
-	@Suppress("NAME_SHADOWING")
 	fun excluirAresta(origem: Int, destino: Int) {
-		val origem = origem - 1
-		val destino = destino - 1
-		
-		matrizDeAdjacencia[origem][destino] = Grafo.INFINITO
+		matrizDeAdjacencia[origem][destino] = INFINITO
 		if (!direcionado) {
-			matrizDeAdjacencia[destino][origem] = Grafo.INFINITO
+			matrizDeAdjacencia[destino][origem] = INFINITO
 		}
 	}
 	
-	fun excluirAresta(aresta: Aresta) = excluirAresta(aresta.origem + 1, aresta.destino + 1)
-	
-	override fun toString(): String {
-		return buildString {
-			matrizDeAdjacencia.forEach { linha ->
-				linha.forEach { elem ->
-					append(if (elem == Grafo.INFINITO) "INF" else if (this@Grafo is GrafoNaoPonderado) "1" else "$elem")
-					append("\t\t")
-				}
-				append("\n\n")
-			}
-			arestas
-				.map { Aresta(it.origem + 1, it.destino + 1, it.peso) }
-				.withIndex()
-				.forEach { (index, aresta) ->
-					if (index % 3 == 0) append("\n")
-					append("$aresta\t\t")
-				}
-		}
-	}
+	fun excluirAresta(aresta: Aresta) = excluirAresta(aresta.origem, aresta.destino)
 	
 	override fun equals(other: Any?): Boolean {
 		return when {
@@ -125,9 +92,7 @@ protected constructor(val matrizDeAdjacencia: Array<DoubleArray>, val direcionad
 		}
 	}
 	
-	override fun hashCode(): Int {
-		return matrizDeAdjacencia.hashCode() + direcionado.hashCode()
-	}
+	override fun hashCode() = matrizDeAdjacencia.hashCode() + direcionado.hashCode()
 	
 	/**
 	 * Classe agrupando os algoritmos de ordenação topológica

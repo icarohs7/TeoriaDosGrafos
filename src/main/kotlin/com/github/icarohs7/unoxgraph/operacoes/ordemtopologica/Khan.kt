@@ -1,8 +1,8 @@
 package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 
 import com.github.icarohs7.unoxgraph.Grafo
-import com.github.icarohs7.unoxgraph.GrafoNaoAciclicoException
-import com.github.icarohs7.unoxgraph.extensoes.getEntradas
+import com.github.icarohs7.unoxgraph.estatico.GrafoNaoAciclicoException
+import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
 import java.util.LinkedList
 
 object Khan {
@@ -28,7 +28,7 @@ object Khan {
 		val L = LinkedList<Int>()
 		val S = grafo
 			.vertices
-			.filter { vertice -> vertice.getEntradas(grafo).isEmpty() }
+			.filter { vertice -> (grafo entradasParaOVertice vertice).isEmpty() }
 			.toMutableList()
 		
 		// Para cada n em S
@@ -44,16 +44,13 @@ object Khan {
 				.filter { e -> e.origem == n }
 				.onEach(grafo::excluirAresta) // grafo = grafo \ {e}
 				.map { e -> e.destino }
-				.filter { m -> m.getEntradas(grafo).isEmpty() }
+				.filter { m -> (grafo entradasParaOVertice m).isEmpty() }
 				.forEach { m -> S.add(m) } // S = S U {m}
 		}
 		
-		// Incrementar 1 aos elementos, fazendo os vértices irem de 1 a N
-		L.replaceAll { n -> n + 1 }
-		
-		return if (grafo.arestas.isNotEmpty())
+		return if (grafo.arestas.isNotEmpty()) {
 			throw GrafoNaoAciclicoException()
-		else {
+		} else {
 			// Restaurar arestas do grafo
 			arestasBackup.forEach(grafo::addAresta)
 			
