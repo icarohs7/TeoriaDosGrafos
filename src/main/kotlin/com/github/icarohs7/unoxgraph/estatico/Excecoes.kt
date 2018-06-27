@@ -12,7 +12,7 @@ class CicloNegativoException
 class ForaDoGrafoException
 	: RuntimeException("Tentou acessar uma aresta fora do grafo")
 
-class GrafoNaoAciclicoException
+class GrafoCiclicoException
 	: RuntimeException("Há um ou mais ciclos presentes no grafo")
 
 class ElementoSemConjuntoException

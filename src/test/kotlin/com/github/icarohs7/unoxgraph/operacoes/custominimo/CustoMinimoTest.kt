@@ -1,10 +1,10 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import com.github.icarohs7.unoxcommons.extensoes.expandido
 import com.github.icarohs7.unoxgraph.Aresta
 import com.github.icarohs7.unoxgraph.GrafoPonderado
 import com.github.icarohs7.unoxgraph.estatico.ArestaNegativaException
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
+import com.github.icarohs7.unoxkcommons.extensoes.expandido
 import io.kotlintest.Description
 import io.kotlintest.inspectors.forAll
 import io.kotlintest.shouldBe
@@ -21,7 +21,7 @@ class CustoMinimoTest : StringSpec() {
 				val src = it.second
 				val dist = it.third
 				
-				if (g.matrizDeAdjacencia.expandido().any { it < 0 }) {
+				if (g.matrizAdjacencia.expandido().any { it < 0 }) {
 					shouldThrow<ArestaNegativaException> { g.custoMinimo.dijkstra(src) }
 				} else {
 					g.custoMinimo.dijkstra(src).distancias shouldBe dist
@@ -36,7 +36,7 @@ class CustoMinimoTest : StringSpec() {
 	override fun beforeTest(description: Description) {
 		cases = mutableListOf()
 		
-		val g = GrafoPonderado(5, true).also { grafo ->
+		val g = GrafoPonderado.ofASize(5, true).also { grafo ->
 			grafo += Aresta(0, 1, 1.0)
 			grafo += Aresta(0, 4, 10.0)
 			grafo += Aresta(0, 3, 3.0)
@@ -51,7 +51,7 @@ class CustoMinimoTest : StringSpec() {
 		val d = doubleArrayOf(0.0, 1.0, 5.0, 3.0, 6.0)
 		cases.add(Triple(g, 0, d))
 		
-		val g2 = GrafoPonderado(6, true).also { grafo ->
+		val g2 = GrafoPonderado.ofASize(6, true).also { grafo ->
 			grafo += Aresta(0, 1, 1.0)
 			grafo += Aresta(0, 2, 3.0)
 			
@@ -70,7 +70,7 @@ class CustoMinimoTest : StringSpec() {
 		val d2 = doubleArrayOf(0.0, 1.0, 2.0, 0.0, 3.0, 2.0)
 		cases.add(Triple(g2, 0, d2))
 		
-		val g3 = GrafoPonderado(5, true).also { grafo ->
+		val g3 = GrafoPonderado.ofASize(5, true).also { grafo ->
 			grafo += Aresta(0, 1, 2.0)
 			grafo += Aresta(0, 2, 4.0)
 			grafo += Aresta(0, 4, 3.0)

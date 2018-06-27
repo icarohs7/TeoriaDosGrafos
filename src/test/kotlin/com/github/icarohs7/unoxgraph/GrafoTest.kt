@@ -1,12 +1,12 @@
 package com.github.icarohs7.unoxgraph
 
-import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
-import com.github.icarohs7.unoxcommons.extensoes.expandido
-import com.github.icarohs7.unoxcommons.extensoes.para
-import com.github.icarohs7.unoxcommons.extensoes.por
-import com.github.icarohs7.unoxcommons.extensoes.preenchendoMatrizDoubleDeTamanho
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
+import com.github.icarohs7.unoxkcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxkcommons.extensoes.expandido
+import com.github.icarohs7.unoxkcommons.extensoes.para
+import com.github.icarohs7.unoxkcommons.extensoes.por
+import com.github.icarohs7.unoxkcommons.extensoes.preenchendoMatrizDoubleDeTamanho
 import io.kotlintest.Description
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
@@ -20,8 +20,8 @@ class GrafoTest : StringSpec() {
 	
 	init {
 		"Deve conter uma lista de arestas correspondentes à matriz de adjacência" {
-			g.matrizDeAdjacencia.expandido() shouldBe m.expandido()
-			gnd.matrizDeAdjacencia.expandido() shouldBe mnd.expandido()
+			g.matrizAdjacencia.expandido() shouldBe m.expandido()
+			gnd.matrizAdjacencia.expandido() shouldBe mnd.expandido()
 		}
 		
 		"Deve verificar se outro grafo é igual" {
@@ -29,7 +29,7 @@ class GrafoTest : StringSpec() {
 		}
 		
 		"Deve excluir uma aresta" {
-			val g3 = GrafoNaoPonderado(3)
+			val g3 = GrafoNaoPonderado.ofASize(3)
 			g3.addAresta(0, 1)
 			g3.addAresta(1, 2)
 			g2.excluirAresta(2, 0)
@@ -42,21 +42,21 @@ class GrafoTest : StringSpec() {
 		}
 		
 		"Deve ser construído de forma idiomática" {
-			val gi = GrafoNaoPonderado(0, 1, 2, 0, direcionado = false)
+			val gi = GrafoNaoPonderado.withThePath(0, 1, 2, 0, direcionado = false)
 			gi shouldBe g
 			
-			val gndi = GrafoNaoPonderado(0, 1, 2, 0)
+			val gndi = GrafoNaoPonderado.withThePath(0, 1, 2, 0)
 			gndi shouldBe gnd
 		}
 	}
 	
 	override fun beforeTest(description: Description) {
-		g = GrafoNaoPonderado(3)
+		g = GrafoNaoPonderado.ofASize(3)
 		g += 0 para 1
 		g += 1 para 2
 		g += 2 para 0
 		
-		g2 = GrafoNaoPonderado(3)
+		g2 = GrafoNaoPonderado.ofASize(3)
 		g2 += 0 para 1
 		g2 += 1 para 2
 		g2 += 2 para 0
@@ -69,7 +69,7 @@ class GrafoTest : StringSpec() {
 		m[2][0] = 0.0
 		m[0][2] = 0.0
 		
-		gnd = GrafoNaoPonderado(3, true)
+		gnd = GrafoNaoPonderado.ofASize(3, true)
 		gnd += 0 para 1
 		gnd += 1 para 2
 		gnd += 2 para 0

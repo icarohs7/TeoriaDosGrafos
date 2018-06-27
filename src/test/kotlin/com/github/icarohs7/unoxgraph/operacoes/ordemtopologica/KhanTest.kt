@@ -1,11 +1,11 @@
 package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 
-import com.github.icarohs7.unoxcommons.extensoes.para
-import com.github.icarohs7.unoxcommons.extensoes.transformadoRecursivamentePor
 import com.github.icarohs7.unoxgraph.Grafo
 import com.github.icarohs7.unoxgraph.GrafoNaoPonderado
 import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
+import com.github.icarohs7.unoxkcommons.extensoes.para
+import com.github.icarohs7.unoxkcommons.extensoes.transformadoRecursivamentePor
 import io.kotlintest.Description
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
@@ -31,7 +31,7 @@ class KhanTest : StringSpec() {
 	}
 	
 	override fun beforeTest(description: Description) {
-		g = GrafoNaoPonderado(11, true).also { grafo ->
+		g = GrafoNaoPonderado.ofASize(11, true).also { grafo ->
 			grafo += 6 para 10
 			grafo += 6 para 7
 			
@@ -56,7 +56,7 @@ class KhanTest : StringSpec() {
 			listOf(7, 5, 11, 2, 3, 8, 9, 10)
 		) transformadoRecursivamentePor { it - 1 }
 		
-		g2 = GrafoNaoPonderado(5, true).also { grafo ->
+		g2 = GrafoNaoPonderado.ofASize(5, true).also { grafo ->
 			grafo += 0 para 1
 			grafo += 0 para 2
 			

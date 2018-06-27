@@ -1,16 +1,17 @@
 package com.github.icarohs7.unoxgraph
 
-import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
-import com.github.icarohs7.unoxcommons.extensoes.para
-import com.github.icarohs7.unoxcommons.extensoes.por
-import com.github.icarohs7.unoxcommons.extensoes.preenchendoMatrizDoubleDeTamanho
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.estatico.NumeroDeVerticesInsuficienteException
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
+import com.github.icarohs7.unoxkcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxkcommons.extensoes.para
+import com.github.icarohs7.unoxkcommons.extensoes.por
+import com.github.icarohs7.unoxkcommons.extensoes.preenchendoMatrizDoubleDeTamanho
 
-class GrafoNaoPonderado(matrizDeAdjacencia: MatrizDouble, direcionado: Boolean = false) : Grafo(matrizDeAdjacencia, direcionado) {
+class GrafoNaoPonderado
+private constructor(matrizAdjacencia: MatrizDouble, direcionado: Boolean = false) : Grafo(matrizAdjacencia, direcionado) {
 	
-	constructor(tamanho: Int, direcionado: Boolean = false)
+	private constructor(tamanho: Int, direcionado: Boolean = false)
 			: this(INFINITO preenchendoMatrizDoubleDeTamanho (tamanho por tamanho), direcionado)
 	
 	/**
@@ -18,12 +19,16 @@ class GrafoNaoPonderado(matrizDeAdjacencia: MatrizDouble, direcionado: Boolean =
 	 * GrafoPonderado(0, 1, 2), onde os valores passados no construtor são os vértices
 	 * de forma que o grafo forme um caminho equivalente à ordem
 	 */
-	constructor(vararg vertices: Int, direcionado: Boolean = true) : this(vertices.max()!! + 1, direcionado) {
+	private constructor(vararg vertices: Int, direcionado: Boolean = true) : this(vertices.max()!! + 1, direcionado) {
 		if (vertices.size < 2) throw NumeroDeVerticesInsuficienteException()
 		
-		for (v in 0 until vertices.size - 1) {
-			this += vertices[v] para vertices[v + 1]
-		}
+		vertices.dropLast(1).forEachIndexed { index, vertice -> this += vertice para vertices[index + 1] }
+	}
+	
+	companion object {
+		fun fromTheMatrix(matrizAdjacencia: MatrizDouble, direcionado: Boolean = false) = GrafoNaoPonderado(matrizAdjacencia, direcionado)
+		fun ofASize(tamanho: Int, direcionado: Boolean = false) = GrafoNaoPonderado(tamanho, direcionado)
+		fun withThePath(vararg vertices: Int, direcionado: Boolean = true) = GrafoNaoPonderado(*vertices, direcionado = direcionado)
 	}
 	
 	val metodosDeBusca = MetodosDeBusca(this)

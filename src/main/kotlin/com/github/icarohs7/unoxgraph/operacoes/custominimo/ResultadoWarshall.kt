@@ -1,11 +1,13 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
-import com.github.icarohs7.unoxcommons.estatico.MatrizInteira
-import java.util.Arrays
+import com.github.icarohs7.unoxkcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxkcommons.estatico.MatrizInt
 
-data class ResultadoWarshall(val distancias: MatrizDouble, val proximos: MatrizInteira) {
-	
+class ResultadoWarshall(val distancias: MatrizDouble, val proximos: MatrizInt) {
+	/**
+	 * Recupera o menor caminho entre 2 vértices contido
+	 * na matriz de menores distâncias do resultado
+	 */
 	fun buscar(origem: Int, destino: Int): List<Int> {
 		val o = origem - 1
 		val d = destino - 1
@@ -21,32 +23,4 @@ data class ResultadoWarshall(val distancias: MatrizDouble, val proximos: MatrizI
 		}
 		return caminho
 	}
-	
-	/**
-	 * Implementação da comparação de igualdade entre 2 objetos ResultadoPonderado
-	 * @param other Any?
-	 * @return Boolean
-	 */
-	override fun equals(other: Any?): Boolean {
-		if (this === other) return true
-		if (javaClass != other?.javaClass) return false
-		
-		other as ResultadoWarshall
-		
-		if (!Arrays.equals(distancias, other.distancias)) return false
-		if (!Arrays.equals(proximos, other.proximos)) return false
-		
-		return true
-	}
-	
-	/**
-	 * Implementação do hashing de um objeto filho da classe atual baseado em seus 2 atributos
-	 * @return Int
-	 */
-	override fun hashCode(): Int {
-		var result = Arrays.hashCode(distancias)
-		result = 31 * result + Arrays.hashCode(proximos)
-		return result
-	}
-	
 }

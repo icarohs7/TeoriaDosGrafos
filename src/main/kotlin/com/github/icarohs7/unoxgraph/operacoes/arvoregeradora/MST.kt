@@ -1,9 +1,9 @@
 package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
-import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
-import com.github.icarohs7.unoxcommons.extensoes.expandido
 import com.github.icarohs7.unoxgraph.Aresta
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
+import com.github.icarohs7.unoxkcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxkcommons.extensoes.expandido
 import java.util.Arrays
 
 class MST(private val tamanho: Int) {
@@ -24,10 +24,7 @@ class MST(private val tamanho: Int) {
 	
 	/**
 	 * Retorna uma lista contendo as arestas presentes na árvore geradora
-	 *
-	 * @return List<Aresta> -- A lista de arestas
 	 */
-	@Suppress("MemberVisibilityCanBePrivate")
 	fun getArestas(): List<Aresta> {
 		/* Criar lista de arestas */
 		val arestas = arrayListOf<Aresta>()

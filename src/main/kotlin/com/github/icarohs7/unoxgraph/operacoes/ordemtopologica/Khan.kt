@@ -1,62 +1,40 @@
 package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 
 import com.github.icarohs7.unoxgraph.Grafo
-import com.github.icarohs7.unoxgraph.estatico.GrafoNaoAciclicoException
+import com.github.icarohs7.unoxgraph.estatico.GrafoCiclicoException
 import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
+import com.github.icarohs7.unoxgraph.extensoes.minusAssign
+import com.github.icarohs7.unoxkcommons.extensoes.transformadoPor
 import java.util.LinkedList
 
 object Khan {
 	@Suppress("LocalVariableName")
 	fun ordenar(grafo: Grafo): List<Int> {
-		/* S: Vértices sem arestas de entrada
-		 * L: Lista inicialmente vazia
-		 * Para cada n em S:
-		 *      S = S \ {n}
-		 *      L = L U {n}
-		 *      Para cada m de cada aresta e(n,m):
-		 *          grafo = grafo \ {e}
-		 *          se m.grauEntrada == 0:
-		 *              S = S U {m}
-		 * se grafo.qtdeArestas > 0
-		 *      erro(grafo tem ciclos)
-		 * senao
-		 *      retornar L */
-		
-		// Guardar uma cópia das arestas do grafo
+		// Guardar uma cópia das arestas do grafo para restauração ao fim do algoritmo
 		val arestasBackup = grafo.arestas.toList()
 		
-		val L = LinkedList<Int>()
-		val S = grafo
-			.vertices
+		val verticesOrdenadosTopologicamente = LinkedList<Int>()
+		val verticesASeremProcessados = grafo.vertices
 			.filter { vertice -> (grafo entradasParaOVertice vertice).isEmpty() }
 			.toMutableList()
 		
-		// Para cada n em S
-		while (S.isNotEmpty()) {
-			val n = S.first()
+		while (verticesASeremProcessados.isNotEmpty()) {
+			val verticeAtual = verticesASeremProcessados.first()
 			
-			S -= n
-			L += n
+			verticesASeremProcessados -= verticeAtual
+			verticesOrdenadosTopologicamente += verticeAtual
 			
-			// Para cada e em e(n,m)
-			grafo
-				.arestas
-				.filter { e -> e.origem == n }
-				.onEach(grafo::excluirAresta) // grafo = grafo \ {e}
-				.map { e -> e.destino }
-				.filter { m -> (grafo entradasParaOVertice m).isEmpty() }
-				.forEach { m -> S.add(m) } // S = S U {m}
+			grafo.arestas
+				.filter { aresta -> aresta.origem == verticeAtual } // Selecionar arestas saindo do vértice atual
+				.onEach { aresta -> grafo -= aresta } // Remover essas arestas do grafo
+				.map { aresta -> aresta.destino } // Utilizar os destinos das arestas removidas
+				.filter { vertice -> (grafo entradasParaOVertice vertice).isEmpty() }   // Selecionar os vértices sem entrada
+				.forEach { vertice -> verticesASeremProcessados += vertice } // Adicionar os vértices selecionados à fila de processamento
 		}
 		
-		return if (grafo.arestas.isNotEmpty()) {
-			throw GrafoNaoAciclicoException()
-		} else {
-			// Restaurar arestas do grafo
-			arestasBackup.forEach(grafo::addAresta)
-			
-			// Retornar lista ordenada
-			L
-		}
-		
+		return if (grafo.arestas.isEmpty())
+			verticesOrdenadosTopologicamente.also { arestasBackup transformadoPor grafo::addAresta }
+		else
+			throw GrafoCiclicoException()
 	}
 }

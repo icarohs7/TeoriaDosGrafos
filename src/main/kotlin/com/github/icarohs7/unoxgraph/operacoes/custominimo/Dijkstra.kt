@@ -9,11 +9,11 @@ object Dijkstra {
 	fun buscar(origem: Int, grafo: GrafoPonderado): ResultadoPonderado {
 		/* Processo de inicialização do grafo */
 		grafo.inicializar()
-		val dist = DoubleArray(grafo.matrizDeAdjacencia.size) { grafo.matrizDeAdjacencia[origem][it] }.also { it[origem] = 0.0 }
-		val prev = IntArray(grafo.matrizDeAdjacencia.size) { 0 }
+		val dist = DoubleArray(grafo.matrizAdjacencia.size) { grafo.matrizAdjacencia[origem][it] }.also { it[origem] = 0.0 }
+		val prev = IntArray(grafo.matrizAdjacencia.size) { 0 }
 		grafo.visitados[origem] = true
 		/* Conjunto de vértices do grafo */
-		val q = (0 until grafo.matrizDeAdjacencia.size)
+		val q = (0 until grafo.matrizAdjacencia.size)
 			.filter { it != origem }
 			.toMutableList()
 		
@@ -26,10 +26,10 @@ object Dijkstra {
 			/* Relaxar todos os vizinhos abertos de u */
 			grafo.getVizinhos(u, true).forEach { v ->
 				/* Caso haja alguma aresta negativa no grafo, lançar um erro */
-				if (grafo.matrizDeAdjacencia[u][v] < 0) {
+				if (grafo.matrizAdjacencia[u][v] < 0) {
 					throw ArestaNegativaException()
 				}
-				val alternativo = dist[u] + grafo.matrizDeAdjacencia[u][v]
+				val alternativo = dist[u] + grafo.matrizAdjacencia[u][v]
 				/* Se a distância da aresta E(u,v) somada à distância
 				 * dist(s,u) for menor que a distância dist(s,v), alterar a última */
 				if (alternativo < dist[v]) {

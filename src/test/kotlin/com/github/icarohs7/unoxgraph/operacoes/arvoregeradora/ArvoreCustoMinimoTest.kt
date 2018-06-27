@@ -1,9 +1,9 @@
 package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
-import com.github.icarohs7.unoxcommons.extensoes.expandido
 import com.github.icarohs7.unoxgraph.Aresta
 import com.github.icarohs7.unoxgraph.GrafoPonderado
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
+import com.github.icarohs7.unoxkcommons.extensoes.expandido
 import io.kotlintest.Description
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
@@ -25,7 +25,7 @@ class ArvoreCustoMinimoTest : StringSpec() {
 	}
 	
 	override fun beforeTest(description: Description) {
-		original = GrafoPonderado(7).also { grafo ->
+		original = GrafoPonderado.ofASize(7).also { grafo ->
 			//a,b,c,d,e,f,g
 			//0,1,2,3,4,5,6
 			grafo += Aresta(0, 1, 7.0)  /* A */
@@ -46,7 +46,7 @@ class ArvoreCustoMinimoTest : StringSpec() {
 			grafo += Aresta(5, 6, 11.0) /* F */
 		}
 		
-		minimo = GrafoPonderado(7).also { grafo ->
+		minimo = GrafoPonderado.ofASize(7).also { grafo ->
 			grafo += Aresta(0, 1, 7.0)
 			grafo += Aresta(0, 3, 5.0)
 			
@@ -56,6 +56,6 @@ class ArvoreCustoMinimoTest : StringSpec() {
 			
 			grafo += Aresta(4, 2, 5.0)
 			grafo += Aresta(4, 6, 9.0)
-		}.matrizDeAdjacencia.expandido()
+		}.matrizAdjacencia.expandido()
 	}
 }

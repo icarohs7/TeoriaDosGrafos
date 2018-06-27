@@ -12,7 +12,7 @@ object Prim {
 		grafo.inicializar()
 		
 		/* Quantidade de vértices */
-		val tamanho = grafo.matrizDeAdjacencia.size
+		val tamanho = grafo.matrizAdjacencia.size
 		
 		/* Criar MST que conterá o resultado, com suas arestas representando T */
 		val mst = MST(tamanho)
@@ -54,18 +54,13 @@ object Prim {
 	 * Retorna a aresta de menor peso tal que sua origem pertence ao conjunto de vértices abertos
 	 * sem pertencer ao conjunto de vértices adicionados pelo algoritmo de Prim e seu destino pertence
 	 * aos vértices adicionados
-	 *
-	 * @param grafo GrafoPonderado -- O grafo onde a busca esta sendo realizada
-	 * @param b MutableList<Int> -- O conjunto de vértices adicionados pelo algoritmo de Prim
-	 *
-	 * @return Aresta -- A aresta
 	 */
-	private fun menorPeso(grafo: GrafoPonderado, b: MutableList<Int>): Aresta {
+	private fun menorPeso(grafo: GrafoPonderado, conjuntoVertices: MutableList<Int>): Aresta {
 		var menor = Aresta(0, 0, INFINITO)
 		/* O array de vértices abertos */
 		val visitados = grafo.visitados
 		/* A matriz de pesos */
-		val w = grafo.matrizDeAdjacencia
+		val w = grafo.matrizAdjacencia
 		
 		/* Para cada aresta concreta ou não dentro do grafo,
 		 * Com V representando os Vértices abertos
@@ -75,9 +70,9 @@ object Prim {
 				/* Para cada aresta, pegar a que tem menor peso que a menor registrada */
 				if (w[u][v] < menor.peso) {
 					/* Verificar se a origem desta aresta está contida em V e não contida em B */
-					if (!visitados[u] && !b.contains(u)) {
+					if (!visitados[u] && !conjuntoVertices.contains(u)) {
 						/* E Verificar se o destino desta aresta está contivo em B */
-						if (b.contains(v)) {
+						if (conjuntoVertices.contains(v)) {
 							/* Caso as 3 asserções anteriores sejam verdadeiras,
 							 * fazer desta aresta a menor até o momento */
 							menor = Aresta(u, v, w[u][v])

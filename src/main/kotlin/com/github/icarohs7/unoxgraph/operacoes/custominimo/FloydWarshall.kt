@@ -1,9 +1,9 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import com.github.icarohs7.unoxcommons.estatico.MatrizInteira
 import com.github.icarohs7.unoxgraph.GrafoPonderado
 import com.github.icarohs7.unoxgraph.estatico.CicloNegativoException
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
+import com.github.icarohs7.unoxkcommons.estatico.MatrizInt
 
 object FloydWarshall {
 	
@@ -11,12 +11,12 @@ object FloydWarshall {
 		/* Inicializar o grafo */
 		grafo.inicializar()
 		/* Quantidade de vértices */
-		val tamanho = grafo.matrizDeAdjacencia.size
+		val tamanho = grafo.matrizAdjacencia.size
 		/* Pesos */
-		val w = grafo.matrizDeAdjacencia
+		val w = grafo.matrizAdjacencia
 		/* Criar e Inicializar as matrizes de distâncias e próximos */
 		val d = Array(tamanho) { DoubleArray(tamanho) { INFINITO } }
-		val prox = MatrizInteira(tamanho) { IntArray(tamanho) { -1 } }
+		val prox = MatrizInt(tamanho) { IntArray(tamanho) { -1 } }
 		/* Processo de inicialização */
 		for (u in 0 until tamanho) {
 			for (v in 0 until tamanho) {

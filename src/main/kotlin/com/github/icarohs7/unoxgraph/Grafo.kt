@@ -1,66 +1,56 @@
 package com.github.icarohs7.unoxgraph
 
-import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
-import com.github.icarohs7.unoxcommons.extensoes.preenchendoArrayBooleanDeTamanho
 import com.github.icarohs7.unoxgraph.estatico.ForaDoGrafoException
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
+import com.github.icarohs7.unoxkcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxkcommons.extensoes.deepForEachIndexed
+import com.github.icarohs7.unoxkcommons.extensoes.preenchendoArrayBooleanDeTamanho
 
 abstract class Grafo
-protected constructor(val matrizDeAdjacencia: MatrizDouble, val direcionado: Boolean) {
+protected constructor(val matrizAdjacencia: MatrizDouble, val direcionado: Boolean) {
 	
-	val visitados = false preenchendoArrayBooleanDeTamanho matrizDeAdjacencia.size
+	val visitados = false preenchendoArrayBooleanDeTamanho matrizAdjacencia.size
 	
 	val arestas: List<Aresta>
-		get() = mutableListOf<Aresta>().also { arestas ->
-			matrizDeAdjacencia.indices.forEach { i ->
-				matrizDeAdjacencia[0].indices.forEach { j ->
-					val aresta = Aresta(i, j, matrizDeAdjacencia[i][j])
-					if (aresta.peso != INFINITO && !arestas.contains(aresta)) {
-						arestas.add(Aresta(i, j, matrizDeAdjacencia[i][j]))
-					}
-				}
-			}
+		get() {
+			val arestas = mutableListOf<Aresta>()
+			matrizAdjacencia.deepForEachIndexed { row, col, peso -> if (peso != INFINITO) arestas += Aresta(row, col, peso) }
+			return arestas.distinct()
 		}
 	
 	val vertices: List<Int>
-		get() = matrizDeAdjacencia
-			.indices
+		get() = matrizAdjacencia.indices
 			.filter { vertice -> vertice in arestas.fold(listOf<Int>()) { acc, aresta -> acc + aresta.expandirVertices() } }
 	
 	val ordemTopologica = OrdemTopologica()
 	
 	val custoMaximo = CustoMaximo()
 	
-	fun inicializar() = visitados.indices.forEach { vertice -> visitados[vertice] = false }
+	fun inicializar() = visitados.fill(false)
 	
 	fun existeAberto() = visitados.reduce { acc, b -> acc || b }
 	
 	fun getVizinhos(vertice: Int, abertos: Boolean = false): List<Int> {
-		val vizinhos = (0 until matrizDeAdjacencia.size)
-			.filter { matrizDeAdjacencia[vertice][it] != INFINITO }
+		val vizinhos = (0 until matrizAdjacencia.size)
+			.filter { matrizAdjacencia[vertice][it] != INFINITO }
 		return if (abertos) vizinhos.filter { !visitados[it] } else vizinhos
 	}
 	
 	fun addAresta(origem: Int, destino: Int, peso: Double = 0.0) {
 		if (peso == INFINITO) return
 		try {
-			matrizDeAdjacencia[origem][destino] = peso
-			if (!direcionado) {
-				matrizDeAdjacencia[destino][origem] = peso
-			}
+			matrizAdjacencia[origem][destino] = peso
+			if (!direcionado) matrizAdjacencia[destino][origem] = peso
 		} catch (e: IndexOutOfBoundsException) {
 			throw ForaDoGrafoException()
 		}
-		
 	}
 	
 	fun addAresta(aresta: Aresta) = addAresta(aresta.origem, aresta.destino, aresta.peso)
 	
 	fun excluirAresta(origem: Int, destino: Int) {
-		matrizDeAdjacencia[origem][destino] = INFINITO
-		if (!direcionado) {
-			matrizDeAdjacencia[destino][origem] = INFINITO
-		}
+		matrizAdjacencia[origem][destino] = INFINITO
+		if (!direcionado) matrizAdjacencia[destino][origem] = INFINITO
 	}
 	
 	fun excluirAresta(aresta: Aresta) = excluirAresta(aresta.origem, aresta.destino)
@@ -73,8 +63,8 @@ protected constructor(val matrizDeAdjacencia: MatrizDouble, val direcionado: Boo
 			this is GrafoNaoPonderado && other !is GrafoNaoPonderado -> false
 			
 			else -> {
-				val m1 = this.matrizDeAdjacencia
-				val m2 = (other as Grafo).matrizDeAdjacencia
+				val m1 = this.matrizAdjacencia
+				val m2 = (other as Grafo).matrizAdjacencia
 				
 				if (m1.size != m2.size) return false
 				else if (m1[0].size != m2[0].size) return false
@@ -92,7 +82,7 @@ protected constructor(val matrizDeAdjacencia: MatrizDouble, val direcionado: Boo
 		}
 	}
 	
-	override fun hashCode() = matrizDeAdjacencia.hashCode() + direcionado.hashCode()
+	override fun hashCode() = matrizAdjacencia.hashCode() + direcionado.hashCode()
 	
 	/**
 	 * Classe agrupando os algoritmos de ordenação topológica

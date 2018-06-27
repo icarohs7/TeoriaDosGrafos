@@ -1,14 +1,20 @@
 package com.github.icarohs7.unoxgraph
 
-import com.github.icarohs7.unoxcommons.estatico.MatrizDouble
-import com.github.icarohs7.unoxcommons.extensoes.por
-import com.github.icarohs7.unoxcommons.extensoes.preenchendoMatrizDoubleDeTamanho
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
+import com.github.icarohs7.unoxkcommons.estatico.MatrizDouble
+import com.github.icarohs7.unoxkcommons.extensoes.por
+import com.github.icarohs7.unoxkcommons.extensoes.preenchendoMatrizDoubleDeTamanho
 
-class GrafoPonderado(matrizDeAdjacencia: MatrizDouble, direcionado: Boolean = false) : Grafo(matrizDeAdjacencia, direcionado) {
+class GrafoPonderado
+private constructor(matrizAdjacencia: MatrizDouble, direcionado: Boolean = false) : Grafo(matrizAdjacencia, direcionado) {
 	
-	constructor(tamanho: Int, direcionado: Boolean = false)
+	private constructor(tamanho: Int, direcionado: Boolean = false)
 			: this(INFINITO preenchendoMatrizDoubleDeTamanho (tamanho por tamanho), direcionado)
+	
+	companion object {
+		fun fromTheMatrix(matrizAdjacencia: MatrizDouble, direcionado: Boolean = false) = GrafoPonderado(matrizAdjacencia, direcionado)
+		fun ofASize(tamanho: Int, direcionado: Boolean = false) = GrafoPonderado(tamanho, direcionado)
+	}
 	
 	val custoMinimo = CustoMinimo(this)
 	
