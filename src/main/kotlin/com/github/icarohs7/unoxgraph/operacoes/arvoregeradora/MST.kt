@@ -2,16 +2,16 @@ package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
-import com.github.icarohs7.unoxkcommons.estatico.DoubleMatriz
 import com.github.icarohs7.unoxkcommons.extensoes.cells
+import com.github.icarohs7.unoxkcommons.funcoes.matrizOf
 import java.util.Arrays
 
-class MST(private val tamanho: Int) {
+class MST(val tamanho: Int) {
 	
 	@Suppress("MemberVisibilityCanBePrivate")
-	val tree: DoubleMatriz = Array(tamanho) { DoubleArray(tamanho) { INFINITO } }
+	val tree = matrizOf(tamanho) { INFINITO }
 	
-	fun addAresta(aresta: Aresta, direcionado: Boolean = false) {
+	internal fun addAresta(aresta: Aresta, direcionado: Boolean = false) {
 		/* Não permitir a inserção de aresta repetida */
 		if (tree[aresta.origem][aresta.destino] != INFINITO) return
 		

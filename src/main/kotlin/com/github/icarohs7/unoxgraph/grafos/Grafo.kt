@@ -4,13 +4,11 @@ import com.github.icarohs7.unoxgraph.estatico.ForaDoGrafoException
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.estatico.NumeroDeVerticesInsuficienteException
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
-import com.github.icarohs7.unoxkcommons.estatico.DoubleMatriz
+import com.github.icarohs7.unoxkcommons.estatico.Matriz
 import com.github.icarohs7.unoxkcommons.extensoes.cells
-import com.github.icarohs7.unoxkcommons.extensoes.deepForEachIndexed
 import com.github.icarohs7.unoxkcommons.extensoes.para
 import com.github.icarohs7.unoxkcommons.extensoes.por
-import com.github.icarohs7.unoxkcommons.extensoes.preenchendoArrayBooleanDeTamanho
-import com.github.icarohs7.unoxkcommons.extensoes.preenchendoMatrizDoubleDeTamanho
+import com.github.icarohs7.unoxkcommons.funcoes.matrizOf
 
 open class Grafo private constructor() {
 	
@@ -20,14 +18,14 @@ open class Grafo private constructor() {
 	var tamanho
 		get() = matrizAdjacencia.size
 		protected set(value) {
-			matrizAdjacencia = INFINITO preenchendoMatrizDoubleDeTamanho (value por value)
-			visitados = false preenchendoArrayBooleanDeTamanho value
+			matrizAdjacencia = matrizOf(value por value) { INFINITO }
+			visitados = Array(value) { false }
 		}
 	
-	lateinit var matrizAdjacencia: DoubleMatriz
+	lateinit var matrizAdjacencia: Matriz<Double>
 		protected set
 	
-	lateinit var visitados: BooleanArray
+	lateinit var visitados: Array<Boolean>
 		protected set
 	
 	val arestas: List<Aresta>
@@ -151,13 +149,11 @@ open class Grafo private constructor() {
 		/**
 		 * Criar um grafo a partir da matriz de adjacência
 		 */
-		private fun fromTheMatrix(matrizAdjacencia: DoubleMatriz, direcionado: Boolean): Grafo {
+		private fun fromTheMatrix(matrizAdjacencia: Matriz<Double>, direcionado: Boolean): Grafo {
 			return Grafo().apply {
-				this.tamanho = matrizAdjacencia.size
+				tamanho = matrizAdjacencia.size
 				this.direcionado = direcionado
-				matrizAdjacencia.deepForEachIndexed { row, col, cell ->
-					this.matrizAdjacencia[row][col] = cell
-				}
+				this.matrizAdjacencia = matrizOf(tamanho por tamanho) { matrizAdjacencia[it.row][it.col] }
 			}
 		}
 		
@@ -182,20 +178,6 @@ open class Grafo private constructor() {
 		
 		override fun toString(): String {
 			return "Aresta($origem,$destino) = $peso"
-		}
-		
-		/**
-		 * Retorna uma lista com os vértices da aresta
-		 */
-		fun expandirVertices(): List<Int> {
-			return listOf(origem, destino)
-		}
-		
-		/**
-		 * Retorna um par contendo a lista de vértices e o peso da aresta
-		 */
-		fun expandirVerticesPonderado(): Pair<List<Int>, Double> {
-			return expandirVertices() to peso
 		}
 		
 		override fun equals(other: Any?): Boolean {
@@ -229,7 +211,7 @@ open class Grafo private constructor() {
 				return Grafo.ofASize(tamanho, direcionado).toPonderado()
 			}
 			
-			fun fromTheMatrix(matrizAdjacencia: DoubleMatriz, direcionado: Boolean): Grafo.Ponderado {
+			fun fromTheMatrix(matrizAdjacencia: Matriz<Double>, direcionado: Boolean): Grafo.Ponderado {
 				return Grafo.fromTheMatrix(matrizAdjacencia, direcionado).toPonderado()
 			}
 			
@@ -244,14 +226,14 @@ open class Grafo private constructor() {
 	 */
 	class PonderadoComFluxo internal constructor() : Grafo() {
 		
-		var matrizFluxo: DoubleMatriz
+		var matrizFluxo: Matriz<Double>
 			protected set
 		
 		val arestasFluxo: List<Aresta>
 			get() = matrizFluxo.cells.filter { it.value != INFINITO }.map { Aresta(it.row, it.col, it.value) }.distinct()
 		
 		init {
-			matrizFluxo = INFINITO preenchendoMatrizDoubleDeTamanho (tamanho por tamanho)
+			matrizFluxo = matrizOf(tamanho por tamanho) { INFINITO }
 		}
 		
 		companion object {
@@ -259,7 +241,7 @@ open class Grafo private constructor() {
 				return Grafo.ofASize(tamanho, direcionado).toPonderadoComFluxo()
 			}
 			
-			fun fromTheMatrix(matrizAdjacencia: DoubleMatriz, direcionado: Boolean): Grafo.PonderadoComFluxo {
+			fun fromTheMatrix(matrizAdjacencia: Matriz<Double>, direcionado: Boolean): Grafo.PonderadoComFluxo {
 				return Grafo.fromTheMatrix(matrizAdjacencia, direcionado).toPonderadoComFluxo()
 			}
 			
@@ -279,7 +261,7 @@ open class Grafo private constructor() {
 				return Grafo.ofASize(tamanho, direcionado).toNaoPonderado()
 			}
 			
-			fun fromTheMatrix(matrizAdjacencia: DoubleMatriz, direcionado: Boolean): Grafo.NaoPonderado {
+			fun fromTheMatrix(matrizAdjacencia: Matriz<Double>, direcionado: Boolean): Grafo.NaoPonderado {
 				return Grafo.fromTheMatrix(matrizAdjacencia, direcionado).toNaoPonderado()
 			}
 			

@@ -1,6 +1,6 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-class ResultadoPonderado(val distancias: DoubleArray, val predecessores: IntArray) {
+class ResultadoPonderado(val distancias: Array<Double>, val predecessores: Array<Int>) {
 	
 	/**
 	 * Retorna o menor caminho da origem até o destino definido

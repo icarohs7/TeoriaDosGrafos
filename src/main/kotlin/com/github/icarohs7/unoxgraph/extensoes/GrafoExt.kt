@@ -25,4 +25,4 @@ operator fun Grafo.minusAssign(celula: NXCell<Double>) = excluirAresta(celula.ro
 /**
  * Retorna a lista de vértices incidindo sobre o vértice atual
  */
-infix fun Grafo.entradasParaOVertice(v: Int) = arestas.filter { aresta -> aresta.destino == v }.map { aresta -> aresta.origem }
+internal fun Grafo.entradasParaOVertice(v: Int) = arestas.filter { it.destino == v }.map { it.origem }

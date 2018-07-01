@@ -3,34 +3,34 @@ package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
 import com.github.icarohs7.unoxgraph.grafos.Grafo
+import com.github.icarohs7.unoxkcommons.extensoes.deepMap
 import com.github.icarohs7.unoxkcommons.extensoes.para
-import com.github.icarohs7.unoxkcommons.extensoes.transformadoRecursivamentePor
 import io.kotlintest.Description
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
 
 class KhanTest : StringSpec() {
-	private lateinit var g: Grafo
-	private lateinit var g2: Grafo
+	private lateinit var grafo: Grafo
+	private lateinit var grafo2: Grafo
 	private lateinit var ordenacoesValidas: List<List<Int>>
 	private lateinit var ordenacoesValidas2: List<List<Int>>
 	
 	init {
 		"Deve calcular os vértices de entrada de um vértice" {
-			(g entradasParaOVertice 10) shouldBe listOf(4, 6)
+			grafo.entradasParaOVertice(10) shouldBe listOf(4, 6)
 			
-			(g2 entradasParaOVertice 2) shouldBe listOf(0, 1)
+			grafo2.entradasParaOVertice(2) shouldBe listOf(0, 1)
 		}
 		
 		"Deve run um grafo topológicamente utilizando o algoritmo de Khan" {
-			(g.ordemTopologicaKhan() in ordenacoesValidas) shouldBe true
+			(grafo.ordemTopologicaKhan() in ordenacoesValidas) shouldBe true
 			
-			(g2.ordemTopologicaKhan() in ordenacoesValidas2) shouldBe true
+			(grafo2.ordemTopologicaKhan() in ordenacoesValidas2) shouldBe true
 		}
 	}
 	
 	override fun beforeTest(description: Description) {
-		g = Grafo.NaoPonderado.ofASize(11, true).also { grafo ->
+		grafo = Grafo.NaoPonderado.ofASize(11, true).also { grafo ->
 			grafo += 6 para 10
 			grafo += 6 para 7
 			
@@ -53,9 +53,9 @@ class KhanTest : StringSpec() {
 			listOf(5, 7, 3, 8, 11, 10, 9, 2),
 			listOf(7, 5, 11, 3, 10, 8, 9, 2),
 			listOf(7, 5, 11, 2, 3, 8, 9, 10)
-		) transformadoRecursivamentePor { it - 1 }
+		) deepMap { it - 1 }
 		
-		g2 = Grafo.NaoPonderado.ofASize(5, true).also { grafo ->
+		grafo2 = Grafo.NaoPonderado.ofASize(5, true).also { grafo ->
 			grafo += 0 para 1
 			grafo += 0 para 2
 			
@@ -69,6 +69,6 @@ class KhanTest : StringSpec() {
 		ordenacoesValidas2 = listOf(
 			listOf(1, 2, 3, 4, 5),
 			listOf(1, 2, 3, 5, 4)
-		) transformadoRecursivamentePor { it - 1 }
+		) deepMap { it - 1 }
 	}
 }

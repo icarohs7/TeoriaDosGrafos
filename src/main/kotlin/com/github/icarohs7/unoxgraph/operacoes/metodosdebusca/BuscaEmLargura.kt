@@ -10,41 +10,38 @@ import java.util.Stack
  * Injeta a função de busca em largura no grafo
  */
 fun Grafo.buscaEmLargura(origem: Int, destino: Int): List<Int> {
-	return BuscaEmLargura.buscar(origem, destino, this as? Grafo.NaoPonderado ?: throw TipoDeGrafoIncorretoException())
+	return buscaEmLargura(origem, destino, this as? Grafo.NaoPonderado ?: throw TipoDeGrafoIncorretoException())
 }
 
-private object BuscaEmLargura {
+private fun buscaEmLargura(origem: Int, destino: Int, grafo: Grafo.NaoPonderado): List<Int> {
+	grafo.desmarcarTodosOsVertices()
+	grafo.visitados[origem] = true
+	val caminho = LinkedList<Int>()
+	val caminhoInvertido = Stack<Int>()
 	
-	fun buscar(origem: Int, destino: Int, grafo: Grafo.NaoPonderado): List<Int> {
-		grafo.desmarcarTodosOsVertices()
-		grafo.visitados[origem] = true
-		val caminho = LinkedList<Int>()
-		val caminhoInvertido = Stack<Int>()
-		
-		/* Lançar exceção caso o destino não seja encontrado */
-		if (!bfs(origem, destino, grafo, caminho, caminhoInvertido)) throw CaminhoNaoEncontradoException()
-		
-		/* Retornar o caminho da origem para o destino */
-		return caminhoInvertido
+	/* Lançar exceção caso o destino não seja encontrado */
+	if (!bfs(origem, destino, grafo, caminho, caminhoInvertido)) throw CaminhoNaoEncontradoException()
+	
+	/* Retornar o caminho da origem para o destino */
+	return caminhoInvertido
+}
+
+/**
+ * Procedimento recursivo responsável pela busca em largura
+ */
+private tailrec fun bfs(origem: Int, destino: Int, grafo: Grafo.NaoPonderado, proximosVertices: LinkedList<Int>, caminhoInvertido:
+Stack<Int>): Boolean {
+	caminhoInvertido += origem   // Adicionar origem ao caminho
+	
+	if (origem == destino) return true  // Caso base
+	
+	for (verticeVizinho in grafo.getVizinhos(origem, abertos = true)) {    // Enfileirar vizinhos abertos do vértice origem
+		grafo.visitados[verticeVizinho] = true
+		proximosVertices += verticeVizinho
 	}
 	
-	/**
-	 * Procedimento recursivo responsável pela busca em largura
-	 */
-	private tailrec fun bfs(origem: Int, destino: Int, grafo: Grafo.NaoPonderado, proximosVertices: LinkedList<Int>, caminhoInvertido:
-	Stack<Int>): Boolean {
-		caminhoInvertido += origem   // Adicionar origem ao caminho
-		
-		if (origem == destino) return true  // Caso base
-		
-		for (verticeVizinho in grafo.getVizinhos(origem, abertos = true)) {    // Enfileirar vizinhos abertos do vértice origem
-			grafo.visitados[verticeVizinho] = true
-			proximosVertices += verticeVizinho
-		}
-		
-		return if (!proximosVertices.isEmpty())
-			bfs(proximosVertices.remove(), destino, grafo, proximosVertices, caminhoInvertido)  // Chamada recursiva para o próximo vértice
-		else
-			false
-	}
+	return if (!proximosVertices.isEmpty())
+		bfs(proximosVertices.remove(), destino, grafo, proximosVertices, caminhoInvertido)  // Chamada recursiva para o próximo vértice
+	else
+		false
 }

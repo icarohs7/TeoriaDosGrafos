@@ -1,9 +1,8 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import com.github.icarohs7.unoxkcommons.estatico.DoubleMatriz
-import com.github.icarohs7.unoxkcommons.estatico.IntMatriz
+import com.github.icarohs7.unoxkcommons.estatico.Matriz
 
-class ResultadoWarshall(val distancias: DoubleMatriz, val proximos: IntMatriz) {
+class ResultadoWarshall(val distancias: Matriz<Double>, val proximos: Matriz<Int>) {
 	/**
 	 * Recupera o menor caminho entre 2 vértices contido
 	 * na matriz de menores distâncias do resultado

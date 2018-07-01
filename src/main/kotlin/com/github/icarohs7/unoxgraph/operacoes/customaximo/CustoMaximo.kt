@@ -10,25 +10,21 @@ import kotlin.math.max
  * na classe grafo
  */
 fun Grafo.custoMaximo(): Int {
-	return CustoMaximo.calcular(this)
+	return calcularCustoMaximo(this)
 }
 
-private object CustoMaximo {
+private fun calcularCustoMaximo(grafo: Grafo): Int {
+	// Ordenar topológicamente
+	val verticesOrdenados = grafo.ordemTopologicaKhan()
 	
-	@Suppress("LocalVariableName")
-	fun calcular(grafo: Grafo): Int {
-		// Ordenar topológicamente
-		val V = grafo.ordemTopologicaKhan()
-		
-		// Função recursiva para cálculo da maior distância de um vértice comparando todos caminhos possíveis
-		fun dist(v: Int): Int {
-			return if ((grafo entradasParaOVertice v).isEmpty())
-				0
-			else
-				1 + (grafo entradasParaOVertice v).fold(0) { acc, i -> max(acc, dist(i)) }
+	// Função recursiva para cálculo da maior distância de um vértice comparando todos caminhos possíveis
+	fun dist(v: Int): Int {
+		return when (grafo.entradasParaOVertice(v).isEmpty()) {
+			true -> 0
+			false -> 1 + grafo.entradasParaOVertice(v).fold(0) { acc, i -> max(acc, dist(i)) }
 		}
-		
-		// Returnar max(dist(v))
-		return V.fold(0) { acc, v -> max(acc, dist(v)) }
 	}
+	
+	// Returnar max(dist(v))
+	return verticesOrdenados.fold(0) { acc, v -> max(acc, dist(v)) }
 }
