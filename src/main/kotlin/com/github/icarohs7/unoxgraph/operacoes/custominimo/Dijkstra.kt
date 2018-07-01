@@ -1,19 +1,29 @@
 package com.github.icarohs7.unoxgraph.operacoes.custominimo
 
-import com.github.icarohs7.unoxgraph.GrafoPonderado
 import com.github.icarohs7.unoxgraph.estatico.ArestaNegativaException
+import com.github.icarohs7.unoxgraph.estatico.TipoDeGrafoIncorretoException
+import com.github.icarohs7.unoxgraph.grafos.Grafo
+import com.github.icarohs7.unoxkcommons.extensoes.preenchendoArrayIntDeTamanho
 
-object Dijkstra {
+/**
+ * Função de extensão injetando o cálculo de custo mínimo utilizando
+ * o algoritmo de Dijkstra na classe grafo
+ */
+fun Grafo.custoMinimoDijkstra(origem: Int): ResultadoPonderado {
+	return Dijkstra.buscar(origem, this as? Grafo.Ponderado ?: throw TipoDeGrafoIncorretoException())
+}
+
+private object Dijkstra {
 	
 	@Suppress("NAME_SHADOWING")
-	fun buscar(origem: Int, grafo: GrafoPonderado): ResultadoPonderado {
+	fun buscar(origem: Int, grafo: Grafo.Ponderado): ResultadoPonderado {
 		/* Processo de inicialização do grafo */
-		grafo.inicializar()
-		val dist = DoubleArray(grafo.matrizAdjacencia.size) { grafo.matrizAdjacencia[origem][it] }.also { it[origem] = 0.0 }
-		val prev = IntArray(grafo.matrizAdjacencia.size) { 0 }
+		grafo.desmarcarTodosOsVertices()
+		val dist = DoubleArray(grafo.tamanho) { grafo.matrizAdjacencia[origem][it] }.also { it[origem] = 0.0 }
+		val prev = 0 preenchendoArrayIntDeTamanho grafo.tamanho
 		grafo.visitados[origem] = true
 		/* Conjunto de vértices do grafo */
-		val q = (0 until grafo.matrizAdjacencia.size)
+		val q = (0 until grafo.tamanho)
 			.filter { it != origem }
 			.toMutableList()
 		

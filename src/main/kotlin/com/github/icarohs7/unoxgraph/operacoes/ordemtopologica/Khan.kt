@@ -1,15 +1,23 @@
 package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 
-import com.github.icarohs7.unoxgraph.Grafo
 import com.github.icarohs7.unoxgraph.estatico.GrafoCiclicoException
 import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
 import com.github.icarohs7.unoxgraph.extensoes.minusAssign
+import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxkcommons.extensoes.transformadoPor
 import java.util.LinkedList
 
-object Khan {
+/**
+ * Injetar a função para cálculo da ordenação topológica de khan
+ * na classe grafo
+ */
+fun Grafo.ordemTopologicaKhan(): List<Int> {
+	return Khan.run(this)
+}
+
+private object Khan {
 	@Suppress("LocalVariableName")
-	fun ordenar(grafo: Grafo): List<Int> {
+	fun run(grafo: Grafo): List<Int> {
 		// Guardar uma cópia das arestas do grafo para restauração ao fim do algoritmo
 		val arestasBackup = grafo.arestas.toList()
 		

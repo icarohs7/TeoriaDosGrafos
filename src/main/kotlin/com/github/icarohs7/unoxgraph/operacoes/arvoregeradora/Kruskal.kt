@@ -1,20 +1,28 @@
 package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
-import com.github.icarohs7.unoxgraph.GrafoPonderado
 import com.github.icarohs7.unoxgraph.estatico.ConjuntoInexistenteException
 import com.github.icarohs7.unoxgraph.estatico.ElementoSemConjuntoException
+import com.github.icarohs7.unoxgraph.estatico.TipoDeGrafoIncorretoException
+import com.github.icarohs7.unoxgraph.grafos.Grafo
 
-object Kruskal {
+/**
+ * Injetar a função de calculo de kruskal na classe grafo
+ */
+fun Grafo.mstKruskal(): MST {
+	return Kruskal.gerar(this as? Grafo.Ponderado ?: throw TipoDeGrafoIncorretoException())
+}
+
+private object Kruskal {
 	
 	private val conjuntos = mutableListOf<SubConjunto>()
 	
-	fun gerar(grafo: GrafoPonderado): MST {
+	fun gerar(grafo: Grafo.Ponderado): MST {
 		/* Criar a árvore geradora */
-		val mst = MST(grafo.matrizAdjacencia.size)
+		val mst = MST(grafo.tamanho)
 		/* Limpar conjuntos */
 		conjuntos.clear()
 		/* Definir conjuntos iniciais */
-		grafo.matrizAdjacencia.indices.forEach { conjuntos.add(SubConjunto(it, mutableListOf(it))) }
+		(0 until grafo.tamanho).forEach { conjuntos.add(SubConjunto(it, mutableListOf(it))) }
 		
 		/* Para cada aresta dentro do grafo em ordem ascendente de peso */
 		grafo.arestas
@@ -29,6 +37,8 @@ object Kruskal {
 			}
 		
 		/* Por fim, retornar a árvore */
+		mst.arestas.forEach(::println)
+		println("\n")
 		return mst
 	}
 	

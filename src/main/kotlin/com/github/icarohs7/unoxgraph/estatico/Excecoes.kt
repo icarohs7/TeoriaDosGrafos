@@ -26,3 +26,6 @@ class MstArestasInsuficientesException
 
 class NumeroDeVerticesInsuficienteException
 	: RuntimeException("Número de vértices insuficiente para formar um grafo")
+
+class TipoDeGrafoIncorretoException
+	: RuntimeException("A operação desejada não é possível no tipo de grafo utilizado")

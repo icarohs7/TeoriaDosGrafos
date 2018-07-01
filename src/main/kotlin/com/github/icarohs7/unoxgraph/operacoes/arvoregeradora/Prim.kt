@@ -1,15 +1,23 @@
 package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
-import com.github.icarohs7.unoxgraph.Aresta
-import com.github.icarohs7.unoxgraph.GrafoPonderado
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.estatico.MstArestasInsuficientesException
+import com.github.icarohs7.unoxgraph.estatico.TipoDeGrafoIncorretoException
+import com.github.icarohs7.unoxgraph.grafos.Grafo
+import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
 
-object Prim {
+/**
+ * Injetar a função de calculo de prim na classe grafo
+ */
+fun Grafo.mstPrim(): MST {
+	return Prim.gerar(this as? Grafo.Ponderado ?: throw TipoDeGrafoIncorretoException())
+}
+
+private object Prim {
 	
-	fun gerar(grafo: GrafoPonderado): MST {
+	fun gerar(grafo: Grafo.Ponderado): MST {
 		/* Inicializar o grafo */
-		grafo.inicializar()
+		grafo.desmarcarTodosOsVertices()
 		
 		/* Quantidade de vértices */
 		val tamanho = grafo.matrizAdjacencia.size
@@ -20,7 +28,7 @@ object Prim {
 		/* Array contendo os vértices visitados, representando V */
 		val visitados = grafo.visitados
 		
-		/* Lista que irá controlar a iteração, inicializar com o primeiro vértice do grafo,
+		/* Lista que irá controlar a iteração, desmarcarTodosOsVertices com o primeiro vértice do grafo,
 		 * representando B */
 		val b = mutableListOf(0)
 		
@@ -55,7 +63,7 @@ object Prim {
 	 * sem pertencer ao conjunto de vértices adicionados pelo algoritmo de Prim e seu destino pertence
 	 * aos vértices adicionados
 	 */
-	private fun menorPeso(grafo: GrafoPonderado, conjuntoVertices: MutableList<Int>): Aresta {
+	private fun menorPeso(grafo: Grafo.Ponderado, conjuntoVertices: MutableList<Int>): Aresta {
 		var menor = Aresta(0, 0, INFINITO)
 		/* O array de vértices abertos */
 		val visitados = grafo.visitados

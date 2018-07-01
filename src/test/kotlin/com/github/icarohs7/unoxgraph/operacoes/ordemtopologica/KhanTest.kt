@@ -1,9 +1,8 @@
 package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 
-import com.github.icarohs7.unoxgraph.Grafo
-import com.github.icarohs7.unoxgraph.GrafoNaoPonderado
 import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
+import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxkcommons.extensoes.para
 import com.github.icarohs7.unoxkcommons.extensoes.transformadoRecursivamentePor
 import io.kotlintest.Description
@@ -23,15 +22,15 @@ class KhanTest : StringSpec() {
 			(g2 entradasParaOVertice 2) shouldBe listOf(0, 1)
 		}
 		
-		"Deve ordenar um grafo topológicamente utilizando o algoritmo de Khan" {
-			(g.ordemTopologica.khan() in ordenacoesValidas) shouldBe true
+		"Deve run um grafo topológicamente utilizando o algoritmo de Khan" {
+			(g.ordemTopologicaKhan() in ordenacoesValidas) shouldBe true
 			
-			(g2.ordemTopologica.khan() in ordenacoesValidas2) shouldBe true
+			(g2.ordemTopologicaKhan() in ordenacoesValidas2) shouldBe true
 		}
 	}
 	
 	override fun beforeTest(description: Description) {
-		g = GrafoNaoPonderado.ofASize(11, true).also { grafo ->
+		g = Grafo.NaoPonderado.ofASize(11, true).also { grafo ->
 			grafo += 6 para 10
 			grafo += 6 para 7
 			
@@ -56,7 +55,7 @@ class KhanTest : StringSpec() {
 			listOf(7, 5, 11, 2, 3, 8, 9, 10)
 		) transformadoRecursivamentePor { it - 1 }
 		
-		g2 = GrafoNaoPonderado.ofASize(5, true).also { grafo ->
+		g2 = Grafo.NaoPonderado.ofASize(5, true).also { grafo ->
 			grafo += 0 para 1
 			grafo += 0 para 2
 			

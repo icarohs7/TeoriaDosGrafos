@@ -1,16 +1,24 @@
 package com.github.icarohs7.unoxgraph.operacoes.customaximo
 
-import com.github.icarohs7.unoxgraph.Grafo
 import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
-import com.github.icarohs7.unoxgraph.operacoes.ordemtopologica.khan
+import com.github.icarohs7.unoxgraph.grafos.Grafo
+import com.github.icarohs7.unoxgraph.operacoes.ordemtopologica.ordemTopologicaKhan
 import kotlin.math.max
 
-object CustoMaximo {
+/**
+ * Injetar a função de cálculo de custo máximo
+ * na classe grafo
+ */
+fun Grafo.custoMaximo(): Int {
+	return CustoMaximo.calcular(this)
+}
+
+private object CustoMaximo {
 	
 	@Suppress("LocalVariableName")
 	fun calcular(grafo: Grafo): Int {
 		// Ordenar topológicamente
-		val V = grafo.ordemTopologica.khan()
+		val V = grafo.ordemTopologicaKhan()
 		
 		// Função recursiva para cálculo da maior distância de um vértice comparando todos caminhos possíveis
 		fun dist(v: Int): Int {

@@ -1,7 +1,7 @@
 package com.github.icarohs7.unoxgraph.operacoes.customaximo
 
-import com.github.icarohs7.unoxgraph.GrafoNaoPonderado
 import com.github.icarohs7.unoxgraph.extensoes.plusAssign
+import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxkcommons.extensoes.para
 import io.kotlintest.inspectors.forAll
 import io.kotlintest.shouldBe
@@ -12,7 +12,7 @@ class CustoMaximoTest : StringSpec() {
 		"Deve calcular o custo máximo em um grafo" {
 			//a,b,c,d,e,f,g,h,i
 			//0,1,2,3,4,5,6,7,8
-			val g = GrafoNaoPonderado.ofASize(9, true).also { grafo ->
+			val g = Grafo.NaoPonderado.ofASize(9, true).also { grafo ->
 				grafo += 0 para 1
 				
 				grafo += 1 para 2
@@ -32,7 +32,7 @@ class CustoMaximoTest : StringSpec() {
 				grafo += 6 para 7
 				
 				grafo += 7 para 8
-			}.custoMaximo.custoMaximo()
+			}.custoMaximo()
 			val cm = 6
 			
 			val cases = listOf(g para cm)

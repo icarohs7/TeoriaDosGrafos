@@ -1,13 +1,21 @@
 package com.github.icarohs7.unoxgraph.operacoes.metodosdebusca
 
-import com.github.icarohs7.unoxgraph.Grafo
 import com.github.icarohs7.unoxgraph.estatico.CaminhoNaoEncontradoException
+import com.github.icarohs7.unoxgraph.estatico.TipoDeGrafoIncorretoException
+import com.github.icarohs7.unoxgraph.grafos.Grafo
 import java.util.Stack
 
-object BuscaEmProfundidade {
+/**
+ * Injeta a função de busca em profundidade no grafo
+ */
+fun Grafo.buscaEmProfundidade(origem: Int, destino: Int): List<Int> {
+	return BuscaEmProfundidade.buscar(origem, destino, this as? Grafo.NaoPonderado ?: throw TipoDeGrafoIncorretoException())
+}
+
+private object BuscaEmProfundidade {
 	
 	fun buscar(origem: Int, destino: Int, grafo: Grafo): List<Int> {
-		grafo.inicializar()
+		grafo.desmarcarTodosOsVertices()
 		val caminhoInvertido = Stack<Int>()
 		
 		/* Lançar uma exceção caso o destino não seja encontrado */

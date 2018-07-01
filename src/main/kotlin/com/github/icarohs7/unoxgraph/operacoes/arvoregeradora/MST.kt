@@ -1,15 +1,15 @@
 package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
-import com.github.icarohs7.unoxgraph.Aresta
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
-import com.github.icarohs7.unoxkcommons.estatico.MatrizDouble
-import com.github.icarohs7.unoxkcommons.extensoes.expandido
+import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
+import com.github.icarohs7.unoxkcommons.estatico.DoubleMatriz
+import com.github.icarohs7.unoxkcommons.extensoes.cells
 import java.util.Arrays
 
 class MST(private val tamanho: Int) {
 	
 	@Suppress("MemberVisibilityCanBePrivate")
-	val tree: MatrizDouble = Array(tamanho) { DoubleArray(tamanho) { INFINITO } }
+	val tree: DoubleMatriz = Array(tamanho) { DoubleArray(tamanho) { INFINITO } }
 	
 	fun addAresta(aresta: Aresta, direcionado: Boolean = false) {
 		/* Não permitir a inserção de aresta repetida */
@@ -25,25 +25,8 @@ class MST(private val tamanho: Int) {
 	/**
 	 * Retorna uma lista contendo as arestas presentes na árvore geradora
 	 */
-	fun getArestas(): List<Aresta> {
-		/* Criar lista de arestas */
-		val arestas = arrayListOf<Aresta>()
-		for (u in 0 until tamanho) {
-			for (v in 0 until tamanho) {
-				/* Para cada aresta da árvore, se a mesma não possuir
-				 * peso infinito e já não estiver contida na lista,
-				  * adicioná-la à lista de arestas*/
-				if (tree[u][v] != INFINITO) {
-					val novaAresta = Aresta(u, v, tree[u][v])
-					if (!arestas.contains(novaAresta)) {
-						arestas.add(novaAresta)
-					}
-				}
-			}
-		}
-		/* Retornar arestas */
-		return arestas.distinct()
-	}
+	val arestas: List<Aresta>
+		get() = tree.cells.filter { it.value != INFINITO }.map { Aresta(it.row, it.col, it.value) }.distinct()
 	
 	override fun equals(other: Any?): Boolean {
 		if (this === other) return true
@@ -52,7 +35,7 @@ class MST(private val tamanho: Int) {
 		other as MST
 		
 		if (tamanho != other.tamanho) return false
-		if (!tree.expandido().contentEquals(other.tree.expandido())) return false
+		if (tree.cells != other.tree.cells) return false
 		
 		return true
 	}
