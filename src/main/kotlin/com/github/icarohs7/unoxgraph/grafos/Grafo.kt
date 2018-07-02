@@ -9,6 +9,7 @@ import com.github.icarohs7.unoxkcommons.extensoes.cells
 import com.github.icarohs7.unoxkcommons.extensoes.para
 import com.github.icarohs7.unoxkcommons.extensoes.por
 import com.github.icarohs7.unoxkcommons.funcoes.matrizOf
+import java.util.Arrays
 
 open class Grafo private constructor() {
 	
@@ -54,6 +55,11 @@ open class Grafo private constructor() {
 	fun excluirAresta(origem: Int, destino: Int) {
 		matrizAdjacencia[origem][destino] = INFINITO
 		if (!direcionado) matrizAdjacencia[destino][origem] = INFINITO
+		
+		if (this is PonderadoComFluxo) {
+			matrizFluxo[origem][destino] = INFINITO
+			if (!direcionado) matrizFluxo[destino][origem] = INFINITO
+		}
 	}
 	
 	fun excluirAresta(aresta: Aresta) {
@@ -81,19 +87,25 @@ open class Grafo private constructor() {
 			this is Grafo.PonderadoComFluxo && other !is Grafo.PonderadoComFluxo -> false
 			
 			else -> {
-				val m1 = this.matrizAdjacencia
-				val m2 = (other as Grafo).matrizAdjacencia
+				val matrizGrafo1 = this.matrizAdjacencia
+				val matrizGrafo2 = (other as Grafo).matrizAdjacencia
 				
-				if (m1.size != m2.size) return false
-				else if (m1[0].size != m2[0].size) return false
+				// Sua matriz de adjacência deve ter as mesmas dimensões
+				if (matrizGrafo1.size != matrizGrafo2.size) return false
+				else if (matrizGrafo1[0].size != matrizGrafo2[0].size) return false
 				
-				for (i in 0 until m1.size) {
-					for (j in 0 until m1[0].size) {
-						if (m1[i][j] != m2[i][j]) return false
+				// Devem conter a mesma matriz de adjacência
+				for (i in 0 until matrizGrafo1.size) {
+					for (j in 0 until matrizGrafo1[0].size) {
+						if (matrizGrafo1[i][j] != matrizGrafo2[i][j]) return false
 					}
 				}
 				
+				// Devem ser igualmente direcionados ou não direcionados
 				if (this.direcionado != other.direcionado) return false
+				
+				// Se contiverem limite de fluxo, devem ser iguais
+				if (this is PonderadoComFluxo && other is PonderadoComFluxo) return this.matrizFluxo.cells == other.matrizFluxo.cells
 				
 				true
 			}
@@ -107,7 +119,7 @@ open class Grafo private constructor() {
 		return matrizAdjacencia.hashCode() + direcionado.hashCode()
 	}
 	
-	private fun toPonderado(): Grafo.Ponderado {
+	internal fun toPonderado(): Grafo.Ponderado {
 		val grafo = Grafo.Ponderado()
 		grafo.tamanho = this.tamanho
 		grafo.direcionado = this.direcionado
@@ -115,20 +127,36 @@ open class Grafo private constructor() {
 		return grafo
 	}
 	
-	private fun toPonderadoComFluxo(): Grafo.PonderadoComFluxo {
-		val grafo = Grafo.PonderadoComFluxo()
+	internal fun toPonderadoComFluxo(): Grafo.PonderadoComFluxo {
+		val grafo = Grafo.PonderadoComFluxo(this.tamanho)
+		grafo.direcionado = this.direcionado
+		grafo.matrizAdjacencia = this.matrizAdjacencia
+		return grafo
+	}
+	
+	internal fun toNaoPonderado(): Grafo.NaoPonderado {
+		val grafo = Grafo.NaoPonderado()
 		grafo.tamanho = this.tamanho
 		grafo.direcionado = this.direcionado
 		grafo.matrizAdjacencia = this.matrizAdjacencia
 		return grafo
 	}
 	
-	private fun toNaoPonderado(): Grafo.NaoPonderado {
-		val grafo = Grafo.NaoPonderado()
-		grafo.tamanho = this.tamanho
-		grafo.direcionado = this.direcionado
-		grafo.matrizAdjacencia = this.matrizAdjacencia
-		return grafo
+	override fun toString(): String {
+		return "Grafo(\n" +
+				"direcionado=$direcionado\n" +
+				"matrizAdjacencia=${matrizAdjacencia.cells.filter { it.value != INFINITO }}\n" +
+				"visitados=${Arrays.toString(visitados)}\n" +
+				")"
+	}
+	
+	internal open fun copy(): Grafo {
+		return Grafo().also { grafo ->
+			grafo.tamanho = this.tamanho
+			grafo.direcionado = this.direcionado
+			grafo.visitados = this.visitados
+			grafo.matrizAdjacencia = this.matrizAdjacencia
+		}
 	}
 	
 	/**
@@ -140,9 +168,9 @@ open class Grafo private constructor() {
 		 * Criar um grafo a partir de um tamanho
 		 */
 		private fun ofASize(tamanho: Int, direcionado: Boolean): Grafo {
-			return Grafo().apply {
-				this.tamanho = tamanho
-				this.direcionado = direcionado
+			return Grafo().also { grafo ->
+				grafo.tamanho = tamanho
+				grafo.direcionado = direcionado
 			}
 		}
 		
@@ -150,10 +178,10 @@ open class Grafo private constructor() {
 		 * Criar um grafo a partir da matriz de adjacência
 		 */
 		private fun fromTheMatrix(matrizAdjacencia: Matriz<Double>, direcionado: Boolean): Grafo {
-			return Grafo().apply {
-				tamanho = matrizAdjacencia.size
-				this.direcionado = direcionado
-				this.matrizAdjacencia = matrizOf(tamanho por tamanho) { matrizAdjacencia[it.row][it.col] }
+			return Grafo().also { grafo ->
+				grafo.tamanho = matrizAdjacencia.size
+				grafo.direcionado = direcionado
+				grafo.matrizAdjacencia = matrizOf(grafo.tamanho) { matrizAdjacencia[it.row][it.col] }
 			}
 		}
 		
@@ -163,10 +191,10 @@ open class Grafo private constructor() {
 		private fun withThePath(vararg vertices: Int, direcionado: Boolean): Grafo {
 			if (vertices.size < 2) throw NumeroDeVerticesInsuficienteException()
 			
-			return Grafo().apply {
-				this.tamanho = (vertices.max()!! + 1)
-				this.direcionado = direcionado
-				vertices.dropLast(1).forEachIndexed { index, vertice -> this += vertice para vertices[index + 1] }
+			return Grafo().also { grafo ->
+				grafo.tamanho = (vertices.max()!! + 1)
+				grafo.direcionado = direcionado
+				vertices.dropLast(1).forEachIndexed { index, vertice -> grafo += vertice para vertices[index + 1] }
 			}
 		}
 	}
@@ -222,9 +250,31 @@ open class Grafo private constructor() {
 	}
 	
 	/**
+	 * Classe representando um grafo sem peso nas arestas
+	 */
+	class NaoPonderado internal constructor() : Grafo() {
+		
+		companion object {
+			
+			fun ofASize(tamanho: Int, direcionado: Boolean): Grafo.NaoPonderado {
+				return Grafo.ofASize(tamanho, direcionado).toNaoPonderado()
+			}
+			
+			fun fromTheMatrix(matrizAdjacencia: Matriz<Double>, direcionado: Boolean): Grafo.NaoPonderado {
+				return Grafo.fromTheMatrix(matrizAdjacencia, direcionado).toNaoPonderado()
+			}
+			
+			fun withThePath(vararg vertices: Int, direcionado: Boolean): Grafo.NaoPonderado {
+				return Grafo.withThePath(*vertices, direcionado = direcionado).toNaoPonderado()
+			}
+			
+		}
+	}
+	
+	/**
 	 * Classe representando um grafo contendo peso e limite de fluxo nas arestas
 	 */
-	class PonderadoComFluxo internal constructor() : Grafo() {
+	class PonderadoComFluxo internal constructor(tamanho: Int) : Grafo() {
 		
 		var matrizFluxo: Matriz<Double>
 			protected set
@@ -233,7 +283,30 @@ open class Grafo private constructor() {
 			get() = matrizFluxo.cells.filter { it.value != INFINITO }.map { Aresta(it.row, it.col, it.value) }.distinct()
 		
 		init {
+			this.tamanho = tamanho
 			matrizFluxo = matrizOf(tamanho por tamanho) { INFINITO }
+		}
+		
+		/**
+		 * Operação de adição de aresta com fluxo
+		 */
+		operator fun plusAssign(other: Pair<Aresta, Double>) {
+			val aresta = other.first
+			addAresta(aresta)
+			matrizFluxo[aresta.origem][aresta.destino] = other.second
+			if (!direcionado) matrizFluxo[aresta.destino][aresta.origem] = other.second
+		}
+		
+		/**
+		 * Realiza a cópia do grafo, gerando outra instância equivalente
+		 */
+		override fun copy(): Grafo.PonderadoComFluxo {
+			return Grafo.PonderadoComFluxo(this.tamanho).also { grafo ->
+				grafo.direcionado = this.direcionado
+				grafo.matrizAdjacencia = this.matrizAdjacencia
+				grafo.matrizFluxo = this.matrizFluxo
+				grafo.visitados = this.visitados
+			}
 		}
 		
 		companion object {
@@ -247,26 +320,6 @@ open class Grafo private constructor() {
 			
 			fun withThePath(vararg vertices: Int, direcionado: Boolean): Grafo.PonderadoComFluxo {
 				return Grafo.withThePath(*vertices, direcionado = direcionado).toPonderadoComFluxo()
-			}
-		}
-	}
-	
-	/**
-	 * Classe representando um grafo sem peso nas arestas
-	 */
-	class NaoPonderado internal constructor() : Grafo() {
-		
-		companion object {
-			fun ofASize(tamanho: Int, direcionado: Boolean): Grafo.NaoPonderado {
-				return Grafo.ofASize(tamanho, direcionado).toNaoPonderado()
-			}
-			
-			fun fromTheMatrix(matrizAdjacencia: Matriz<Double>, direcionado: Boolean): Grafo.NaoPonderado {
-				return Grafo.fromTheMatrix(matrizAdjacencia, direcionado).toNaoPonderado()
-			}
-			
-			fun withThePath(vararg vertices: Int, direcionado: Boolean): Grafo.NaoPonderado {
-				return Grafo.withThePath(*vertices, direcionado = direcionado).toNaoPonderado()
 			}
 		}
 	}

@@ -1,7 +1,6 @@
 package com.github.icarohs7.unoxgraph.operacoes.metodosdebusca
 
 import com.github.icarohs7.unoxgraph.estatico.CaminhoNaoEncontradoException
-import com.github.icarohs7.unoxgraph.estatico.TipoDeGrafoIncorretoException
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import java.util.LinkedList
 import java.util.Stack
@@ -10,10 +9,10 @@ import java.util.Stack
  * Injeta a função de busca em largura no grafo
  */
 fun Grafo.buscaEmLargura(origem: Int, destino: Int): List<Int> {
-	return buscaEmLargura(origem, destino, this as? Grafo.NaoPonderado ?: throw TipoDeGrafoIncorretoException())
+	return buscaEmLargura(origem, destino, this)
 }
 
-private fun buscaEmLargura(origem: Int, destino: Int, grafo: Grafo.NaoPonderado): List<Int> {
+private fun buscaEmLargura(origem: Int, destino: Int, grafo: Grafo): List<Int> {
 	grafo.desmarcarTodosOsVertices()
 	grafo.visitados[origem] = true
 	val caminho = LinkedList<Int>()
@@ -29,7 +28,7 @@ private fun buscaEmLargura(origem: Int, destino: Int, grafo: Grafo.NaoPonderado)
 /**
  * Procedimento recursivo responsável pela busca em largura
  */
-private tailrec fun bfs(origem: Int, destino: Int, grafo: Grafo.NaoPonderado, proximosVertices: LinkedList<Int>, caminhoInvertido:
+private tailrec fun bfs(origem: Int, destino: Int, grafo: Grafo, proximosVertices: LinkedList<Int>, caminhoInvertido:
 Stack<Int>): Boolean {
 	caminhoInvertido += origem   // Adicionar origem ao caminho
 	

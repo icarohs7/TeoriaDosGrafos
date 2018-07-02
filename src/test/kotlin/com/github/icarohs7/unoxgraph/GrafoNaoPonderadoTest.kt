@@ -12,10 +12,10 @@ import io.kotlintest.Description
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.StringSpec
 
-class GrafoTest : StringSpec() {
-	private lateinit var grafo: Grafo   //Grafo1
-	private lateinit var grafo2: Grafo  //Grafo2
-	private lateinit var grafoDirecionado: Grafo //Grafo não direcionado
+class GrafoNaoPonderadoTest : StringSpec() {
+	private lateinit var grafo: Grafo.NaoPonderado   //Grafo1
+	private lateinit var grafo2: Grafo.NaoPonderado  //Grafo2
+	private lateinit var grafoDirecionado: Grafo.NaoPonderado //Grafo não direcionado
 	private lateinit var matriz: Matriz<Double>    //Matriz1
 	private lateinit var matrizDirecionada: Matriz<Double>  //Matriz não direcionada
 	
@@ -50,6 +50,12 @@ class GrafoTest : StringSpec() {
 		"Deve ser construído de forma idiomática, não direcionado" {
 			val gdi = Grafo.NaoPonderado.withThePath(0, 1, 2, 0, direcionado = true)
 			gdi shouldBe grafoDirecionado
+		}
+		
+		"Deve realizar uma copia fiel de si mesmo" {
+			val copia = grafo.copy().toNaoPonderado()
+			(copia === grafo) shouldBe false
+			copia shouldBe grafo
 		}
 	}
 	
