@@ -12,7 +12,7 @@ class BuscaEmProfundidadeTest : StringSpec() {
 				grafo += 0 para 1
 				grafo += 1 para 3
 			}.buscaEmProfundidade(0, 4)
-			val caminhoEsperado = listOf(0, 1, 3, 2, 4)
+			val caminhoEsperado = listOf(0, 2, 4)
 			
 			caminho shouldBe caminhoEsperado
 		}
@@ -25,8 +25,8 @@ class BuscaEmProfundidadeTest : StringSpec() {
 				grafo += 0 para 2
 				grafo += 0 para 1
 				grafo += 1 para 2
-			}.buscaEmProfundidade(2, 3)
-			val caminhoEsperado = listOf(2, 0, 1, 3)
+			}.buscaEmProfundidade(0, 3)
+			val caminhoEsperado = listOf(0, 1, 2, 3)
 			
 			caminho shouldBe caminhoEsperado
 		}

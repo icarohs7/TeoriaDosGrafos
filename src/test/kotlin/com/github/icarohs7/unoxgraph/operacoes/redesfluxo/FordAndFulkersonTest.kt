@@ -42,6 +42,7 @@ class FordAndFulkersonTest : StringSpec() {
 				NXCell(5, 3, 1.0)
 			).toMatriz(INFINITO)
 			
+			
 			rede.fluxoMaximo shouldBe 7.0
 			rede.matrizResidual.cells shouldBe matrizResidualEsperada.cells
 		}
@@ -66,20 +67,25 @@ class FordAndFulkersonTest : StringSpec() {
 			val rede = grafoFluxo.fluxoMaximoFordAndFulkerson(0, 5)
 			
 			val matrizResidualEsperada = listOf(
-				NXCell(1, 0, 4.0),
+				NXCell(0, 1, 4.0),
+				NXCell(0, 2, 2.0),
 				
-				NXCell(2, 0, 3.0),
-				NXCell(2, 3, 1.0),
-				NXCell(2, 4, 1.0),
+				NXCell(1, 0, 12.0),
+				NXCell(1, 2, 10.0),
 				
-				NXCell(3, 1, 4.0),
-				NXCell(3, 2, 2.0),
+				NXCell(2, 0, 11.0),
+				NXCell(2, 1, 4.0),
+				NXCell(2, 4, 3.0),
 				
-				NXCell(4, 2, 5.0),
-				NXCell(4, 5, 1.0),
+				NXCell(3, 1, 12.0),
+				NXCell(3, 2, 9.0),
+				NXCell(3, 4, 7.0),
+				NXCell(3, 5, 1.0),
 				
-				NXCell(5, 3, 2.0),
-				NXCell(5, 4, 5.0)
+				NXCell(4, 2, 11.0),
+				
+				NXCell(5, 3, 19.0),
+				NXCell(5, 4, 4.0)
 			).toMatriz(INFINITO)
 			
 			rede.fluxoMaximo shouldBe 23.0

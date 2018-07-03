@@ -26,8 +26,8 @@ private fun buscaEmProfundidade(origem: Int, destino: Int, grafo: Grafo): List<I
  * Procedimento recursivo responsável pela busca em profundidade
  */
 private fun dfs(origem: Int, destino: Int, grafo: Grafo, caminhoInvertido: Stack<Int>): Boolean {
-	grafo.visitados[origem] = true  // Marcar o vértice
-	caminhoInvertido.push(origem)   // Adicioná-lo ao caminho
+	grafo.visitados[origem] = true // Marcar o vértice
+	caminhoInvertido.push(origem) // Adicioná-lo ao caminho
 	
 	if (origem == destino) return true // Caso base
 	
@@ -37,5 +37,7 @@ private fun dfs(origem: Int, destino: Int, grafo: Grafo, caminhoInvertido: Stack
 		}
 	}
 	
-	return false    // Destino não encontrado
+	caminhoInvertido.pop() // Desempilhar vértices que não levam ao caminho correto
+	
+	return false // Destino não encontrado
 }

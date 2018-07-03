@@ -3,6 +3,7 @@ package com.github.icarohs7.unoxgraph.operacoes.redesfluxo
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
+import com.github.icarohs7.unoxgraph.grafos.Grafo.Ponderado
 import com.github.icarohs7.unoxkcommons.extensoes.deepReplace
 
 /**
@@ -27,8 +28,10 @@ private fun fordAndFulkerson(origem: Int, destino: Int, grafo: Grafo.Ponderado):
 		val caminho = grafoResidual.buscar(origem, destino)
 		
 		if (caminho.isEmpty() || caminho.last() != destino) {
-			grafo.arestas.forEach { grafoResidual[-it] = grafo[it] - grafoResidual[it] }
-			grafoResidual.matrizAdjacencia = grafoResidual.matrizAdjacencia.deepReplace(0.0, INFINITO)
+			infinitesToZeros(grafoResidual)
+			grafo.arestas
+				.forEach { grafoResidual[-it] += grafo[it] - grafoResidual[it] }
+			zerosToInfinites(grafoResidual)
 			return ResultadoFulkerson(fluxoMaximo, grafoResidual.matrizAdjacencia)
 		}
 		
@@ -40,7 +43,6 @@ private fun fordAndFulkerson(origem: Int, destino: Int, grafo: Grafo.Ponderado):
 		
 		// Obter menor fluxo contido nas arestas
 		val menorPeso = arestas
-			.filter { grafo.matrizAdjacencia[it.origem][it.destino] != INFINITO }
 			.map { it.peso }
 			.reduce(::minOf)
 		
@@ -74,3 +76,17 @@ private fun Grafo.Ponderado.buscar(origem: Int, destino: Int): List<Int> {
  * Lista de vértices abertos
  */
 private lateinit var abertos: MutableList<Boolean>
+
+/**
+ * Substituir valores 0 do grafo por infinito
+ */
+private fun zerosToInfinites(grafo: Ponderado) {
+	grafo.matrizAdjacencia = grafo.matrizAdjacencia.deepReplace(0.0, INFINITO)
+}
+
+/**
+ * Substituir valores infinito do grafo por 0
+ */
+private fun infinitesToZeros(grafo: Ponderado) {
+	grafo.matrizAdjacencia = grafo.matrizAdjacencia.deepReplace(INFINITO, 0.0)
+}
