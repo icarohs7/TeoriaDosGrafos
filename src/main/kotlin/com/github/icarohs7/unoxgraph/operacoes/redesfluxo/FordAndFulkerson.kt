@@ -3,9 +3,7 @@ package com.github.icarohs7.unoxgraph.operacoes.redesfluxo
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
-import com.github.icarohs7.unoxkcommons.extensoes.deepMap
-import com.github.icarohs7.unoxkcommons.extensoes.toMatriz
-import com.github.icarohs7.unoxkcommons.tipos.NXCell
+import com.github.icarohs7.unoxkcommons.extensoes.deepReplace
 
 /**
  * Algoritmo para calculo do fluxo máximo em um grafo
@@ -15,21 +13,23 @@ fun Grafo.Ponderado.fluxoMaximoFordAndFulkerson(origem: Int, destino: Int): Resu
 }
 
 private fun fordAndFulkerson(origem: Int, destino: Int, grafo: Grafo.Ponderado): ResultadoFulkerson {
+	
 	// Grafo residual guardando o fluxo restante das arestas
-	val grafoResidual = grafo.copy().toPonderado().also {
-		// Converter pesos 0 para INFINITO
-		it.matrizAdjacencia = it.matrizAdjacencia deepMap { if (it == 0.0) INFINITO else it }
-	}
+	val grafoResidual = grafo.copy()
 	
 	var fluxoMaximo = 0.0
 	
 	while (true) {
+		
+		// Desmarcar vértices a cada busca
 		abertos = MutableList(grafoResidual.tamanho) { true }
-		val caminho = grafoResidual.buscar(origem, destino).also { resultado ->
-			if (resultado.isEmpty() || resultado.last() != destino) {
-				val matrizResidual = grafo.arestas.map { Aresta(it.destino, it.origem, it.peso) } + grafoResidual.arestas
-				return ResultadoFulkerson(fluxoMaximo, matrizResidual.map { NXCell(it.origem, it.destino, it.peso) }.toMatriz(INFINITO))
-			}
+		
+		val caminho = grafoResidual.buscar(origem, destino)
+		
+		if (caminho.isEmpty() || caminho.last() != destino) {
+			grafo.arestas.forEach { grafoResidual[-it] = grafo[it] - grafoResidual[it] }
+			grafoResidual.matrizAdjacencia = grafoResidual.matrizAdjacencia.deepReplace(0.0, INFINITO)
+			return ResultadoFulkerson(fluxoMaximo, grafoResidual.matrizAdjacencia)
 		}
 		
 		// Obter arestas contidas no caminho atual
@@ -45,16 +45,7 @@ private fun fordAndFulkerson(origem: Int, destino: Int, grafo: Grafo.Ponderado):
 			.reduce(::minOf)
 		
 		// Subtrair o menor fluxo das arestas contidas no caminho
-		arestas.forEach {
-			val arestaOrigem = it.origem
-			val arestaDestino = it.destino
-			
-			grafoResidual.matrizAdjacencia[arestaOrigem][arestaDestino] -= menorPeso
-			
-			// Caso o valor caia para 0, substitui-lo por infinito, representando sem passagem
-			if (grafoResidual.matrizAdjacencia[arestaOrigem][arestaDestino] == 0.0)
-				grafoResidual.matrizAdjacencia[arestaOrigem][arestaDestino] = INFINITO
-		}
+		arestas.forEach { grafoResidual[it] -= menorPeso }
 		
 		fluxoMaximo += menorPeso
 	}
@@ -68,9 +59,10 @@ private fun Grafo.Ponderado.buscar(origem: Int, destino: Int): List<Int> {
 	abertos[origem] = false
 	if (origem == destino) return listOf(destino)
 	
+	// Próxima origem escolhida com base no vizinho aberto com aresta de maior peso
 	val proxOrigem = this.arestas
 		.filter { abertos[it.destino] }
-		.filter { it.origem == origem && it.peso != INFINITO }
+		.filter { it.origem == origem && it.peso != INFINITO && it.peso != 0.0 }
 		.also { if (it.isEmpty()) return emptyList() }
 		.reduce(::maxOf)
 		.destino

@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4042f55a-2d4d-48b4-9c53-c8e80f368968" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/ResultadoFulkerson.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/ArestaExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/grafos/Grafo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/grafos/Grafo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderadoComFluxoTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderadoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderadoTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderadoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderadoTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/ArvoreCustoMinimoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/ArvoreCustoMinimoTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximoTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/CustoMinimoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/CustoMinimoTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmLarguraTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmLarguraTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmProfundidadeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmProfundidadeTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/KhanTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/KhanTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkersonTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkersonTest.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -70,8 +80,8 @@
     <session id="1168434970">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="17" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
@@ -84,59 +94,68 @@
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
           <entry key="gitignore" value="1" />
-          <entry key="gradle" value="10" />
-          <entry key="kt" value="309" />
+          <entry key="gradle" value="11" />
+          <entry key="kt" value="322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="Git file" value="1" />
-          <entry key="Groovy" value="10" />
-          <entry key="Kotlin" value="309" />
+          <entry key="Groovy" value="11" />
+          <entry key="Kotlin" value="322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="gradle" value="38" />
-          <entry key="kt" value="21750" />
-          <entry key="txt" value="564" />
+          <entry key="kt" value="24575" />
+          <entry key="txt" value="742" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="1" />
           <entry key="Groovy" value="38" />
-          <entry key="Kotlin" value="21750" />
-          <entry key="PLAIN_TEXT" value="564" />
+          <entry key="Kotlin" value="24575" />
+          <entry key="PLAIN_TEXT" value="742" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkersonTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+            <state relative-caret-position="-199">
+              <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="26" column="97" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/grafos/Grafo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="2100">
+              <caret line="126" column="4" lean-forward="true" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -154,10 +173,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>println</find>
       <find>MatrizDouble</find>
       <find>print</find>
       <find>internal</find>
+      <find>println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -384,9 +403,9 @@
     <option name="modificationStamps">
       <map>
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="553374088" />
-        <entry key="$PROJECT_DIR$" value="6116362761687" />
+        <entry key="$PROJECT_DIR$" value="6116516696584" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2449522433" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3467937609" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2077093676" />
       </map>
     </option>
@@ -669,38 +688,38 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/grafos/GrafoNaoPonderado.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/IntExt.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/estatico/Excecoes.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/ArvoreCustoMinimoTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Prim.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoWarshall.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/ResultadoPonderado.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/CustoMinimoTest.kt" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/BellmanFord.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/Dijkstra.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/custominimo/FloydWarshall.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmProfundidadeTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/Kruskal.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/KhanTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/MST.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderadoComFluxoTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderadoTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderadoTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/estatico/Constantes.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/funcoes/ErrorHandling.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximoTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmProfundidade.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/ArestaExt.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmLarguraTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmLargura.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/ResultadoFulkerson.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderadoTest.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/ArvoreCustoMinimoTest.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/grafos/Grafo.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkersonTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt" />
       </list>
     </option>
   </component>
@@ -727,6 +746,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -782,56 +803,6 @@
               <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
               <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="unoxgraph" type="462c0819:PsiDirectoryNode" />
-              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
-              <item name="customaximo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="unoxgraph" type="462c0819:PsiDirectoryNode" />
-              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
-              <item name="custominimo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="unoxgraph" type="462c0819:PsiDirectoryNode" />
-              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
-              <item name="metodosdebusca" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="unoxgraph" type="462c0819:PsiDirectoryNode" />
-              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
-              <item name="ordemtopologica" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="unoxgraph" type="462c0819:PsiDirectoryNode" />
-              <item name="operacoes" type="462c0819:PsiDirectoryNode" />
-              <item name="redesfluxo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UNoxGraph" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UNoxGraph" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -882,8 +853,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1070,38 +1039,45 @@
       <option name="project" value="LOCAL" />
       <updated>1530540110754</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="V2.3.1 - Implementação inicial do algoritmo de Ford And Fulkerson&#10;&#10;Disclaimer: Somente o resultado do fluxo máximo do algoritmo de Ford&#10;and Fulkerson retorna o resultado esperado">
+      <created>1530626906716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1530626906716</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 35m 58s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 30m 24s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 39m 12s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 33m 23s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 43m 31s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 34m 23s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 45m 49s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 35m 41s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 45m 58s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 48m 00s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 49m 03s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 48m 29s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 49m 21s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 49m 28s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 54m 17s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 50m 04s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 10h 55m 07s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 51m 09s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 11h 03m 46s.xml">
+    <history-entry file="FordAndFulkersonTest - 2018.07.03 at 14h 53m 34s.xml">
       <configuration name="FordAndFulkersonTest" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
@@ -1115,7 +1091,7 @@
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info active="true" id="Run" order="4" visible="true" weight="0.3022388" />
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3296582" />
-      <window_info anchor="bottom" id="Version Control" order="1" weight="0.3289183" />
+      <window_info anchor="bottom" id="Version Control" order="1" weight="0.32855567" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="4" weight="0.3289183" />
@@ -1174,7 +1150,8 @@
     <MESSAGE value="V2.2.0 - Reestruturação de classes&#10;&#10;Início da reestruturação das classes buscando melhora na organização e&#10;manutenibilidade" />
     <MESSAGE value="V2.2.1 - Otimizações de código" />
     <MESSAGE value="V2.3.0 - Adição do tipo de grafo PonderadoComFluxo" />
-    <option name="LAST_COMMIT_MESSAGE" value="V2.3.0 - Adição do tipo de grafo PonderadoComFluxo" />
+    <MESSAGE value="V2.3.1 - Implementação inicial do algoritmo de Ford And Fulkerson&#10;&#10;Disclaimer: Somente o resultado do fluxo máximo do algoritmo de Ford&#10;and Fulkerson retorna o resultado esperado" />
+    <option name="LAST_COMMIT_MESSAGE" value="V2.3.1 - Implementação inicial do algoritmo de Ford And Fulkerson&#10;&#10;Disclaimer: Somente o resultado do fluxo máximo do algoritmo de Ford&#10;and Fulkerson retorna o resultado esperado" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1248,13 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/ArvoreCustoMinimoTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/icarohs7/unoxkcommons/0.2.0/unoxkcommons-0.2.0-sources.jar!/com/github/icarohs7/unoxkcommons/extensoes/MatrizExt.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1304,13 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/estatico/Excecoes.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -1336,27 +1299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderadoTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderadoTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="68" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1395,20 +1337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/metodosdebusca/BuscaEmProfundidade.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1420,13 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1474,24 +1395,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/grafos/Grafo.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/extensoes/GrafoExt.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CaminhoMaximo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="203" column="39" selection-start-line="203" selection-start-column="39" selection-end-line="203" selection-end-column="39" />
+        <state relative-caret-position="40">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/ordemtopologica/Khan.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="80">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/customaximo/CustoMaximo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoNaoPonderadoTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/GrafoPonderadoTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/arvoregeradora/ArvoreCustoMinimoTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkersonTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
+        <state relative-caret-position="-199">
+          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/grafos/Grafo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="126" column="4" lean-forward="true" selection-start-line="126" selection-start-column="4" selection-end-line="126" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/github/icarohs7/unoxgraph/operacoes/redesfluxo/FordAndFulkerson.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" column="97" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
         </state>
       </provider>
     </entry>

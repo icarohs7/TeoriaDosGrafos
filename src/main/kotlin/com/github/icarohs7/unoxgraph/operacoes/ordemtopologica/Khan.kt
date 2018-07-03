@@ -1,8 +1,6 @@
 package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 
 import com.github.icarohs7.unoxgraph.estatico.GrafoCiclicoException
-import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
-import com.github.icarohs7.unoxgraph.extensoes.minusAssign
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import java.util.LinkedList
 

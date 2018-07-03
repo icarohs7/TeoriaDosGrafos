@@ -1,8 +1,6 @@
 package com.github.icarohs7.unoxgraph
 
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
-import com.github.icarohs7.unoxgraph.extensoes.minusAssign
-import com.github.icarohs7.unoxgraph.extensoes.plusAssign
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
 import com.github.icarohs7.unoxkcommons.estatico.Matriz

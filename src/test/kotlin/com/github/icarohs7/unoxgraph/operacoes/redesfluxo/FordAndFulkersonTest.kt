@@ -1,7 +1,6 @@
 package com.github.icarohs7.unoxgraph.operacoes.redesfluxo
 
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
-import com.github.icarohs7.unoxgraph.extensoes.plusAssign
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
 import com.github.icarohs7.unoxkcommons.extensoes.cells
@@ -32,28 +31,18 @@ class FordAndFulkersonTest : StringSpec() {
 				NXCell(1, 0, 4.0),
 				
 				NXCell(2, 0, 3.0),
-				NXCell(2, 3, 1.0),
-				NXCell(2, 4, 1.0),
+				NXCell(2, 3, 3.0),
 				
 				NXCell(3, 1, 4.0),
-				NXCell(3, 2, 2.0),
+				NXCell(3, 5, 1.0),
 				
-				NXCell(4, 2, 5.0),
-				NXCell(4, 5, 1.0),
+				NXCell(4, 2, 6.0),
 				
-				NXCell(5, 3, 2.0),
-				NXCell(5, 4, 5.0)
+				NXCell(5, 4, 6.0),
+				NXCell(5, 3, 1.0)
 			).toMatriz(INFINITO)
 			
 			rede.fluxoMaximo shouldBe 7.0
-			for (row in rede.matrizResidual) {
-				for (value in row) {
-					val formattedValue = if (value == INFINITO) 0.0 else value
-					print("$formattedValue\t ")
-				}
-				println()
-			}
-			rede.matrizResidual.cells.filter { it.value != INFINITO }.forEach(::println)
 			rede.matrizResidual.cells shouldBe matrizResidualEsperada.cells
 		}
 		
@@ -94,14 +83,6 @@ class FordAndFulkersonTest : StringSpec() {
 			).toMatriz(INFINITO)
 			
 			rede.fluxoMaximo shouldBe 23.0
-			for (row in rede.matrizResidual) {
-				for (value in row) {
-					val formattedValue = if (value == INFINITO) 0.0 else value
-					print("$formattedValue\t ")
-				}
-				println()
-			}
-			rede.matrizResidual.cells.filter { it.value != INFINITO }.forEach(::println)
 			rede.matrizResidual.cells shouldBe matrizResidualEsperada.cells
 		}
 	}

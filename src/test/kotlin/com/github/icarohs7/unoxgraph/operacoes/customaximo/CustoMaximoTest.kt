@@ -1,6 +1,5 @@
 package com.github.icarohs7.unoxgraph.operacoes.customaximo
 
-import com.github.icarohs7.unoxgraph.extensoes.plusAssign
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxkcommons.extensoes.para
 import io.kotlintest.inspectors.forAll

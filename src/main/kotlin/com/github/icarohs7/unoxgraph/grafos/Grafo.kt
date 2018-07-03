@@ -3,12 +3,13 @@ package com.github.icarohs7.unoxgraph.grafos
 import com.github.icarohs7.unoxgraph.estatico.ForaDoGrafoException
 import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.estatico.NumeroDeVerticesInsuficienteException
-import com.github.icarohs7.unoxgraph.extensoes.plusAssign
 import com.github.icarohs7.unoxkcommons.estatico.Matriz
 import com.github.icarohs7.unoxkcommons.extensoes.cells
+import com.github.icarohs7.unoxkcommons.extensoes.deepCopy
 import com.github.icarohs7.unoxkcommons.extensoes.para
 import com.github.icarohs7.unoxkcommons.extensoes.por
 import com.github.icarohs7.unoxkcommons.funcoes.matrizOf
+import com.github.icarohs7.unoxkcommons.tipos.NXCell
 import java.util.Arrays
 
 open class Grafo private constructor() {
@@ -60,6 +61,11 @@ open class Grafo private constructor() {
 	fun excluirAresta(aresta: Aresta) {
 		excluirAresta(aresta.origem, aresta.destino)
 	}
+	
+	/**
+	 * Retorna a lista de vértices incidindo sobre o vértice atual
+	 */
+	internal fun entradasParaOVertice(v: Int) = arestas.filter { it.destino == v }.map { it.origem }
 	
 	fun hasAberto(): Boolean {
 		return visitados.reduce { acc, b -> acc || b }
@@ -114,6 +120,7 @@ open class Grafo private constructor() {
 		val grafo = Grafo.Ponderado()
 		grafo.tamanho = this.tamanho
 		grafo.direcionado = this.direcionado
+		grafo.visitados = this.visitados
 		grafo.matrizAdjacencia = this.matrizAdjacencia
 		return grafo
 	}
@@ -122,6 +129,7 @@ open class Grafo private constructor() {
 		val grafo = Grafo.NaoPonderado()
 		grafo.tamanho = this.tamanho
 		grafo.direcionado = this.direcionado
+		grafo.visitados = this.visitados
 		grafo.matrizAdjacencia = this.matrizAdjacencia
 		return grafo
 	}
@@ -138,8 +146,8 @@ open class Grafo private constructor() {
 		return Grafo().also { grafo ->
 			grafo.tamanho = this.tamanho
 			grafo.direcionado = this.direcionado
-			grafo.visitados = this.visitados
-			grafo.matrizAdjacencia = this.matrizAdjacencia
+			grafo.visitados = this.visitados.copyOf()
+			grafo.matrizAdjacencia = this.matrizAdjacencia.deepCopy()
 		}
 	}
 	
@@ -217,6 +225,8 @@ open class Grafo private constructor() {
 		override fun compareTo(other: Aresta): Int {
 			return this.peso.compareTo(other.peso)
 		}
+		
+		operator fun unaryMinus() = Aresta(this.destino, this.origem, this.peso)
 	}
 	
 	/**
@@ -225,6 +235,7 @@ open class Grafo private constructor() {
 	class Ponderado internal constructor() : Grafo() {
 		
 		companion object {
+			
 			fun ofASize(tamanho: Int, direcionado: Boolean): Grafo.Ponderado {
 				return Grafo.ofASize(tamanho, direcionado).toPonderado()
 			}
@@ -236,6 +247,10 @@ open class Grafo private constructor() {
 			fun withThePath(vararg vertices: Int, direcionado: Boolean): Grafo.Ponderado {
 				return Grafo.withThePath(*vertices, direcionado = direcionado).toPonderado()
 			}
+		}
+		
+		override fun copy(): Grafo.Ponderado {
+			return super.copy().toPonderado()
 		}
 	}
 	
@@ -259,5 +274,45 @@ open class Grafo private constructor() {
 			}
 			
 		}
+		
+		override fun copy(): Grafo {
+			return super.copy().toNaoPonderado()
+		}
+	}
+	
+	/**
+	 * Adicionar uma aresta ao grafo
+	 */
+	operator fun plusAssign(aresta: Aresta) = addAresta(aresta)
+	
+	operator fun plusAssign(aresta: Pair<Int, Int>) = addAresta(aresta.first, aresta.second)
+	
+	operator fun plusAssign(celula: NXCell<Double>) = addAresta(celula.row, celula.col, celula.value)
+	
+	/**
+	 * Remover uma aresta do grafo
+	 */
+	operator fun minusAssign(aresta: Aresta) = excluirAresta(aresta)
+	
+	operator fun minusAssign(aresta: Pair<Int, Int>) = excluirAresta(aresta.first, aresta.second)
+	
+	operator fun minusAssign(celula: NXCell<Double>) = excluirAresta(celula.row, celula.col)
+	
+	/**
+	 * Get de um grafo utilizando uma aresta
+	 */
+	operator fun get(aresta: Aresta) = this.matrizAdjacencia[aresta.origem][aresta.destino]
+	
+	operator fun get(aresta: Pair<Int, Int>) = this.matrizAdjacencia[aresta.first][aresta.second]
+	
+	/**
+	 * Atribuir um valor à matriz de adjacência utilizando uma aresta
+	 */
+	operator fun set(aresta: Aresta, valor: Double) {
+		this.matrizAdjacencia[aresta.origem][aresta.destino] = valor
+	}
+	
+	operator fun set(aresta: Pair<Int, Int>, valor: Double) {
+		this.matrizAdjacencia[aresta.first][aresta.second] = valor
 	}
 }

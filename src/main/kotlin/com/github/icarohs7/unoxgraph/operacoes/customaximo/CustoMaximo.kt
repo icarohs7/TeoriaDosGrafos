@@ -1,6 +1,5 @@
 package com.github.icarohs7.unoxgraph.operacoes.customaximo
 
-import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxgraph.operacoes.ordemtopologica.ordemTopologicaKhan
 import kotlin.math.max

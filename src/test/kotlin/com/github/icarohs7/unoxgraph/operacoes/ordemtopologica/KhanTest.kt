@@ -1,7 +1,5 @@
 package com.github.icarohs7.unoxgraph.operacoes.ordemtopologica
 
-import com.github.icarohs7.unoxgraph.extensoes.entradasParaOVertice
-import com.github.icarohs7.unoxgraph.extensoes.plusAssign
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxkcommons.extensoes.deepMap
 import com.github.icarohs7.unoxkcommons.extensoes.para

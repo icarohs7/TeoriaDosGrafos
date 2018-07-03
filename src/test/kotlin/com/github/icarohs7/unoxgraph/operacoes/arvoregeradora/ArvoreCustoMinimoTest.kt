@@ -1,6 +1,5 @@
 package com.github.icarohs7.unoxgraph.operacoes.arvoregeradora
 
-import com.github.icarohs7.unoxgraph.extensoes.plusAssign
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
 import com.github.icarohs7.unoxkcommons.extensoes.cells
