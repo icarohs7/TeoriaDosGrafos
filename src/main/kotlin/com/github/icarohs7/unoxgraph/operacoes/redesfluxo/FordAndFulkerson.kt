@@ -19,6 +19,9 @@ private fun fordAndFulkerson(origem: Int, destino: Int, grafo: Grafo.Ponderado):
 	// Grafo residual guardando o fluxo restante das arestas
 	val grafoResidual = grafo.copy()
 	
+	// Builder guardando a string com as iterações
+	val iteracoesBuilder = StringBuilder()
+	
 	var fluxoMaximo = 0.0
 	
 	while (true) {
@@ -31,7 +34,7 @@ private fun fordAndFulkerson(origem: Int, destino: Int, grafo: Grafo.Ponderado):
 			infinitesToZeros(grafoResidual)
 			grafo.arestas.forEach { grafoResidual[-it] += grafo[it] - grafoResidual[it] }
 			zerosToInfinites(grafoResidual)
-			return ResultadoFulkerson(fluxoMaximo, grafoResidual.matrizAdjacencia)
+			return ResultadoFulkerson(fluxoMaximo, grafoResidual.matrizAdjacencia, iteracoesBuilder.toString())
 		}
 		
 		// Obter menor fluxo contido nas arestas
@@ -43,6 +46,7 @@ private fun fordAndFulkerson(origem: Int, destino: Int, grafo: Grafo.Ponderado):
 		caminho.zipWithNext { a, b -> grafoResidual[a para b] -= menorPeso }
 		
 		fluxoMaximo += menorPeso
+		iteracoesBuilder.append("fluxo $menorPeso em => $caminho\n")
 	}
 }
 
