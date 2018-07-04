@@ -3,9 +3,6 @@ package com.github.icarohs7.unoxgraph.estatico
 class ArestaNegativaException
 	: RuntimeException("Há uma aresta de peso negativo no grafo")
 
-class CaminhoNaoEncontradoException
-	: RuntimeException("Destino não encontrado")
-
 class CicloNegativoException
 	: RuntimeException("O grafo contem um ou mais ciclos negativos")
 

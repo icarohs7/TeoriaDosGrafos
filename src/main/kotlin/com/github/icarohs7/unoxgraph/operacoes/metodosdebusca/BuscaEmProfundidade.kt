@@ -1,43 +1,44 @@
 package com.github.icarohs7.unoxgraph.operacoes.metodosdebusca
 
-import com.github.icarohs7.unoxgraph.estatico.CaminhoNaoEncontradoException
+import com.github.icarohs7.unoxgraph.estatico.INFINITO
+import com.github.icarohs7.unoxgraph.extensoes.removeLast
 import com.github.icarohs7.unoxgraph.grafos.Grafo
-import java.util.Stack
 
 /**
  * Injeta a função de busca em profundidade no grafo
  */
-fun Grafo.buscaEmProfundidade(origem: Int, destino: Int): List<Int> {
+fun Grafo.buscaEmProfundidade(origem: Int, destino: Int, vararg ignorados: Double): List<Int> {
+	elementosIgnorados = listOf(INFINITO) + ignorados.toList()
 	return buscaEmProfundidade(origem, destino, this)
 }
 
 private fun buscaEmProfundidade(origem: Int, destino: Int, grafo: Grafo): List<Int> {
 	grafo.desmarcarTodosOsVertices()
-	val caminhoInvertido = Stack<Int>()
-	
-	/* Lançar uma exceção caso o destino não seja encontrado */
-	if (!dfs(origem, destino, grafo, caminhoInvertido)) throw CaminhoNaoEncontradoException()
-	
-	/* Retornar o caminho da origem para o destino */
-	return caminhoInvertido
+	val caminho = mutableListOf<Int>()
+	return if (dfs(origem, destino, grafo, caminho)) caminho else emptyList()
 }
 
 /**
  * Procedimento recursivo responsável pela busca em profundidade
  */
-private fun dfs(origem: Int, destino: Int, grafo: Grafo, caminhoInvertido: Stack<Int>): Boolean {
+private fun dfs(origem: Int, destino: Int, grafo: Grafo, caminho: MutableList<Int>): Boolean {
 	grafo.visitados[origem] = true // Marcar o vértice
-	caminhoInvertido.push(origem) // Adicioná-lo ao caminho
+	caminho += origem // Adicioná-lo ao caminho
 	
-	if (origem == destino) return true // Caso base
+	if (origem == destino) // Destino encontrado
+		return true
 	
-	for (verticeVizinho in grafo.getVizinhos(origem, abertos = true)) {
-		if (dfs(verticeVizinho, destino, grafo, caminhoInvertido)) { // Descer um nível na busca e retornar o resultado
+	val vizinhos = grafo.getVizinhos(origem, abertos = true).filterNot { grafo[origem to it] in elementosIgnorados }
+	for (verticeVizinho in vizinhos)
+		if (dfs(verticeVizinho, destino, grafo, caminho)) // Realizar busca em cada vizinho
 			return true
-		}
-	}
 	
-	caminhoInvertido.pop() // Desempilhar vértices que não levam ao caminho correto
+	caminho.removeLast() // Remover vértice levando ao caminho incorreto
 	
 	return false // Destino não encontrado
 }
+
+/**
+ * Valores ignorados como pesos de arestas
+ */
+private var elementosIgnorados = listOf(INFINITO)

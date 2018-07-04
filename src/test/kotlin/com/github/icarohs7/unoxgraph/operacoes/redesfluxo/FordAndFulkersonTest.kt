@@ -4,6 +4,8 @@ import com.github.icarohs7.unoxgraph.estatico.INFINITO
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import com.github.icarohs7.unoxgraph.grafos.Grafo.Aresta
 import com.github.icarohs7.unoxkcommons.extensoes.cells
+import com.github.icarohs7.unoxkcommons.extensoes.deepMap
+import com.github.icarohs7.unoxkcommons.extensoes.deepReplace
 import com.github.icarohs7.unoxkcommons.extensoes.toMatriz
 import com.github.icarohs7.unoxkcommons.tipos.NXCell
 import io.kotlintest.shouldBe
@@ -90,6 +92,43 @@ class FordAndFulkersonTest : StringSpec() {
 			
 			rede.fluxoMaximo shouldBe 23.0
 			rede.matrizResidual.cells shouldBe matrizResidualEsperada.cells
+		}
+		
+		"Deve calcular o fluxo máximo em um grafo 3" {
+			val matriz = arrayOf(
+				arrayOf(0, 6, 8, 14, 0, 0, 0, 0, 0, 0, 0, 0),
+				arrayOf(0, 0, 4, 0, 6, 2, 0, 0, 0, 0, 0, 0),
+				arrayOf(0, 0, 0, 0, 0, 0, 7, 0, 0, 3, 0, 0),
+				arrayOf(0, 0, 1, 0, 0, 0, 8, 2, 0, 0, 0, 0),
+				arrayOf(0, 0, 0, 0, 0, 8, 0, 0, 2, 0, 0, 0),
+				arrayOf(0, 0, 0, 0, 0, 0, 0, 0, 9, 1, 6, 0),
+				arrayOf(0, 5, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0),
+				arrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 9, 2),
+				arrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 9),
+				arrayOf(0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 8, 6),
+				arrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12),
+				arrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)) deepMap Int::toDouble
+			val grafo = Grafo.Ponderado.fromTheMatrix(matriz.deepReplace(0.0, INFINITO), direcionado = true)
+			val rede = grafo.fluxoMaximoFordAndFulkerson(0, 11)
+			
+			rede.fluxoMaximo shouldBe 22.0
+		}
+		
+		"Deve calcular o fluxo máximo em um grafo 4" {
+			val matriz = arrayOf(
+				arrayOf(0, 13, 10, 10, 0, 0, 0, 0),
+				arrayOf(0, 0, 0, 0, 24, 0, 0, 0),
+				arrayOf(0, 5, 0, 15, 0, 0, 7, 0),
+				arrayOf(0, 0, 0, 0, 0, 0, 15, 0),
+				arrayOf(0, 0, 0, 0, 0, 1, 0, 9),
+				arrayOf(0, 0, 0, 0, 0, 0, 6, 13),
+				arrayOf(0, 0, 0, 0, 0, 0, 0, 16),
+				arrayOf(0, 0, 0, 0, 0, 0, 0, 0)) deepMap Int::toDouble
+			val grafo = Grafo.Ponderado.fromTheMatrix(matriz.deepReplace(0.0, INFINITO), direcionado = true)
+			
+			val rede = grafo.fluxoMaximoFordAndFulkerson(0, 7)
+			
+			rede.fluxoMaximo shouldBe 26.0
 		}
 	}
 }

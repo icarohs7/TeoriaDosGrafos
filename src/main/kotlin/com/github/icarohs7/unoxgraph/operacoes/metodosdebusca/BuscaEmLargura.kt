@@ -1,6 +1,5 @@
 package com.github.icarohs7.unoxgraph.operacoes.metodosdebusca
 
-import com.github.icarohs7.unoxgraph.estatico.CaminhoNaoEncontradoException
 import com.github.icarohs7.unoxgraph.grafos.Grafo
 import java.util.LinkedList
 import java.util.Stack
@@ -18,11 +17,7 @@ private fun buscaEmLargura(origem: Int, destino: Int, grafo: Grafo): List<Int> {
 	val caminho = LinkedList<Int>()
 	val caminhoInvertido = Stack<Int>()
 	
-	/* Lançar exceção caso o destino não seja encontrado */
-	if (!bfs(origem, destino, grafo, caminho, caminhoInvertido)) throw CaminhoNaoEncontradoException()
-	
-	/* Retornar o caminho da origem para o destino */
-	return caminhoInvertido
+	return if (bfs(origem, destino, grafo, caminho, caminhoInvertido)) caminhoInvertido else emptyList()
 }
 
 /**
